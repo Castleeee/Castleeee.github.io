@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Django的目录和配置[0] | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/59.388b8a2f.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/back/python/django/django0.html#conda和ide" class="sidebar-link">conda和IDE</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#conda需要的包" class="sidebar-link">conda需要的包</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#ide配置" class="sidebar-link">IDE配置</a></li></ul></li><li><a href="/blog/back/python/django/django0.html#修改setting" class="sidebar-link">修改setting</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#更改目录" class="sidebar-link">更改目录</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#installed-apps加入" class="sidebar-link">INSTALLED_APPS加入</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#middleware修改添加跨域插件" class="sidebar-link">MIDDLEWARE修改添加跨域插件</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#修改templates-使用jinja2" class="sidebar-link">修改TEMPLATES,使用jinja2</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#修改static和media路径" class="sidebar-link">修改static和media路径</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#修改时区添加跨域配置" class="sidebar-link">修改时区添加跨域配置</a></li></ul></li><li><a href="/blog/back/python/django/django0.html#使用xadmin" class="sidebar-link">使用Xadmin</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/django/django0.html#引入" class="sidebar-link">引入</a></li></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>Django的目录和配置[0]</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>3/7/2020</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      后端
+    </span><span class="tag-item" data-v-2c25cede>
+      web
+    </span><span class="tag-item" data-v-2c25cede>
+      Django
+    </span><span class="tag-item" data-v-2c25cede>
+      python🐍
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><p>这是Django的第一部分,配置基本的环境并建立一个实验性的app</p> <p>这节代码比较少</p> <div class="tip custom-block"><p class="custom-block-title">目标</p> <p>完整的把自己的django的笔记记下来,提醒自己<br>
+第一个阶段先建立一个vue+django+xadmin+DRF的用户中心<br>
+完善的邮箱登录注册jwt验证刷新sql+redis<br>
+这个用户中心可以拓任意的业务,干啥都行.为什么选django因为它容易搭建,不用自己动手的地方很多,懒人福利,自己用要求不那么高或者快速上线一个东西的地方可以用.</p></div> <h2 id="conda和ide"><a href="#conda和ide" aria-hidden="true" class="header-anchor">#</a> conda和IDE</h2> <p>conda记得设置代理,所有的中国源都不能用了,pip和conda的代理不是同一个<br>
+创建<code>conda create -n django_env python=3.7</code><br>
+激活<code>source activate django_env</code></p> <h3 id="conda需要的包"><a href="#conda需要的包" aria-hidden="true" class="header-anchor">#</a> conda需要的包</h3> <p>不带版本号的直接安就行</p> <div class="language- extra-class"><pre class="language-text"><code>coreapi
+django               2.2(最新的3不兼容xadmin)
+django-cors-headers  
+django-crispy-forms  
+django-filter        
+django-formtools     
+django-import-export 
+django-redis         
+django-reversion     
+djangorestframework
+future               
+httplib2             
+Jinja2               
+Markdown             
+PyMySQL              
+pytz                 
+redis                
+six                  
+xlrd                 
+Xlsxwriter           
+xlwt                 
+mysqlclient(windows 拓展站下载轮子)linux直接安
+xadmin(最好直接把源码包放目录下,去github安直接pip版本不对)
+</code></pre></div><details><summary><B><I style="cursor:pointer;color:#0e5870;">xadmin包和懒人命令</I></B></summary> <p>这是环境必须要求的</p> <div class="language-shell extra-class"><pre class="language-text"><code>pip install django==2.2 django-cors-headers django-crispy-forms django-filter django-formtools django-import-export django-redis django-reversion djangorestframework future httplib2 Jinja2 Markdown PyMySQL pytz redis six xlrd Xlsxwriter xlwt djangorestframework_simplejwt ldap django_auth_ldap coreapi drf-yasg django-rest-swagger
+</code></pre></div><p>这是可选的</p> <div class="language-py extra-class"><pre class="language-py"><code>pip install pymongo mongoengine requests elasticsearch drf<span class="token operator">-</span>haystack 
+</code></pre></div><br> <p>可以查查haystack是怎么用的<br> <strong>安装xadmin</strong></p> <div class="language-shell extra-class"><pre class="language-text"><code>pip install https://codeload.github.com/sshwsfc/xadmin/zip/django2
+</code></pre></div><br>
+但是直接安装不能自己修改里面的css图标和插件,当然你也可以找到site-packages修改,但是比较麻烦
+</details> <h3 id="ide配置"><a href="#ide配置" aria-hidden="true" class="header-anchor">#</a> IDE配置</h3> <ul><li>project interpreter设置使用刚刚创建的环境</li> <li>Languages&amp;Frameworks-&gt;Template Languages-&gt;jinja2</li> <li>Run/Edit configuration配置好环境</li> <li>在项目目录下创建目录<code>apps</code>,<code>extra_apps</code>,<code>templates</code>,<code>static</code></li></ul> <h2 id="修改setting"><a href="#修改setting" aria-hidden="true" class="header-anchor">#</a> 修改setting</h2> <h3 id="更改目录"><a href="#更改目录" aria-hidden="true" class="header-anchor">#</a> 更改目录</h3> <p>将apps,extra_apps目录加入系统搜寻路径,并在pycahrm中设置为sources root</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment">#在这段下面加</span>
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> sys <span class="token comment"># 引入sys</span>
+<span class="token comment"># Build paths inside the project like this: os.path.join(BASE_DIR, ...)</span>
+BASE_DIR <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>BASE_DIR<span class="token punctuation">)</span> <span class="token comment"># 加入路径</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span><span class="token string">&quot;apps&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 加入路径</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span><span class="token string">&quot;extra_apps&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 加入路径</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><h3 id="installed-apps加入"><a href="#installed-apps加入" aria-hidden="true" class="header-anchor">#</a> INSTALLED_APPS加入</h3> <div class="language-py extra-class"><pre class="language-py"><code><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">&quot;crispy_forms&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;xadmin&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;corsheaders&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">'reversion'</span><span class="token punctuation">,</span>
+    <span class="token string">'rest_framework'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><h3 id="middleware修改添加跨域插件"><a href="#middleware修改添加跨域插件" aria-hidden="true" class="header-anchor">#</a> MIDDLEWARE修改添加跨域插件</h3> <div class="language-py extra-class"><pre class="language-py"><code>MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">'corsheaders.middleware.CorsMiddleware'</span><span class="token punctuation">,</span><span class="token comment"># 加入这个</span>
+    <span class="token string">'django.middleware.common.CommonMiddleware'</span><span class="token punctuation">,</span><span class="token comment"># 一定要在这个得前面</span>
+      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">]</span>
+</code></pre></div><h3 id="修改templates-使用jinja2"><a href="#修改templates-使用jinja2" aria-hidden="true" class="header-anchor">#</a> 修改TEMPLATES,使用jinja2</h3> <div class="language-py extra-class"><pre class="language-py"><code>
+CONTEXT_PROCESSORS <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token comment"># 这个是原来自带的,拿出来</span>
+    <span class="token string">'django.template.context_processors.debug'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.template.context_processors.request'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.auth.context_processors.auth'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.messages.context_processors.messages'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+TEMPLATES <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">'BACKEND'</span><span class="token punctuation">:</span> <span class="token string">'django.template.backends.django.DjangoTemplates'</span><span class="token punctuation">,</span>
+        <span class="token string">'DIRS'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">'APP_DIRS'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+        <span class="token string">'OPTIONS'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'context_processors'</span><span class="token punctuation">:</span> CONTEXT_PROCESSORS<span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token comment"># 提上去了,没变</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token comment"># 新增的Jinja2模板,配置差不多</span>
+        <span class="token string">'BACKEND'</span><span class="token punctuation">:</span> <span class="token string">'django.template.backends.jinja2.Jinja2'</span><span class="token punctuation">,</span>
+        <span class="token string">'DIRS'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">'templates'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">'APP_DIRS'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+        <span class="token string">'OPTIONS'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">'context_processors'</span><span class="token punctuation">:</span> CONTEXT_PROCESSORS<span class="token punctuation">,</span>
+            <span class="token string">'environment'</span><span class="token punctuation">:</span> <span class="token string">'文件位置.jinja2.environment'</span> <span class="token comment"># 文件在下面xadmin那里创建</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>DB你愿意用什么就用什么,这里提供mysql的方法</p> <div class="language-py extra-class"><pre class="language-py"><code>DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">&quot;***&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;USER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PASSWORD&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;****&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;HOST&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;127.0.0.1&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PORT&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;3306&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;OPTIONS&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;charset&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;utf8mb4&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>DB添加<code>OPTIONS</code>解决Incorrect string value: '\xF0\x9F\x98\x81'</p></div> <h3 id="修改static和media路径"><a href="#修改static和media路径" aria-hidden="true" class="header-anchor">#</a> 修改static和media路径</h3> <h3 id="修改时区添加跨域配置"><a href="#修改时区添加跨域配置" aria-hidden="true" class="header-anchor">#</a> 修改时区添加跨域配置</h3> <p>先修改这三个</p> <div class="language-py extra-class"><pre class="language-py"><code>LANGUAGE_CODE <span class="token operator">=</span> <span class="token string">'zh-hans'</span>
+
+TIME_ZONE <span class="token operator">=</span> <span class="token string">'Asia/Shanghai'</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+USE_TZ <span class="token operator">=</span> <span class="token boolean">False</span>
+</code></pre></div><p>在这最后面添加</p> <div class="language-py extra-class"><pre class="language-py"><code>CORS_ALLOW_CREDENTIALS <span class="token operator">=</span> <span class="token boolean">True</span>
+CORS_ORIGIN_ALLOW_ALL <span class="token operator">=</span> <span class="token boolean">True</span>
+
+
+CORS_ALLOW_METHODS <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token string">'DELETE'</span><span class="token punctuation">,</span>
+    <span class="token string">'GET'</span><span class="token punctuation">,</span>
+    <span class="token string">'OPTIONS'</span><span class="token punctuation">,</span>
+    <span class="token string">'PATCH'</span><span class="token punctuation">,</span>
+    <span class="token string">'POST'</span><span class="token punctuation">,</span>
+    <span class="token string">'PUT'</span><span class="token punctuation">,</span>
+    <span class="token string">'VIEW'</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+CORS_ALLOW_HEADERS <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token string">'XMLHttpRequest'</span><span class="token punctuation">,</span>
+    <span class="token string">'X_FILENAME'</span><span class="token punctuation">,</span>
+    <span class="token string">'accept-encoding'</span><span class="token punctuation">,</span>
+    <span class="token string">'authorization'</span><span class="token punctuation">,</span>
+    <span class="token string">'content-type'</span><span class="token punctuation">,</span>
+    <span class="token string">'dnt'</span><span class="token punctuation">,</span>
+    <span class="token string">'origin'</span><span class="token punctuation">,</span>
+    <span class="token string">'user-agent'</span><span class="token punctuation">,</span>
+    <span class="token string">'x-csrftoken'</span><span class="token punctuation">,</span>
+    <span class="token string">'x-requested-with'</span><span class="token punctuation">,</span>
+    <span class="token string">'Pragma'</span><span class="token punctuation">,</span>
+    <span class="token string">'x-token'</span><span class="token punctuation">,</span>
+    <span class="token string">'X-Token'</span><span class="token punctuation">,</span><span class="token comment"># veu 请求的header允许跨域</span>
+
+<span class="token punctuation">)</span>
+</code></pre></div><h2 id="使用xadmin"><a href="#使用xadmin" aria-hidden="true" class="header-anchor">#</a> 使用Xadmin</h2> <h3 id="引入"><a href="#引入" aria-hidden="true" class="header-anchor">#</a> 引入</h3> <ol><li>先修改url,在<code>urls</code>文件中把<code>admin.site.urls</code>改为<code>xadmin</code></li> <li>替换css和图标
+<ul><li>去这个网站下载图标4.7版本（xadmin暂时不支持5以上,一定要下载4.7），解压css和font覆盖文件</li> <li>目录在<code>.\extra_apps\xadmin\static\xadmin\vendor\font-awesome</code>下</li> <li>使用的时候去这个网站找到对应版本的icon，想要哪个直接复制css给model_icon</li></ul></li> <li>修正使用jinja2的时候Xadmin报错
+<ul><li>首先在<code>settings.py</code>同目录下创建两个文件<code>backends.py</code>和<code>jinja2.py</code>内容如下</li> <li><code>'environment': '文件位置.jinja2.environment' # 文件在下面xadmin那里创建</code>文件位置修改为<code>jinja2.py</code>所在的位置</li></ul></li></ol> <p>backends.py</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> sys
+
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>template<span class="token punctuation">.</span>backends <span class="token keyword">import</span> jinja2 <span class="token keyword">as</span> jinja2backend
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>template<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>utils <span class="token keyword">import</span> csrf_input_lazy<span class="token punctuation">,</span> csrf_token_lazy
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>template <span class="token keyword">import</span> TemplateDoesNotExist<span class="token punctuation">,</span> TemplateSyntaxError
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>module_loading <span class="token keyword">import</span> import_string
+<span class="token keyword">import</span> jinja2
+<span class="token keyword">import</span> six
+
+
+<span class="token keyword">class</span> <span class="token class-name">Jinja2Backend</span><span class="token punctuation">(</span>jinja2backend<span class="token punctuation">.</span>Jinja2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>context_processors <span class="token operator">=</span> <span class="token punctuation">[</span>
+            import_string<span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+            <span class="token keyword">for</span> p <span class="token keyword">in</span> params<span class="token punctuation">[</span><span class="token string">'OPTIONS'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'context_processors'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Jinja2Backend<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">from_string</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> template_code<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> Template<span class="token punctuation">(</span>
+            self<span class="token punctuation">.</span>env<span class="token punctuation">.</span>from_string<span class="token punctuation">(</span>template_code<span class="token punctuation">)</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>context_processors<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_template</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> template_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> Template<span class="token punctuation">(</span>
+                self<span class="token punctuation">.</span>env<span class="token punctuation">.</span>get_template<span class="token punctuation">(</span>template_name<span class="token punctuation">)</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>context_processors<span class="token punctuation">)</span>
+        <span class="token keyword">except</span> jinja2<span class="token punctuation">.</span>TemplateNotFound <span class="token keyword">as</span> exc<span class="token punctuation">:</span>
+            six<span class="token punctuation">.</span>reraise<span class="token punctuation">(</span>TemplateDoesNotExist<span class="token punctuation">,</span> TemplateDoesNotExist<span class="token punctuation">(</span>exc<span class="token punctuation">.</span>args<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        sys<span class="token punctuation">.</span>exc_info<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> jinja2<span class="token punctuation">.</span>TemplateSyntaxError <span class="token keyword">as</span> exc<span class="token punctuation">:</span>
+            six<span class="token punctuation">.</span>reraise<span class="token punctuation">(</span>TemplateSyntaxError<span class="token punctuation">,</span> TemplateSyntaxError<span class="token punctuation">(</span>exc<span class="token punctuation">.</span>args<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        sys<span class="token punctuation">.</span>exc_info<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Template</span><span class="token punctuation">(</span>jinja2backend<span class="token punctuation">.</span>Template<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> template<span class="token punctuation">,</span> context_processors<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>template <span class="token operator">=</span> template
+        self<span class="token punctuation">.</span>context_processors <span class="token operator">=</span> context_processors
+
+    <span class="token keyword">def</span> <span class="token function">render</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> context<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> request<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> context <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            context <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token keyword">if</span> request <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            context<span class="token punctuation">[</span><span class="token string">'request'</span><span class="token punctuation">]</span> <span class="token operator">=</span> request
+            lazy_csrf_input <span class="token operator">=</span> csrf_input_lazy<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+            context<span class="token punctuation">[</span><span class="token string">'csrf'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">lambda</span><span class="token punctuation">:</span> lazy_csrf_input
+            context<span class="token punctuation">[</span><span class="token string">'csrf_input'</span><span class="token punctuation">]</span> <span class="token operator">=</span> lazy_csrf_input
+            context<span class="token punctuation">[</span><span class="token string">'csrf_token'</span><span class="token punctuation">]</span> <span class="token operator">=</span> csrf_token_lazy<span class="token punctuation">(</span>request<span class="token punctuation">)</span>
+            <span class="token keyword">for</span> cp <span class="token keyword">in</span> self<span class="token punctuation">.</span>context_processors<span class="token punctuation">:</span>
+                context<span class="token punctuation">.</span>update<span class="token punctuation">(</span>cp<span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token comment"># print(context)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>template<span class="token punctuation">.</span>render<span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+</code></pre></div><p>jinja2.py</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># myapp/jinja2.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>staticfiles<span class="token punctuation">.</span>storage <span class="token keyword">import</span> staticfiles_storage
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> reverse
+
+<span class="token keyword">from</span> jinja2 <span class="token keyword">import</span> Environment
+
+
+<span class="token keyword">def</span> <span class="token function">environment</span><span class="token punctuation">(</span><span class="token operator">**</span>options<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    env <span class="token operator">=</span> Environment<span class="token punctuation">(</span><span class="token operator">**</span>options<span class="token punctuation">)</span>
+    env<span class="token punctuation">.</span><span class="token builtin">globals</span><span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token string">'static'</span><span class="token punctuation">:</span> staticfiles_storage<span class="token punctuation">.</span>url<span class="token punctuation">,</span>
+        <span class="token string">'url'</span><span class="token punctuation">:</span> reverse<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> env
+
+</code></pre></div><p>在尝试进入admin就不会报错了</p> <div id="vcomments"></div></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>4/4/2020, 8:11:56 AM</span></div></div> <div class="page-nav" data-v-cdcae5a4><p class="inner" data-v-cdcae5a4><!----> <span class="next" data-v-cdcae5a4><a href="/blog/back/python/django/django1.html" data-v-cdcae5a4>
+          Django[1]
+        </a>
+        →
+      </span></p></div> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/59.388b8a2f.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

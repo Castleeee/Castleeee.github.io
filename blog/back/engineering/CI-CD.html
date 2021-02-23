@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CI/CD | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/5.b5540d72.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/back/engineering/CI-CD.html#travisci" class="sidebar-link">travisCI</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#概念" class="sidebar-link">概念</a></li><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#代码之外的配置" class="sidebar-link">代码之外的配置</a></li><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#自定义规则" class="sidebar-link">自定义规则</a></li><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#上传到服务器指定目录" class="sidebar-link">上传到服务器指定目录</a></li><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#奖励" class="sidebar-link">奖励</a></li></ul></li><li><a href="/blog/back/engineering/CI-CD.html#gitea" class="sidebar-link">gitea</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#自定义" class="sidebar-link">自定义</a></li><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#备份" class="sidebar-link">备份</a></li></ul></li><li><a href="/blog/back/engineering/CI-CD.html#gitlabci" class="sidebar-link">GitLabCI</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/engineering/CI-CD.html#有时间再看" class="sidebar-link">有时间再看</a></li></ul></li><li><a href="/blog/back/engineering/CI-CD.html#jenkins" class="sidebar-link">Jenkins</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/engineering/CI-CD.html#参考资料" class="sidebar-link">参考资料</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>CI/CD</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>3/10/2019</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      CI/CD
+    </span><span class="tag-item" data-v-2c25cede>
+      软件工程
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span><span class="tag-item" data-v-2c25cede>
+      后端
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><h2 id="travisci"><a href="#travisci" aria-hidden="true" class="header-anchor">#</a> travisCI</h2> <h3 id="概念"><a href="#概念" aria-hidden="true" class="header-anchor">#</a> 概念</h3> <p><a href="https://www.redhat.com/zh/topics/devops/what-is-ci-cd">看这里</a>,CI工具有很多，不过我不是devops，用的也很少，这里因为博客一直是写在vuepress上
+<br>每次发布提交的流程：npm build-&gt;提交到git-&gt;然后使用ftp传到blog目录下。<br>
+每次都这样很麻烦，而且必须攒攒一大块更新才发，有了CI就方便多了。<br>
+常用工具:</p> <ul><li><a href="https://about.gitlab.com/product/continuous-integration/">GitLabCI</a> <ul><li>标准企业级CI/CD,不过需要gitlab，后面再学现在用不到</li></ul></li> <li><a href="https://circleci.com/">CircleCI</a> <ul><li>对github支持很友好的CI，而且功能很强支持自定义的CI，如果有更高的需求可以试一下</li></ul></li> <li><a href="https://travis-ci.org/">travisCI</a> <ul><li>我所使用的CI</li></ul></li> <li><a href="https://jenkins.io/">jenkins</a> <ul><li>重量级的CI，java写的插件丰富。不过我好像也用不到</li></ul></li></ul> <p>工具选择上我的需要是我提交代码之后让他不用再本机上就能自动build，然后复制到我服务器的blog目录下。<br>
+travisCI已经完全满足我的需求，对公有仓库免费，私有收费。因为是博客也没什么好隐藏的，直接把仓库弄成公有的。<br></p> <h3 id="代码之外的配置"><a href="#代码之外的配置" aria-hidden="true" class="header-anchor">#</a> 代码之外的配置</h3> <p>假设你现在有一个本地的(vuepress)工程并且受git控制，你的发布流程应该和我是差不多的。要使用CI接下来要做的这么几件事</p> <ul><li>注册一个<a href="https://github.com/">Github</a>账号,并使用账号登录<a href="https://travis-ci.org/">travisCI</a></li> <li>通过webstorm在Github创建你的工程</li> <li>添加文件，让travisCI监听该repo</li></ul> <p>在这里点击右上角登陆，按照提示注册一个账号，登进来应该是这样的。
+</p><div align="center"><img src="/assets/img/截图2019-04-04_21-02-03.15401f24.png" style="height: 250px"></div>
+然后进入CircleCI再sing in with Github
+<div align="center"><img src="/assets/img/截图2019-04-04_21-03-17.cd59d415.png" style="height: 250px"></div>
+在webstorm打开本地工程，配置一下github
+<div align="center"><img src="/assets/img/截图2019-04-04_21-07-46.b1847c33.png" style="height: 450px"></div> <div align="center"><img src="/assets/img/截图2019-04-04_21-09-30.29baa4c5.png" style="height: 250px"></div>
+我的已经发布过了所以会报错，没发布过的不会报错不要紧。别点private。<br>
+一会就发布完了，现在登陆github和travisCI会发现自己多了工程。<br>
+这时候试一下能不能正常的push，pull，commit。如果不能，在github的sshkey管理中<a href="https://blog.csdn.net/fenghuibian/article/details/73350890">添加公钥</a>
+然后工程根目录下新建一个空的<code>.travis.yml</code>文件，commit，push<br> <div align="center"><img src="/assets/img/截图2019-04-04_21-21-56.bcce9d59.png" style="height: 280px"></div>
+在travisCI中打开监听，然后点进去
+<div align="center"><img src="/assets/img/截图2019-04-04_21-20-14.dc393f3f.png" style="height: 290px"></div>
+这时候我们已经完成了代码托管，travisCI监听，当你push到GitHub，travisCI就会自动按照<code>.travis.yml</code>的规则给你构建。
+接下来我们就要自定义规则和推送到服务器<p></p> <h3 id="自定义规则"><a href="#自定义规则" aria-hidden="true" class="header-anchor">#</a> 自定义规则</h3> <p><code>.travis.yml</code>有默认的语法和选项，不过我们要配置一下才能适应自己的工程。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">language</span><span class="token punctuation">:</span> <span class="token comment">#node_js#使用node环境</span>
+<span class="token key atrule">node_js</span><span class="token punctuation">:</span> <span class="token comment">#node大版本</span>
+<span class="token punctuation">-</span> <span class="token string">'10'</span>
+<span class="token key atrule">branchs</span><span class="token punctuation">:</span> <span class="token comment">#监听哪个分支</span>
+  <span class="token key atrule">only</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> master
+<span class="token key atrule">addons</span><span class="token punctuation">:</span> <span class="token comment">#额外的嘱咐，添加下面的ip可以第一次登录不需要你输入yes</span>
+  <span class="token key atrule">ssh_known_hosts</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> 你的.服务.器的.地址
+<span class="token key atrule">before_install</span><span class="token punctuation">:</span> <span class="token comment">#这个先不要管他怎么来的</span>
+<span class="token punctuation">-</span> openssl aes<span class="token punctuation">-</span>256<span class="token punctuation">-</span>cbc <span class="token punctuation">-</span>K $encrypted_xxxxxxxx_key <span class="token punctuation">-</span>iv $encrypted_xxxxxxxx_iv
+  <span class="token punctuation">-</span>in id_rsa.enc <span class="token punctuation">-</span>out ~/.ssh/id_rsa <span class="token punctuation">-</span>d
+<span class="token punctuation">-</span> chmod <span class="token punctuation">-</span>R 600 ~/.ssh/id_rsa <span class="token comment">#注意改权限</span>
+<span class="token key atrule">script</span><span class="token punctuation">:</span> <span class="token comment">#你平时怎么build的</span>
+<span class="token punctuation">-</span> npm run docs<span class="token punctuation">:</span>build
+<span class="token key atrule">notifications</span><span class="token punctuation">:</span> <span class="token comment">#邮件提醒，太他妈人性化了</span>
+  <span class="token key atrule">email</span><span class="token punctuation">:</span>
+    <span class="token key atrule">recipients</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> xxxxxx@qq.com
+    <span class="token key atrule">on_success</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">on_failure</span><span class="token punctuation">:</span> always
+<span class="token key atrule">after_success</span><span class="token punctuation">:</span> <span class="token comment">#构建成功后的动作</span>
+<span class="token punctuation">-</span> chmod <span class="token punctuation">-</span>R 600 ~/.ssh/id_rsa<span class="token comment">#权限</span>
+<span class="token punctuation">-</span> scp <span class="token punctuation">-</span>o StrictHostKeyChecking=no <span class="token punctuation">-</span>v <span class="token punctuation">-</span>r docs/.vuepress/dist/* travis@你的.服务.器的.地址<span class="token punctuation">:</span>/你的/博客目录 <span class="token comment">#一会着重讲解scp命令，先不说</span>
+
+</code></pre></div><p>需要其他语句自己去查，阮一峰的blog和官网上有<br></p> <p>先试一下这个脚本看看监听构建成功不</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>
+<span class="token key atrule">language</span><span class="token punctuation">:</span> node_js<span class="token comment">#使用node环境</span>
+<span class="token key atrule">node_js</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token string">'10'</span>
+<span class="token key atrule">branchs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">only</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> master
+<span class="token key atrule">addons</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ssh_known_hosts</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> 你的.服务.器的.地址
+<span class="token key atrule">script</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> npm run docs<span class="token punctuation">:</span>build
+<span class="token key atrule">notifications</span><span class="token punctuation">:</span>
+  <span class="token key atrule">email</span><span class="token punctuation">:</span>
+    <span class="token key atrule">recipients</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> xxxxxx@qq.com
+    <span class="token key atrule">on_success</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">on_failure</span><span class="token punctuation">:</span> always
+<span class="token key atrule">after_success</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> ls docs/.vuepress/dist
+
+</code></pre></div><p>把这个复制到你的<code>.travis.yml</code>里，过几分钟（监听有延迟）刷新travisCI那个页面应该就出日志了，最后应该给passing了就可以了。
+</p><div align="center"><img src="/assets/img/125C7BB7-A457-4DA1-877C-9932BB4BA520.e85fe07d.jpeg" style="height: 300px"></div><p></p> <p>现在我们已经可以提交到git之后自己build了，但是我们需要上传到自己服务器。前面可能很好做，下面会有坑。</p> <h3 id="上传到服务器指定目录"><a href="#上传到服务器指定目录" aria-hidden="true" class="header-anchor">#</a> 上传到服务器指定目录</h3> <h3>登陆原理</h3> <p>mv和cp是在本机上操作文件，scp是用ssh连接远程传输文件，上传必定要登陆，但是在自动化构建过程中不允许交互，
+ssh和scp都需要<a href="https://blog.csdn.net/mmd0308/article/details/73825953">免密登陆</a>。 <br><br>
+传统免密登陆过程<code>ssh-keygen</code>互相交换公钥，放到<code>authorized_keys</code> 中，客户端发起连接请求时，服务器发送一个字符串给客户端，
+客户端用本地的私钥对字符串进行加密然后发送给服务器，服务器将收到的加密字符串用公钥解密，如果能解密成功就登陆成功。
+下次登陆直接<code>ssh username@ip</code>就可以了。 <br> <br> 但是我们无法控制travis的主机，自然就无法交换，
+况且这也是不安全的暴露在公网上。这时候就需要让Travis伪装成一个受信的客户端去连接。也就是我们
+需要有一对公钥/私钥对，公钥已经保存在我们的Linux服务器中，私钥保存在某个Travis能访问到的地方，在必要的时候
+用这个私钥去连接服务器，这里我们可以把私钥放在Git代码仓库中，但是直接把私钥放代码中不安全，
+所以Travis提供了对私钥进行加密的功能，我们可以把私钥加密之后放在代码仓库，在登陆的时候Travis解密该私钥用于连接。
+</p><h3>服务器操作</h3><p></p> <p>公钥私钥是成对的，直接在服务器上操作就可以。我们要做的：</p> <ul><li>新建用户，改权限</li> <li>服务器生成公钥和私钥</li> <li>将公钥添加进<code>authorized_keys</code> 中</li> <li>私钥用<code>两个特殊字符串</code>加密放到<code>repository</code>的<code>id_rsa.enc</code>中让travis可以通过保存在网站后台的<code>两个特殊字符串</code>拿到私钥</li> <li>在脚本中测试能不能免密登陆</li> <li>上传文件</li></ul> <ol><li>新建用户，修改权限</li></ol> <div class="language-shell extra-class"><pre class="language-text"><code>#新建用户
+useradd travis
+#修改密码,按照提示设置密码。
+passwd travis
+#为用户添加添加权限
+vim /etc/sudoers
+#找到#Allow root to run any commands anywhere这一段注释，在下面新增一行：
+
+travis  ALL=(ALL)   ALL
+#切换到travis用户
+su travis
+</code></pre></div><ol start="2"><li>在travis用户下，～目录生成rsa密钥对，passphase留空
+<div align="center"><img src="/assets/img/屏幕快照 2019-04-05 上午9.18.07.cd09bd4b.png" style="height: 360px"></div>
+更改ssh文件夹的权限，.ssh目录设置为700权限，.ssh目录下面的所有文件设置为600权限</li></ol> <div class="language-shell extra-class"><pre class="language-text"><code>chmod -R 700 ~/.ssh/
+
+chmod 600 ~/.ssh/*
+
+#看一下改成功了没
+ls -al
+
+ls ~/.ssh/ -al
+
+总用量 28
+drwx------  2 travis travis 4096 4月   4 16:15 .
+drwx------ 11 travis travis 4096 4月   4 16:21 ..
+-rw-------  1 travis travis  412 4月   4 16:12 authorized_keys
+-rw-------  1 travis travis  135 4月   3 18:41 config
+-rw-------  1 travis travis 1679 4月   3 18:28 id_rsa
+-rw-------  1 travis travis  412 4月   3 18:28 id_rsa.pub
+-rw-------  1 travis travis 1372 4月   3 20:11 known_hosts
+
+</code></pre></div><ol start="3"><li>在～/.ssh目录下把公钥添加进信任列表<code>authorized_keys</code>里面</li></ol> <div class="language-shell extra-class"><pre class="language-text"><code>cd .ssh/
+#将公钥内容输出到authorized_keys中
+cat id_rsa.pub &gt;&gt; authorized_keys
+cat authorized_keys 
+</code></pre></div><p>这样我们就能以travis用户身份用私钥登陆服务器了<br>
+测试一下能否免密登陆</p> <div class="language-shell extra-class"><pre class="language-text"><code>cd ~/.ssh
+
+vim config
+
+#config文件中的内容
+
+Host test
+HostName 你的.服务.器的.地址
+#登陆的用户名
+User travis
+IdentitiesOnly yes
+#登陆使用的密钥
+IdentityFile ~/.ssh/id_rsa
+
+#config文件中的内容结束，下面回到shell
+
+#一定要更该权限
+chmod -R 600 config 
+chmod -R 600 authorized_keys 
+
+#测试
+ssh test
+</code></pre></div><div align="center"><img src="/assets/img/屏幕快照 2019-04-05 上午9.39.41.31317108.png" style="height: 360px"></div> <p>接下来我们要把加密的私钥<code>id_rsa.enc</code>放到<code>repository</code></p> <ol start="4"><li>安装rvm-&gt;ruby-&gt;gem-&gt;travis客户端工具，真够麻烦的，为了用这个工具必须用gem和ruby</li></ol> <div class="language- extra-class"><pre class="language-text"><code>#安装rvm
+curl -sSL https://get.rvm.io | bash -s stable
+#测试一下
+rvm version
+#rvm 1.29.3 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+
+#安装ruby，我看的博客上不成功换了root，我的成功了
+rvm install ruby
+#测试一下
+
+ruby --version
+#ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+
+gem
+#RubyGems is a sophisticated package manager for Ruby.  This is a
+#basic help message containing pointers to more information.
+#
+#  Usage:
+#    gem -h/--help
+#    gem -v/--version
+#    gem comma....(输出太长了不写
+
+#查看gem的源
+gem sources -l
+# *** CURRENT SOURCES ***
+
+
+# 啥也没有，添加一个国内源
+gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+gem sources -l
+
+# *** CURRENT SOURCES ***
+# https://rubygems.org/
+
+</code></pre></div><p>rvm安完了我们来安装和配置travis客户端，客户端走的git服务，不用担心泄露</p> <div class="language- extra-class"><pre class="language-text"><code># 安装客户端，没权限就用root
+gem install travis
+
+# 完事看一下能用吗
+travis
+# Usage: travis COMMAND ...
+# 
+# Available commands:
+#   accoout....
+</code></pre></div><ol start="5"><li>在travis用户下从git拉下你的<code>repository</code>，放在～目录下 <code>git clone xxxx.git</code><br></li></ol> <p>进入你刚下载的repo里面(现在你的目录应该是～/你的repo)</p> <div class="language-shell extra-class"><pre class="language-text"><code>travis login
+# We need your GitHub login to identify you.
+# This information will not be sent to Travis CI, only to api.github.com.
+# The password will not be displayed.
+# 
+# Try running with --github-token or --auto if you dont want to enter your password anyway.
+# 
+# Username: 241****18@qq.com
+# Password for 241****18@qq.com: ******
+# Successfully logged in as Ca****le
+
+travis encrypt-file ~/.ssh/id_rsa --add
+
+# 让你填yes你就填，不要乱按以免生成一些奇怪的文件
+
+</code></pre></div><p>运行完就已经生成好了id_rsa.enc，并且你的<code>.travis.yml</code>已经被更改了
+它会自动添上,手动chmod一下，然后把 <em>自动添加的2</em> 前面的<code>\</code> 去掉，<code>~\/.ssh/id_rsa -d</code>-&gt;<code>~/.ssh/id_rsa -d</code>(不去掉可能会找不到目录等等的奇怪问题)</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">...</span>
+
+<span class="token key atrule">before_install</span><span class="token punctuation">:</span> 
+<span class="token punctuation">-</span> openssl aes<span class="token punctuation">-</span>256<span class="token punctuation">-</span>cbc <span class="token punctuation">-</span>K $encrypted_xxxxxxxx_key <span class="token punctuation">-</span>iv $encrypted_xxxxxxxx_iv <span class="token comment"># 自动添加的1</span>
+  <span class="token punctuation">-</span>in id_rsa.enc <span class="token punctuation">-</span>out ~\/.ssh/id_rsa <span class="token punctuation">-</span>d <span class="token comment"># 自动添加的2</span>
+<span class="token punctuation">-</span> chmod <span class="token punctuation">-</span>R 600 ~/.ssh/id_rsa <span class="token comment"># 注意改权限</span>
+
+<span class="token punctuation">...</span>
+</code></pre></div><p>解释下解密命令中 -in 和 -out 参数:</p> <ul><li>-in 参数指定待解密的文件，位于仓库的根目录(Travis执行任务时会先把代码拉到Travis自己的服务器上，并进入仓库更目录)</li> <li>-out 参数指定解密后的密钥存放在Travis服务器的~/.ssh/id_rsa，如果你的后面需要的话可以取这个路径，我看到网上有的SSH登陆方式用到了这个文件</li></ul> <p><small>-----from掘金listener</small></p> <p><br>之后把这两个文件添加进git，commit，push。</p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>git提交信息最好每次都不同，这样travis容易检测会更快构建</p></div> <ol start="6"><li>使用<a href="http://www.runoob.com/linux/linux-comm-scp.html">scp命令</a>免密登陆传输文件。先测试下密钥对能正常使用不<br>
+构建成功后先使用ssh看能登陆不</li></ol> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">...</span>
+<span class="token key atrule">after_success</span><span class="token punctuation">:</span> <span class="token comment">#构建成功后的动作</span>
+<span class="token punctuation">-</span> chmod <span class="token punctuation">-</span>R 600 ~/.ssh/id_rsa<span class="token comment">#权限</span>
+<span class="token punctuation">-</span> ssh travis@你的.服务.器的.地址 <span class="token punctuation">-</span>o StrictHostKeyChecking=no <span class="token punctuation">-</span>i ~/.ssh/id_rsa
+<span class="token punctuation">...</span>
+</code></pre></div><p>等待自动构建一次，这时候ssh应该不会输出任何日志才对，如果要你输入密码，说明密钥没登陆成功</p> <div align="center"><img src="/assets/img/屏幕快照 2019-04-05 上午10.26.27.36026595.png" style="height: 150px"></div> <p>如果要求输入密码的话那么你需要重新生成密钥对，重新加密，然后添加到git commit push<br>
+如果ssh登陆成功了，将ssh替换成scp命令，你可以在本机上先把scp命令写好，确保这条命令能从目录A传送文件到远程目录B，中间输入密码没关系，因为没有私钥。<br>
+然后将<code>.travis.yaml</code>的ssh替换成scp。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">...</span>
+<span class="token key atrule">after_success</span><span class="token punctuation">:</span> <span class="token comment">#构建成功后的动作</span>
+<span class="token punctuation">-</span> chmod <span class="token punctuation">-</span>R 600 ~/.ssh/id_rsa<span class="token comment">#权限</span>
+<span class="token punctuation">-</span> scp <span class="token punctuation">-</span>o StrictHostKeyChecking=no <span class="token punctuation">-</span>v <span class="token punctuation">-</span>r docs/.vuepress/dist/* travis@你的.服务.器的.地址<span class="token punctuation">:</span>/你的/博客目录 <span class="token comment">#一会着重讲解scp命令，先不说</span>
+<span class="token punctuation">...</span>
+</code></pre></div><p>提交上去试试就可以了。,<strong>千万别忘了加<code>chmod -R 600 ~/.ssh/id_rsa</code></strong><br>
+ssh命令别忘了删掉，我在做的时候先ssh然后scp一块用发现scp需要输入密码，ssh不需要。</p> <div align="center"><img src="/assets/img/QQ20190405-0.7d0b909b.png" style="height: 150px"></div> <p>遇到这种情况就再重新生成密钥对。</p> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <ul><li>nginx读取文件夹内的静态文件，如果该文件夹被删除，然后重新上传了一个同名文件夹，有时会报403，最好不要动。
+<br>替换掉文件夹里的静态文件就可以了。</li> <li>rvm默认是不启用的，gem和ruby不能直接在命令行中使用。使用<code>source ~/.bash_profile</code>激活当前ssh窗口的rvm在当前的session可以使用。也就是关闭了窗口重新启动想要使用travis工具就要运行这个命令</li></ul></div> <h3 id="奖励"><a href="#奖励" aria-hidden="true" class="header-anchor">#</a> 奖励</h3> <p>打开<code>travis这个工程的页面</code>，有个小绿标，点一下复制<code>那个网址</code></p> <div align="center"><img src="/assets/img/屏幕快照 2019-04-05 上午11.01.57.d20b29fa.png" style="height: 350px"></div> <p>在你的项目的（不是vuepress的）<code>README.md</code>里面第一行最加入</p> <div class="language-markdown extra-class"><pre class="language-markdown"><code><span class="token url">[![](那个网址)</span>](travis这个工程的页面地址)
+</code></pre></div><p>之后你的repo上会出现一个passing的小绿标
+像这样:</p> <div align="center"><img src="/assets/img/屏幕快照 2019-04-05 上午10.57.34.c7bd0a0c.png" style="height: 200px"></div> <p>爽到～</p> <h2 id="gitea"><a href="#gitea" aria-hidden="true" class="header-anchor">#</a> gitea</h2> <h3 id="安装"><a href="#安装" aria-hidden="true" class="header-anchor">#</a> 安装</h3> <p>直接docker省时省力简单。</p> <div class="language- extra-class"><pre class="language-text"><code>docker run -d --name=gitea -p 2222:22 -p 8000:3000 -v $PWD/giteastore:/data gitea/gitea:latest
+</code></pre></div><p>我在~目录下运行的，所以直接把/data映射到了~/giteastore。8000是外部访问端口，相当于访问内部的3000，就是主要页面，2222是ssh，用作ssh传输repo的。<br>
+按完之后访问public address:8000 就可以看到首页了</p> <div align="center"><img src="/assets/img/截图2019-07-28_09-43-35.590b292f.png" style="height: 450px"></div> <p>点登陆或者注册第一次会有个设置向导，能设置的设置一下，集的smtp要带端口号465，QQ邮箱的密码在网页版qq邮箱账户中开启smtp和pop3之后获取授权码作为密码而不是单纯用密码，推荐sqlite备份好备份</p> <h3 id="自定义"><a href="#自定义" aria-hidden="true" class="header-anchor">#</a> 自定义</h3> <br>
+自定义包括自定义配置-&gt;自定义html页面-&gt;在idea中使用。  <br> <p>我只放我改动的配置,目录在<code>~/giteastore/gitea/conf/app.ini</code>。  <br></p> <p><code>APP_NAME = 年轻人的代码库</code><br>
+这是显示在首页上最大的文字和html标签上面的文字<br> <code>SSH_DOMAIN = 47.101.52.xxx</code><br>
+显示在ssh的地址 <em>ssh://git@47.101.52.xxx:2222/root/wbooks.git</em> <br> <code>ROOT_URL = http://git.ooowl.fun/</code><br>
+HTTP传输的域名或地址，我直接分了个二级域名所以没加端口 <em>http://git.ooowl.fun/root/wbooks.git</em> <br> <code>SSH_PORT = 2222</code><br>
+ssh传输时的端口<br> <code>DOMAIN = git.ooowl.fun</code><br>
+主域名<br> <code>HOST = smtp.qq.com:465</code><br>
+qq的smtp地址，别忘了端口<br></p> <hr> <p>其实不仅能自定义html页面，啥都可以自定义。</p> <ul><li>进入容器中，输入 $GITEA_CUSTOM一般没被脚本改动的就指向/data被映射到外面(/giteastore)去了.</li> <li>这个目录/gitea文件夹下面有些文件,自带的不用管。</li> <li>文件使用的是<a href="https://github.com/go-gitea/gitea">gitea的repo</a>里默认的.比如我想改动首页(在templates/home.tmpl)，我就在这repo下载templates文件夹，改动完home.tmpl把这个文件夹放到gitea文件夹下，读取的时候就优先读取本地的templates，就生效了</li> <li>不用全下载整个repo想改哪个改完对应的放到目录下重启docker就生效</li> <li><a href="https://docs.gitea.io/zh-cn/">官方文档</a>给出了支持的UI以及更多信息
+<br>
+放一张我的首页
+<div align="center"><img src="/assets/img/截图2019-07-28_10-13-14.066a0a50.png" style="height: 450px"></div></li></ul> <hr> <p>在idea中，使用这个东西要先设置。顶上的工具栏-&gt;VCS-&gt;git-&gt;remotes添加。然后add，commit，push不能直接githubshare，也不能添加账户，只能在push的时候输入账号密码。
+</p><div align="center"><img src="/assets/img/截图2019-07-28_10-17-49.670dfb33.png" style="height: 250px"></div><p></p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>一开始总是验证失败 ，后来发现除了pycharm其他的海龟或者gitbash都可以。<br>
+把时设置-&gt;git里的ssh从native改为build-in就好了，应该是pycharm自带的ssh问题。</p></div> <p>应该能正常push，pull，clone了，简单的团队协作应该还不错，除了CI没有之外其他的没什么了。</p> <h3 id="备份"><a href="#备份" aria-hidden="true" class="header-anchor">#</a> 备份</h3> <p>备份非常见简单，昨天一个群里讨论这个事来着，我拿这个做了个实验。</p> <ul><li>首先把正在运行的gitea容器停下(因为两个容器不能同时写一个文件夹)</li> <li><em><strong>docker run -d --name=gitea -p 2300:22 -p 8100:3000 -v $PWD/giteastore/code:/data --name TEST  gitea/gitea</strong></em> <ul><li>重新运行了一个容器，挂载已有的外部data文件夹，访问8100</li> <li>完整的还原了回来数据也没丢，如果重新改了端口记得改配置和域名。
+<br>
+这样只要这个文件夹不丢所有东西就都有，可以写个shell备份。</li></ul></li></ul> <h2 id="gitlabci"><a href="#gitlabci" aria-hidden="true" class="header-anchor">#</a> GitLabCI</h2> <h3 id="有时间再看"><a href="#有时间再看" aria-hidden="true" class="header-anchor">#</a> 有时间再看</h3> <p>Gitlab吃内存太疯狂了8G才够看，工具又重，不是很想弄。最近找到了一个Gitea。一个开源的github项目，原先有个类似的项目Gogs，但是作者不想让别人维护，只允许自己管控整个项目，导致处理速度太慢然后一些人不满意又创立了gitea</p> <h2 id="jenkins"><a href="#jenkins" aria-hidden="true" class="header-anchor">#</a> Jenkins</h2> <p>鸽了</p> <h2 id="参考资料"><a href="#参考资料" aria-hidden="true" class="header-anchor">#</a> 参考资料</h2> <ul><li>travis-ci的
+<ul><li><a href="https://blog.csdn.net/nahancy/article/details/79059135">Linux安全之SSH 密钥创建及密钥登录</a></li> <li><a href="https://juejin.im/post/5a9e1a5751882555712bd8e1">Travis-CI自动化测试并部署至自己的CentOS服务器</a>这篇好</li> <li><a href="https://blog.csdn.net/u014374031/article/details/80268514">travis自动化部署续篇</a></li> <li><a href="http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html">持续集成服务 Travis CI 教程</a>阮一峰的</li> <li><a href="https://blog.gunxueqiu.site/2018/06/02/2018-06-02-travis%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/">travis阿里云自动部署</a></li> <li><a href="https://juejin.im/post/5c9b3934f265da60d429046d">用 Travis CI 打造大前端持续集成和自动化部署</a></li> <li><a href="没有脑子:-）">丢失的智力</a></li></ul></li> <li>gitlab-ci的
+<ul><li>咕咕咕咕咕～
+<div id="vcomments"></div></li></ul></li></ul></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>11/8/2019, 7:50:25 AM</span></div></div> <div class="page-nav" data-v-cdcae5a4><p class="inner" data-v-cdcae5a4><span class="prev" data-v-cdcae5a4>
+        ←
+        <a href="/blog/back/linux/git.html" class="prev" data-v-cdcae5a4>
+          git
+        </a></span> <span class="next" data-v-cdcae5a4><a href="/blog/back/engineering/Gitlab.html" data-v-cdcae5a4>
+          GitLab
+        </a>
+        →
+      </span></p></div> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/5.b5540d72.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

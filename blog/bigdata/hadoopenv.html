@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker搭建Hadoop集群环境 | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/11.c050169c.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/bigdata/hadoopenv.html#环境说明" class="sidebar-link">环境说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#总目标" class="sidebar-link">总目标</a></li></ul></li><li><a href="/blog/bigdata/hadoopenv.html#镜像准备" class="sidebar-link">镜像准备</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#制作镜像" class="sidebar-link">制作镜像</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#镜像互通" class="sidebar-link">镜像互通</a></li></ul></li><li><a href="/blog/bigdata/hadoopenv.html#配置hadoop" class="sidebar-link">配置hadoop</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#伪集群配置" class="sidebar-link">伪集群配置</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#集群镜像配置" class="sidebar-link">集群镜像配置</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#创建从节点" class="sidebar-link">创建从节点</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#免密登录" class="sidebar-link">免密登录</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#启动集群" class="sidebar-link">启动集群</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#验证一下" class="sidebar-link">验证一下</a></li></ul></li><li><a href="/blog/bigdata/hadoopenv.html#出现的问题" class="sidebar-link">出现的问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#安全模式" class="sidebar-link">安全模式</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#文件块丢失" class="sidebar-link">文件块丢失</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#内存不足和属性未指定" class="sidebar-link">内存不足和属性未指定</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/hadoopenv.html#livenodes数量不对" class="sidebar-link">LiveNodes数量不对</a></li></ul></li><li><a href="/blog/bigdata/hadoopenv.html#引用参考" class="sidebar-link">引用参考</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>Docker搭建Hadoop集群环境</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>12/24/2019</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      hadoop
+    </span><span class="tag-item" data-v-2c25cede>
+      数据层
+    </span><span class="tag-item" data-v-2c25cede>
+      分布式
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span><span class="tag-item" data-v-2c25cede>
+      大数据
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><h2 id="环境说明"><a href="#环境说明" aria-hidden="true" class="header-anchor">#</a> 环境说明</h2> <ul><li>win10专业版19.3</li> <li>docker desktop</li> <li>WSL-Ubuntu18.04</li> <li>jdk1.8-8u231</li> <li>hadoop-3.1.3</li></ul> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>docker是windows上的,也就是在WSL中的客户端不能直接挂在WSL的目录,必须能够转化为windows下的目录</p></div> <p>如果不做更改,默认其他盘是在<code>/mnt</code>下的,但是docker挂载目录需要的是可以转化为win下可寻的目录,所以不能直接挂载/mnt/c,会挂载到一个奇怪的目录,而且不能取消<br>
+在WSL中编辑<code>/etc/wsl.conf</code>写入并 <em>重启</em></p> <div class="language-shell extra-class"><pre class="language-text"><code>[automount]
+enabled = true
+root = /
+options = &quot;metadata,umask=22,fmask=11&quot;
+mountFsTab = false
+</code></pre></div><p>之后根目录下会有<code>/c /d /e</code>,想要挂载目录<code>/c/programfiles...</code>就可以了<br>
+同样注意WSL下的<code>$PWD``$HOME</code>和自定义的变量都不能用,WSL的root在<br> <code>/C/Users/ooowl/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/root/</code><br>
+且不可读,但是可以挂载很奇怪.</p> <h3 id="总目标"><a href="#总目标" aria-hidden="true" class="header-anchor">#</a> 总目标</h3> <p>三个机器一主两从</p> <ul><li>hadoop0 192.168.2.10(主)</li> <li>hadoop1 192.168.2.11</li> <li>hadoop2 192.168.2.12</li></ul> <h2 id="镜像准备"><a href="#镜像准备" aria-hidden="true" class="header-anchor">#</a> 镜像准备</h2> <p>我用的centos7,jdk-8u231-linux-x64,Apache下载的hadoop-3.1.3</p> <h3 id="制作镜像"><a href="#制作镜像" aria-hidden="true" class="header-anchor">#</a> 制作镜像</h3> <p>思路:我们需要的是三个装好hadoop和jdk的镜像,并且配置好了ssh
+pull下来centos<code>docker pull centos</code></p> <div class="language- extra-class"><pre class="language-text"><code>NAME                               DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+centos                             The official build of CentOS.                   5734                [OK]           
+</code></pre></div><p>搞出这么个目录来</p> <div class="language- extra-class"><pre class="language-text"><code> root ~&gt;tree hadoopimgs                                                                      
+hadoopimgs
+├── centos-hadoop
+│   ├── Dockerfile #1 ssh
+│   └── hadoop-3.1.3.tar.gz
+├── centos-ssh-jdk
+│   ├── Dockerfile #2 jdk
+│   └── jdk-8u231-linux-x64.tar.gz
+└── centos-ssh-root
+    └── Dockerfile #3 hadoop
+</code></pre></div><p>在windows上下载两个软件然后直接cp进来<br>
+1 ssh的Dockerfile</p> <div class="language- extra-class"><pre class="language-text"><code># 选择一个已有的os镜像作为基础  
+FROM centos 
+   
+# 镜像的作者  
+MAINTAINER shixun
+   
+# 安装openssh-server和sudo软件包，并且将sshd的UsePAM参数设置成no  
+RUN yum install -y openssh-server sudo  
+RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config  
+#安装openssh-clients
+RUN yum  install -y openssh-clients
+RUN yum  install -y net-tools
+RUN yum  install -y vim
+RUN yum  install -y tree
+RUN yum  install -y git
+   
+# 添加测试用户root，密码root，并且将此用户添加到sudoers里  
+RUN echo &quot;root:root&quot; | chpasswd
+RUN echo &quot;root   ALL=(ALL)       ALL&quot; &gt;&gt; /etc/sudoers  
+# 下面这两句比较特殊，在centos6上必须要有，否则创建出来的容器sshd不能登录  
+RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key  
+RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key  
+   
+# 启动sshd服务并且暴露22端口  
+RUN mkdir /var/run/sshd  
+EXPOSE 22  
+CMD [&quot;/usr/sbin/sshd&quot;, &quot;-D&quot;]
+</code></pre></div><p>在这个目录中执行<code>docker build -t &quot;centos-ssh&quot; .</code></p> <p>2 jdk的Dockerfile</p> <div class="language- extra-class"><pre class="language-text"><code>FROM centos-ssh
+ADD ./jdk-8u231-linux-x64.tar.gz /usr/local/
+RUN mv /usr/local/jdk1.8.0_231 /usr/local/jdk1.8
+ENV JAVA_HOME /usr/local/jdk1.8
+ENV PATH $JAVA_HOME/bin:$PATH
+</code></pre></div><p>在这个目录中执行<code>docker build -t &quot;centos-jdk&quot; .</code></p> <p>3 hadoop的Dockerfile</p> <div class="language- extra-class"><pre class="language-text"><code>FROM centos-jdk
+ADD hadoop-3.1.3.tar.gz /usr/local
+RUN mv /usr/local/hadoop-3.1.3  /usr/local/hadoop
+ENV HADOOP_HOME /usr/local/hadoop
+ENV PATH $HADOOP_HOME/bin:$PATH
+</code></pre></div><p>在这个目录中执行<code>docker build -t &quot;centos-hadoop&quot; .</code></p> <p>一定要按顺序执行不能乱序因为后面的镜像需要前面的设置<br>
+然后<code>docker images</code></p> <div class="language- extra-class"><pre class="language-text"><code>REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+centos-hadoop              latest              0775d9e8e35f        25 hours ago        2.79GB
+centos-jdk                 latest              1fb53b406bea        25 hours ago        1.1GB
+centos-ssh                 latest              636c9d7f103e        25 hours ago        297MB
+centos                     latest              0f3e07c0138f        2 months ago        220MB
+</code></pre></div><h3 id="镜像互通"><a href="#镜像互通" aria-hidden="true" class="header-anchor">#</a> 镜像互通</h3> <p>首先我们捋一下思路:我们需要建立三个镜像,并且能够互相访问,有固定的ip这样hadoop可以访问</p> <p>大部分人用的都是pipework建立bridge,但是WSL好像不能用,所以我们选择docker的网络<br>
+首先创建一个网络覆盖192.168.2.10网段,默认bridge模式可以内外访问,名称就是hadoop就好<br> <code>docker network ls</code>查看网络,<code>docker network create --subnet 192.168.2.0/24 hadoop</code>
+然后我们创建1个镜像然后将配置好的镜像提交一个新镜像,直接创建两个一模一样的,先创建下面这样的目录,映射到里面传输数据用(文件是乱七八糟创建的,看看挂载是否成功)</p> <div class="language- extra-class"><pre class="language-text"><code>root&gt;~$tree hadoopdata
+
+hadoopdata
+├── authorized_keys
+├── master0
+│   ├── a.txt
+│   ├── as
+│   └── b.txt
+├── slave1
+│   └── daf
+└── slave2
+    └── sadsadsa
+</code></pre></div><p>WEB界面中监控hdfs:50070,50075<br>
+WEB界面中监控任务执行状况:8088<br>
+访问HDFS:9000<br> <br>
+每个主机都开放ssh,22映射出来
+<br></p> <p><em>命令</em><br>
+hadoop0</p> <div class="language- extra-class"><pre class="language-text"><code>docker run -v /C/Users/ooowl/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/root/hadoopdata:/data 
+--name hadoop0 --hostname hadoop0 
+--net hadoop --ip 192.168.2.10 -d -p 20022:22 -p 50070:50070 -p 8088:8088 -p 9000:9000  
+centos-hadoop
+</code></pre></div><p>注意hostname设置好,相当于给本机预设了DNS,能用名称查询到(为了好看我加了换行记得去掉</p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>我是在WSL上跑的,所以需要映射的目录是从win下能访问到的根目录,直接<code>$HOME</code>和<code>$PWD</code>都不行</p></div> <p>这样配置免密登录就完成了,而且暴露了外网20022,其他机器外网也可以连接</p> <h2 id="配置hadoop"><a href="#配置hadoop" aria-hidden="true" class="header-anchor">#</a> 配置hadoop</h2> <h3 id="伪集群配置"><a href="#伪集群配置" aria-hidden="true" class="header-anchor">#</a> 伪集群配置</h3> <h3>修改配置文件</h3> <p>hadoop的目录在<code>/usr/local/hadoop/</code>,进入<br>
+之后进入<code>/usr/local/hadoop/etc/hadoop</code><br>
+[1] <code>vim hadoop-env.sh</code>,指定运行用户hadoophome等等,如果加进去无效,就加到<code>~/.bashrc</code>里面</p> <div class="language- extra-class"><pre class="language-text"><code>export JAVA_HOME=/usr/local/jdk1.8
+export HDFS_NAMENODE_USER=&quot;root&quot;
+export HDFS_DATANODE_USER=&quot;root&quot;
+export HDFS_SECONDARYNAMENODE_USER=&quot;root&quot;
+export YARN_RESOURCEMANAGER_USER=&quot;root&quot;
+export YARN_NODEMANAGER_USER=&quot;root&quot;
+export HADOOP_INSTALL=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_INSTALL/bin
+export PATH=$PATH:$HADOOP_INSTALL/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
+export HADOOP_COMMON_HOME=$HADOOP_INSTALL
+export HADOOP_HDFS_HOME=$HADOOP_INSTALL
+export YARN_HOME=$HADOOP_INSTALL
+</code></pre></div><p>不添加会报错</p> <div class="language- extra-class"><pre class="language-text"><code>ERROR: Attempting to launch hdfs namenode as root
+ERROR: but there is no HDFS_NAMENODE_USER defined. Aborting launch.
+Starting datanodes
+ERROR: Attempting to launch hdfs datanode as root
+ERROR: but there is no HDFS_DATANODE_USER defined. Aborting launch.
+Starting secondary namenodes [localhost.localdomain]
+ERROR: Attempting to launch hdfs secondarynamenode as root
+ERROR: but there is no HDFS_SECONDARYNAMENODE_USER defined. Aborting launch.
+</code></pre></div><p>[2] <code>vim core-site.xml</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;configuration&gt;
+        &lt;property&gt;
+                &lt;name&gt;fs.defaultFS&lt;/name&gt;
+                &lt;value&gt;hdfs://hadoop0:9000&lt;/value&gt;
+        &lt;/property&gt;
+        &lt;property&gt;
+                &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+                &lt;value&gt;/usr/local/hadoop/tmp&lt;/value&gt;
+        &lt;/property&gt;
+         &lt;property&gt;
+                 &lt;name&gt;fs.trash.interval&lt;/name&gt;
+                 &lt;value&gt;1440&lt;/value&gt;
+        &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></div><p>[3] <code>vim hdfs-site.xml</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+        &lt;value&gt;1&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.permissions&lt;/name&gt;
+        &lt;value&gt;false&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt; 
+        &lt;name&gt;dfs.http.address&lt;/name&gt;
+        &lt;value&gt;0.0.0.0:50070&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></div><p>[4] <code>vim yarn-site.xml</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;configuration&gt;
+        &lt;property&gt;
+                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+                &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+        &lt;/property&gt;
+        &lt;property&gt; 
+                &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt; 
+                &lt;value&gt;true&lt;/value&gt; 
+        &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></div><p>[5] <code>vim mapred-site.xml</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+        &lt;value&gt;yarn&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$HADOOP_HOME&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.map.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$HADOOP_HOME&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$HADOOP_HOME&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+    &lt;name&gt;mapreduce.map.memory.mb&lt;/name&gt;
+    &lt;value&gt;2048&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.map.java.opts&lt;/name&gt;
+        &lt;value&gt;-Xmx2048M&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.reduce.memory.mb&lt;/name&gt;
+        &lt;value&gt;4096&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.reduce.java.opts&lt;/name&gt;
+        &lt;value&gt;-Xmx4096M&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></div><p>我知道很麻烦但是里面没东西也不用找,复制进去就行了😀</p> <p>之后进入<code>cd /usr/local/hadoop</code>,初始化<code>bin/hdfs namenode -format</code></p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>格式化操作不能重复执行。如果一定要重复格式化，带参数-force即可<br>
+格式化必须要进行,否则hdfs模块无法指定.</p></div> <p>出现这个就应该成功了<br></p><div align="center"><img src="/assets/img/Snipaste_2019-12-24_16-50-33.1144f1a8.png" style="height: 200px"></div> <details><summary><B><I style="cursor:pointer;color:#0e5870;">点击查看日志</I></B></summary><p></p> <div class="language- extra-class"><pre class="language-text"><code>WARNING: /usr/local/hadoop/logs does not exist. Creating.
+2019-12-24 08:48:24,278 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = hadoop0/192.168.2.10
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 3.1.3
+STARTUP_MSG:   classpath = /usr/local/hadoop/etc/hadoop:/usr/local/hadoop/share/hadoop/common/lib/jersey-core-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/common/lib/guava-27.0-jre.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-http-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-client-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-databind-2.7.8.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-servlet-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/httpclient-4.5.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-config-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jsch-0.1.54.jar:/usr/local/hadoop/share/hadoop/common/lib/httpcore-4.4.4.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-annotations-3.1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-client-2.13.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-net-3.6.jar:/usr/local/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-recipes-2.13.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-xml-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/re2j-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/netty-3.10.5.Final.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/metrics-core-3.2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/zookeeper-3.4.13.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-server-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-codec-1.11.jar:/usr/local/hadoop/share/hadoop/common/lib/nimbus-jose-jwt-4.41.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-json-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-compress-1.18.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-servlet-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/gson-2.2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-lang3-3.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-server-1.19.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-core-2.7.8.jar:/usr/local/hadoop/share/hadoop/common/lib/failureaccess-1.0.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-auth-3.1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/animal-sniffer-annotations-1.17.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-framework-2.13.0.jar:/usr/local/hadoop/share/hadoop/common/lib/json-smart-2.3.jar:/usr/local/hadoop/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-io-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-webapp-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-server-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-common-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/usr/local/hadoop/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-security-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-annotations-2.7.8.jar:/usr/local/hadoop/share/hadoop/common/lib/checker-qual-2.5.2.jar:/usr/local/hadoop/share/hadoop/common/lib/token-provider-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/error_prone_annotations-2.2.0.jar:/usr/local/hadoop/share/hadoop/common/lib/asm-5.0.4.jar:/usr/local/hadoop/share/hadoop/common/lib/stax2-api-3.1.4.jar:/usr/local/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/usr/local/hadoop/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-util-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/common/lib/snappy-java-1.0.5.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-core-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/avro-1.7.7.jar:/usr/local/hadoop/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/usr/local/hadoop/share/hadoop/common/lib/accessors-smart-1.2.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-1.9.3.jar:/usr/local/hadoop/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-io-2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/usr/local/hadoop/share/hadoop/common/hadoop-nfs-3.1.3.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-3.1.3.jar:/usr/local/hadoop/share/hadoop/common/hadoop-kms-3.1.3.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-3.1.3-tests.jar:/usr/local/hadoop/share/hadoop/hdfs:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/guava-27.0-jre.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-http-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-databind-2.7.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/httpclient-4.5.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsch-0.1.54.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/httpcore-4.4.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/hadoop-annotations-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/curator-client-2.13.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-net-3.6.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/curator-recipes-2.13.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-xml-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/re2j-1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-3.10.5.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/okio-1.6.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-server-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-codec-1.11.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/nimbus-jose-jwt-4.41.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-compress-1.18.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-servlet-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/gson-2.2.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-lang3-3.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-core-2.7.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/hadoop-auth-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/animal-sniffer-annotations-1.17.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/curator-framework-2.13.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/json-smart-2.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-io-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-webapp-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-security-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-annotations-2.7.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/error_prone_annotations-2.2.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/asm-5.0.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-util-ajax-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-util-9.3.24.v20180605.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-all-4.0.52.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/avro-1.7.7.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-beanutils-1.9.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-io-2.5.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.1.3-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.1.3-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.1.3-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.1.3-tests.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.1.3-tests.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn:/usr/local/hadoop/share/hadoop/yarn/lib/objenesis-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/fst-2.50.jar:/usr/local/hadoop/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-4.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/json-io-2.5.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.7.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-base-2.7.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/usr/local/hadoop/share/hadoop/yarn/lib/dnsjava-2.1.7.jar:/usr/local/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/snakeyaml-1.16.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.7.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-client-1.19.jar:/usr/local/hadoop/share/hadoop/yarn/lib/java-util-1.9.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-services-core-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-api-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-services-api-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-client-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-router-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-registry-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-common-3.1.3.jar
+STARTUP_MSG:   build = https://gitbox.apache.org/repos/asf/hadoop.git -r ba631c436b806728f8ec2f54ab1e289526c90579; compiled by 'ztang' on 2019-09-12T02:47Z
+STARTUP_MSG:   java = 1.8.0_231
+************************************************************/
+2019-12-24 08:48:24,285 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2019-12-24 08:48:24,375 INFO namenode.NameNode: createNameNode [-format]
+Formatting using clusterid: CID-7332eeaa-d91e-450a-b79a-4de68bdb1680
+2019-12-24 08:48:24,844 INFO namenode.FSEditLog: Edit logging is async:true
+2019-12-24 08:48:24,856 INFO namenode.FSNamesystem: KeyProvider: null
+2019-12-24 08:48:24,857 INFO namenode.FSNamesystem: fsLock is fair: true
+2019-12-24 08:48:24,857 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2019-12-24 08:48:24,862 INFO namenode.FSNamesystem: fsOwner             = root (auth:SIMPLE)
+2019-12-24 08:48:24,862 INFO namenode.FSNamesystem: supergroup          = supergroup
+2019-12-24 08:48:24,862 INFO namenode.FSNamesystem: isPermissionEnabled = false
+2019-12-24 08:48:24,862 INFO namenode.FSNamesystem: HA Enabled: false
+2019-12-24 08:48:24,925 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2019-12-24 08:48:24,934 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2019-12-24 08:48:24,937 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2019-12-24 08:48:24,942 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2019-12-24 08:48:24,942 INFO blockmanagement.BlockManager: The block deletion will start around 2019 Dec 24 08:48:24
+2019-12-24 08:48:24,943 INFO util.GSet: Computing capacity for map BlocksMap
+2019-12-24 08:48:24,943 INFO util.GSet: VM type       = 64-bit
+2019-12-24 08:48:24,945 INFO util.GSet: 2.0% max memory 444.5 MB = 8.9 MB
+2019-12-24 08:48:24,945 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2019-12-24 08:48:24,954 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2019-12-24 08:48:24,971 INFO Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2019-12-24 08:48:24,971 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2019-12-24 08:48:24,971 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2019-12-24 08:48:24,972 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2019-12-24 08:48:24,974 INFO blockmanagement.BlockManager: defaultReplication         = 1
+2019-12-24 08:48:24,974 INFO blockmanagement.BlockManager: maxReplication             = 512
+2019-12-24 08:48:24,974 INFO blockmanagement.BlockManager: minReplication             = 1
+2019-12-24 08:48:24,974 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2019-12-24 08:48:24,974 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2019-12-24 08:48:24,974 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2019-12-24 08:48:24,974 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2019-12-24 08:48:25,033 INFO namenode.FSDirectory: GLOBAL serial map: bits=24 maxEntries=16777215
+2019-12-24 08:48:25,084 INFO util.GSet: Computing capacity for map INodeMap
+2019-12-24 08:48:25,084 INFO util.GSet: VM type       = 64-bit
+2019-12-24 08:48:25,085 INFO util.GSet: 1.0% max memory 444.5 MB = 4.4 MB
+2019-12-24 08:48:25,085 INFO util.GSet: capacity      = 2^19 = 524288 entries
+2019-12-24 08:48:25,087 INFO namenode.FSDirectory: ACLs enabled? false
+2019-12-24 08:48:25,087 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2019-12-24 08:48:25,087 INFO namenode.FSDirectory: XAttrs enabled? true
+2019-12-24 08:48:25,087 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2019-12-24 08:48:25,092 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2019-12-24 08:48:25,093 INFO snapshot.SnapshotManager: SkipList is disabled
+2019-12-24 08:48:25,097 INFO util.GSet: Computing capacity for map cachedBlocks
+2019-12-24 08:48:25,097 INFO util.GSet: VM type       = 64-bit
+2019-12-24 08:48:25,097 INFO util.GSet: 0.25% max memory 444.5 MB = 1.1 MB
+2019-12-24 08:48:25,098 INFO util.GSet: capacity      = 2^17 = 131072 entries
+2019-12-24 08:48:25,105 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2019-12-24 08:48:25,105 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2019-12-24 08:48:25,105 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2019-12-24 08:48:25,110 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2019-12-24 08:48:25,110 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2019-12-24 08:48:25,113 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2019-12-24 08:48:25,113 INFO util.GSet: VM type       = 64-bit
+2019-12-24 08:48:25,113 INFO util.GSet: 0.029999999329447746% max memory 444.5 MB = 136.5 KB
+2019-12-24 08:48:25,113 INFO util.GSet: capacity      = 2^14 = 16384 entries
+2019-12-24 08:48:25,168 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1918231769-192.168.2.10-1577177305161
+2019-12-24 08:48:25,345 INFO common.Storage: Storage directory /usr/local/hadoop/tmp/dfs/name has been successfully formatted.
+2019-12-24 08:48:25,368 INFO namenode.FSImageFormatProtobuf: Saving image file /usr/local/hadoop/tmp/dfs/name/current/fsimage.ckpt_0000000000000000000 using no compression
+2019-12-24 08:48:25,480 INFO namenode.FSImageFormatProtobuf: Image file /usr/local/hadoop/tmp/dfs/name/current/fsimage.ckpt_0000000000000000000 of size 391 bytes saved in 0 seconds .
+2019-12-24 08:48:25,577 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid &gt;= 0
+2019-12-24 08:48:25,589 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid = 0 when meet shutdown.
+2019-12-24 08:48:25,589 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at hadoop0/192.168.2.10
+************************************************************/
+</code></pre></div></details> <p>最后执行<code>sbin/start-all.sh</code></p> <p>执行<code>jps</code>看到下面的几个进程就成功了</p> <div class="language- extra-class"><pre class="language-text"><code>[root@hadoop0 hadoop]# jps
+1504 NodeManager
+1094 SecondaryNameNode
+1831 Jps
+873 DataNode
+1353 ResourceManager
+699 NameNode
+</code></pre></div><p>停止的时候执行<code>sbin/stop-all.sh</code><br>
+windows外访问<code>127.0.0.1:50070</code>,<code>127.0.0.1:8088</code><br></p><div align="center"><img src="/assets/img/Snipaste_2019-12-24_20-05-06.58eef2bb.png" style="height: 250px"></div> <div align="center"><img src="/assets/img/Snipaste_2019-12-24_20-08-30.d890bf7b.png" style="height: 450px"></div><p></p> <h3 id="集群镜像配置"><a href="#集群镜像配置" aria-hidden="true" class="header-anchor">#</a> 集群镜像配置</h3> <p>[1] 指定nodemanager的地址，修改文件<code>yarn-site.xml</code></p> <div class="language- extra-class"><pre class="language-text"><code>  &lt;property&gt;
+    &lt;description&gt;The hostname of the RM.&lt;/description&gt;
+    &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+    &lt;value&gt;hadoop0&lt;/value&gt;
+  &lt;/property&gt;
+</code></pre></div><p>[2] 修改<code>/usr/local/hadoop/etc/hadoop/works</code></p> <div class="language- extra-class"><pre class="language-text"><code>localhost #不加这个hadoop0就不会被用作DataNode
+hadoop1
+hadoop2
+</code></pre></div><br> <p>停止镜像<code>docker stop hadoop0</code><br>
+提交新镜像<code>docker commit -a &quot;ooowl&quot; -m &quot;ConfiguredHadoop&quot; Hadoop0的id centos-hadoop-confd</code><br> <code>docker images</code></p> <div class="language- extra-class"><pre class="language-text"><code>REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+centos-hadoop-confd        latest              f4d641b36c39        4 minutes ago       2.86GB
+centos-hadoop              latest              0775d9e8e35f        32 hours ago        2.79GB
+centos-jdk                 latest              1fb53b406bea        32 hours ago        1.1GB
+centos-ssh                 latest              636c9d7f103e        32 hours ago        297MB
+mongo                      latest              a0e2e64ac939        5 days ago          364MB
+redis                      latest              dcf9ec9265e0        4 weeks ago         98.2MB
+mysql                      5.7                 1e4405fe1ea9        4 weeks ago         437MB
+nginx                      latest              231d40e811cd        4 weeks ago         126MB
+centos                     latest              0f3e07c0138f        2 months ago        220MB
+docker4w/nsenter-dockerd   latest              2f1c802f322f        14 months ago       187kB
+</code></pre></div><h3 id="创建从节点"><a href="#创建从节点" aria-hidden="true" class="header-anchor">#</a> 创建从节点</h3> <p><em>命令</em><br>
+hadoop1</p> <div class="language- extra-class"><pre class="language-text"><code>docker run -v /C/Users/ooowl/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/root/hadoopdata/:/data 
+--name hadoop1 --hostname hadoop1 
+--net hadoop --ip 192.168.2.11 -d -P -p 20023:22 -p 50071:50070 -p 8089:8088 -p 9001:9000 
+centos-hadoop-confd
+</code></pre></div><p>hadoop2</p> <div class="language- extra-class"><pre class="language-text"><code>docker run -v /C/Users/ooowl/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/root/hadoopdata:/data 
+--name hadoop2 --hostname hadoop2 
+--net hadoop --ip 192.168.2.12 -d -P -p 20024:22 -p 50072:50070 -p 8090:8088 -p 9002:9000 
+centos-hadoop-confd
+</code></pre></div><h3 id="免密登录"><a href="#免密登录" aria-hidden="true" class="header-anchor">#</a> 免密登录</h3> <p>1 现在我们有了三个处在同一子网下的完全一样的镜像,我们下面要做的是配置ssh和免密登录  <br></p> <p>2 <code>docker exec -it hadoop0 bin/bash</code>进入  <br></p> <p>3 <code>ping 192.168.2.11 -c 4</code>ping另外两个ip和百度,能通就行了  <br></p> <p>4 安装vim和which<code>yum install vim which</code> <br></p> <p>5 编辑<code>/etc/ssh/sshd_config</code>,保证
+RSAAuthentication和PubkeyAuthentication,PermitRootLogin是yes没有就添加,Port 22  <br></p> <p>6 <code>ssh-keygen -t rsa</code>一路回车,<code>cat ~/.ssh/id_rsa.pub</code>拿到公钥  <br></p> <p>7 在docker镜像外面hadoopdata下创建<code>authorized_keys</code>,添加进去  <br></p> <p>8 在三个镜像重复一遍操作,之后最好能添加宿主机的公钥,不加也行.<br>
+最后三个镜像中执行<code>cp /data/authorized_keys ~/.ssh</code><br>
+之后测试一下ssh<code>ssh root@192.168.2.11 -p22</code>每个镜像都试试.</p> <div align="center"><img src="/assets/img/Snipaste_2019-12-24_16-32-35.7523f667.png" style="height: 400px"></div> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>可以在第一个镜像里运行一次<code>ssh-keygen -t rsa</code>添加<code>authorized_keys</code>,这样三个镜像应该也能互通,不行的话再用上面的办法<br>
+这一步可以防止livenode数量显示错误</p></div> <h3 id="启动集群"><a href="#启动集群" aria-hidden="true" class="header-anchor">#</a> 启动集群</h3> <p>进入hadoop0<code>docker exec -it hadoop0 /bin/bash</code><br>
+进入<code>/usr/local/hadoop/</code>,<code>sbin/start-all.sh</code><br>
+分别在三个容器里运行<code>jps</code>
+hadoop0</p> <div class="language- extra-class"><pre class="language-text"><code>228 NameNode
+1048 NodeManager
+890 ResourceManager
+378 DataNode
+573 SecondaryNameNode
+1247 Jps
+</code></pre></div><p>hadoop1 hadoop2</p> <div class="language- extra-class"><pre class="language-text"><code>164 NodeManager
+309 Jps
+58 DataNode
+</code></pre></div><p>就启动成功了,接下来解决UUID的问题<br>
+分别删除<code>/usr/local/hadoop/tmp/</code>下的dfs和nm什么,把tmp清空就行了.<br>
+回到<code>cd /usr/local/hadoop</code>,再次格式化<code>bin/hdfs namenode -format</code></p> <h3 id="验证一下"><a href="#验证一下" aria-hidden="true" class="header-anchor">#</a> 验证一下</h3> <p>在50070应该是这样
+8088应该是这样
+在hadoop0的~中跑个wordcount试试</p> <div class="language- extra-class"><pre class="language-text"><code>vi a.txt
+hello you
+hello me
+</code></pre></div><p>上传a.txt到hdfs上</p> <div class="language- extra-class"><pre class="language-text"><code>hdfs dfs -put a.txt /
+</code></pre></div><p>执行wordcount程序</p> <div class="language- extra-class"><pre class="language-text"><code>cd /usr/local/hadoop/share/hadoop/mapreduce
+hadoop jar hadoop-mapreduce-examples-3.1.3.jar wordcount /a.txt /out
+</code></pre></div><p>看看结果</p> <div class="language- extra-class"><pre class="language-text"><code>hdfs dfs -text /out/patr-r-00000
+
+2019-12-25 01:45:21,449 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+hello   2
+me      1
+you     1   
+</code></pre></div><div align="center"><img src="/assets/img/Snipaste_2019-12-25_16-21-02.aa09be30.png" style="height: 400px"></div> <h2 id="出现的问题"><a href="#出现的问题" aria-hidden="true" class="header-anchor">#</a> 出现的问题</h2> <h3 id="安全模式"><a href="#安全模式" aria-hidden="true" class="header-anchor">#</a> 安全模式</h3> <p>安全模式的相关命令:</p> <div class="language- extra-class"><pre class="language-text"><code>获取安全模式的状态:
+
+hdfs dfsadmin -safemode get
+
+安全模式打开
+
+hdfs dfsadmin -safemode enter
+
+安全模式关闭
+
+hdfs dfsadmin -safemode leave
+</code></pre></div><h3 id="文件块丢失"><a href="#文件块丢失" aria-hidden="true" class="header-anchor">#</a> 文件块丢失</h3> <div class="danger custom-block"><p class="custom-block-title">WARNING</p> <p>hdfs在单节点上传之后,在开启多节点之前要把文件删除再重新上传一次,不能直接加节点,块丢失.</p></div> <p>删除:<code>hdfs dfs -rm /a.txt</code>,<code>hdfs dfs -rm -r /out</code></p> <h3 id="内存不足和属性未指定"><a href="#内存不足和属性未指定" aria-hidden="true" class="header-anchor">#</a> 内存不足和属性未指定</h3> <p>[5] <code>vim mapred-site.xml</code><br>
+在上面已经写进去了</p> <div class="language- extra-class"><pre class="language-text"><code>    &lt;property&gt;
+        &lt;name&gt;yarn.app.mapreduce.am.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$HADOOP_HOME&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.map.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$HADOOP_HOME&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.reduce.env&lt;/name&gt;
+        &lt;value&gt;HADOOP_MAPRED_HOME=$HADOOP_HOME&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+    &lt;name&gt;mapreduce.map.memory.mb&lt;/name&gt;
+    &lt;value&gt;2048&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.map.java.opts&lt;/name&gt;
+        &lt;value&gt;-Xmx2048M&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.reduce.memory.mb&lt;/name&gt;
+        &lt;value&gt;4096&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.reduce.java.opts&lt;/name&gt;
+        &lt;value&gt;-Xmx4096M&lt;/value&gt;
+    &lt;/property&gt;
+</code></pre></div><h3 id="livenodes数量不对"><a href="#livenodes数量不对" aria-hidden="true" class="header-anchor">#</a> LiveNodes数量不对</h3> <p>任务正常运行没有任何报错,8088正常三个节点,50070只有一个节点且每次启动节点都会随机变化<br>
+根据网上有一个克隆虚拟机的帖子,猜测可能是datanodeuuid的问题.
+三个节点都进入<code>/usr/local/hadoop/tmp/dfs/name/current</code>,然后<code>cat VERSION</code><br>
+发现uuid一样.<br>
+hadoop0</p> <div class="language- extra-class"><pre class="language-text"><code>[root@hadoop0 hadoop]# cd /usr/local/hadoop/tmp/dfs/name/current
+[root@hadoop0 current]# cat VERSION 
+#Wed Dec 25 07:12:37 UTC 2019
+namespaceID=678964001
+clusterID=CID-dc675f9a-7a43-4ee5-bcd1-669e58096734
+cTime=1577257957962
+storageType=NAME_NODE
+blockpoolID=BP-1966795420-192.168.2.10-1577257957962
+layoutVersion=-64
+</code></pre></div><p>hadoop1</p> <div class="language- extra-class"><pre class="language-text"><code>[root@hadoop1 hadoop]# cd /usr/local/hadoop/tmp/dfs/name/current
+[root@hadoop1 current]# cat VERSION 
+#Wed Dec 25 07:12:37 UTC 2019
+namespaceID=678964001
+clusterID=CID-dc675f9a-7a43-4ee5-bcd1-669e58096734
+cTime=1577257957962
+storageType=NAME_NODE
+blockpoolID=BP-1966795420-192.168.2.10-1577257957962
+layoutVersion=-64
+</code></pre></div><p>hadoop2</p> <div class="language- extra-class"><pre class="language-text"><code>[root@hadoop2 sbin]# cd /usr/local/hadoop/tmp/dfs/name/current
+[root@hadoop2 current]# ls
+VERSION                                        edits_inprogress_0000000000000000002  fsimage_0000000000000000000.md5
+edits_0000000000000000001-0000000000000000001  fsimage_0000000000000000000           seen_txid
+[root@hadoop2 current]# cat VERSION 
+#Wed Dec 25 07:12:37 UTC 2019
+namespaceID=678964001
+clusterID=CID-dc675f9a-7a43-4ee5-bcd1-669e58096734
+cTime=1577257957962
+storageType=NAME_NODE
+blockpoolID=BP-1966795420-192.168.2.10-1577257957962
+layoutVersion=-64
+</code></pre></div><p>分别删除<code>/usr/local/hadoop/tmp/temp</code>下的dfs和nm什么,把temp清空就行了.<br>
+回到<code>cd /usr/local/hadoop</code>,再次格式化<code>bin/hdfs namenode -format</code></p> <h2 id="引用参考"><a href="#引用参考" aria-hidden="true" class="header-anchor">#</a> 引用参考</h2> <ul><li>https://blog.csdn.net/u011462318/article/details/80439160</li> <li>https://blog.csdn.net/xu470438000/article/details/50512442
+<div id="vcomments"></div></li></ul></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>12/26/2019, 2:36:54 PM</span></div></div> <!----> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/11.c050169c.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

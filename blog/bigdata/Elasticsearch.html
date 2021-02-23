@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ElasticSearch | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/71.577ad016.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/bigdata/Elasticsearch.html#docker安装es" class="sidebar-link">docker安装ES</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/bigdata/Elasticsearch.html#数据存储结构" class="sidebar-link">数据存储结构</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/bigdata/Elasticsearch.html#restapi" class="sidebar-link">RESTapi</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/bigdata/Elasticsearch.html#索引" class="sidebar-link">索引</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/bigdata/Elasticsearch.html#正排索引" class="sidebar-link">正排索引</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/Elasticsearch.html#倒排索引" class="sidebar-link">倒排索引</a></li></ul></li><li><a href="/blog/bigdata/Elasticsearch.html#分词" class="sidebar-link">分词</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/bigdata/Elasticsearch.html#分词器和它的构成" class="sidebar-link">分词器和它的构成</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/Elasticsearch.html#中文分词" class="sidebar-link">中文分词</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/Elasticsearch.html#自定义分词" class="sidebar-link">自定义分词</a></li><li class="sidebar-sub-header"><a href="/blog/bigdata/Elasticsearch.html#自定义分词的api" class="sidebar-link">自定义分词的api</a></li></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>ElasticSearch</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>2/10/2019</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      全文检索引擎
+    </span><span class="tag-item" data-v-2c25cede>
+      大数据
+    </span><span class="tag-item" data-v-2c25cede>
+      分布式
+    </span><span class="tag-item" data-v-2c25cede>
+      ELK
+    </span><span class="tag-item" data-v-2c25cede>
+      数据挖掘
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><div class="warning custom-block"><p class="custom-block-title">大数据分析处理流行技术栈</p> <p>E(elasticsearch)L(logstash)K(Kibana)技术栈</p></div> <div align="center"><h1>Easticsearch</h1></div> <h2 id="docker安装es"><a href="#docker安装es" aria-hidden="true" class="header-anchor">#</a> docker安装ES</h2> <p>安装直接用docker。</p> <ol><li><p><code>docker pull registry.docker-cn.com/library/elasticsearch</code>拉取国内镜像站的经镜像</p></li> <li><p><code>docker run -d -p 9200:9200 -p 9300:9300 registry.docker-cn.com/library/elasticsearch</code></p> <ul><li><p>出错了如下jdk分配内存太大2G更改一下为512m</p> <pre><code>OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x0000000085330000， 2060255232， 0) failed; error='Cannot allocate memory' (errno=12)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 2060255232 bytes for committing reserved memory.
+# An error report file with more information is saved as:
+# /tmp/hs_err_pid1.log
+</code></pre></li></ul></li> <li><p><code>docker run -d -p 9200:9200 -p 9300:9300 -e ES_JAVA_OPTS=&quot;-Xms256m -Xmx256m&quot; registry.docker-cn.com/library/elasticsearch</code></p></li> <li><p>&quot;You Know， for Search&quot;</p></li></ol> <h2 id="数据存储结构"><a href="#数据存储结构" aria-hidden="true" class="header-anchor">#</a> 数据存储结构</h2> <p>ES的存储是Index(数据库)和Document(表)，文档和索引。组织结构是Node(节点)和Cluster(集群)<br>
+对外提供RESTapi，json传输<br></p> <ol><li>Json Object，由字段（Field）组成，常见数据类型如下：</li></ol> <ul><li>字符串：text，keyword</li> <li>数值型：long，integer，short byte，double，float，half_float scaled_float</li> <li>布尔：boolean</li> <li>日期：date</li> <li>二进制：binary</li> <li>范围类型：integer range，float range，long_range，double_range，date_range
+每个document都有一个固定_id，如果你自己不指定系统自动指定哈希</li></ul> <ol start="2"><li>元数据（DocumentMetaData），用于标注文档的相关信息每个document中都有元数据</li></ol> <ul><li>_index:文档所在的索引名</li> <li>type：文档所在的类型名</li> <li>id：文档唯一id</li> <li>_uid：组合id，由_type和_id组成（6.x_type不再起作用，同_id一样）</li> <li>_source：文档的原始Json数据，可以从这里获取每个字段的内容</li> <li>all：整合所有字段内容到该字段，默认禁用</li></ul> <ol start="3"><li>索引中存储具有相同结构的文档（Document）</li></ol> <ul><li>每个索引都有自己的mapping定义，用于定义字段名和类型（元数据）</li> <li>一个集群可以有多个索引，比如:nginx日志存储的时候可以按照日期每天生成一个索引来存储，nginx-log-2017-01-01，nginx-log-2017-01-03</li></ul> <h2 id="restapi"><a href="#restapi" aria-hidden="true" class="header-anchor">#</a> RESTapi</h2> <p>访问http://127.0.0.1:9200/_cat 查看可用的api比如查看索引，查看某个索引数目，健康情况等等。</p> <ul><li>PUT方法+索引名可以创建一个index
+    (PUT http://127.0.0.1:9200/ohh)创建了ohh索引</li></ul> <blockquote><p>response<br>
+{<br>
+&quot;acknowledged&quot;:true，<br>
+&quot;shards_acknowledged&quot;:true，<br>
+&quot;index&quot;:&quot;test_index&quot;<br>
+}<br></p></blockquote> <ul><li>创建文档PUT index/type/id+请求内容<br>
+    (PUT http://127.0.0.1:9200/ohh/doc/1 requestbody:{username&quot;:&quot;alfred&quot;，&quot;age&quot;:1})
+<br>ohh创建一个id为1的document</li></ul> <blockquote><p>response<br>
+{<br>
+&quot;_index&quot;:&quot;test_index&quot;，<br>
+&quot;_type&quot;:&quot;doc&quot;，<br>
+&quot;id&quot;:&quot;1&quot;，如果不指定id只指定到type，自己生成一个id<br>
+&quot;version&quot;:1，<br>
+&quot;result&quot;:&quot;created&quot;，<br>
+&quot;_shards&quot;:{<br>
+&quot;total&quot;:2，<br>
+&quot;successful&quot;:1，<br>
+&quot;failed&quot;:0<br>
+&quot;_seq_no&quot;:0，<br>
+&quot;_primary_term&quot;:1<br>
+}<br>
+}<br></p></blockquote> <div class="danger custom-block"><p class="custom-block-title">WARNING</p> <p>如果插入之前没有es自动创建index和type<br>
+在未来type可能会废除，不提倡使用，现在尽量把type全都弄成doc或者是一样的东西不要使用type来分类</p></div> <ul><li>GET /index/type/_search?q=xx 查询关键词的不带关键词是全查询放在body里面{&quot;query&quot;:{&quot;term&quot;:{&quot;_id&quot;:&quot;1&quot;}}}
+    </li></ul> <blockquote><p>response <br>
+{<br>
+&quot;took&quot;：0，查询耗时，单位ms<br>
+&quot;timed_out&quot;：false，是否超时<br>
+&quot;_shards&quot;：{<br>
+&quot;total&quot;：5，总记录<br>
+&quot;successful&quot;：5，查询成功的记录<br>
+&quot;skipped&quot;：0，跳过了<br>
+&quot;failed&quot;：0失败了<br>
+&quot;hits&quot;：{<br>
+&quot;total&quot;：1，符合条件的总文档数<br>
+&quot;hits&quot;：[     返回的文档详情数据数组，默认前10个文档<br>
+&quot;_index&quot;：&quot;test index&quot;，索引名<br>
+&quot;_type&quot;:&quot;doc&quot;，记录的type<br>
+&quot;_id&quot;：&quot;1&quot; 文档的id<br>
+&quot;_score&quot;:1，文档的得分<br>
+&quot;_source&quot;：{文档详情<br>
+username&quot;：&quot;alfred&quot;，<br>
+&quot;age&quot;：1<br>
+}<br></p></blockquote> <p>}</p> <ul><li>允许批量创建文档POST /_bulk<br></li></ul> <p>body里面 {&quot;index&quot;:{&quot;_index&quot;:&quot;test_index&quot;，&quot;_type&quot;:&quot;doc&quot;，&quot;_id&quot;:&quot;3&quot;}{&quot;username&quot;:&quot;alfred&quot;，&quot;age&quot;:10}<br>
+                {&quot;delete&quot;:{&quot;_index&quot;:&quot;test_index&quot;，&quot;_type&quot;:&quot;doc&quot;，&quot;_id&quot;:&quot;1&quot;}<br>
+                {&quot;update&quot;:{&quot;_id&quot;:&quot;2&quot;，&quot;_index&quot;:&quot;test_index&quot;，&quot;_type&quot;:&quot;doc&quot;}{&quot;doc&quot;:{&quot;age&quot;:&quot;20&quot;}</p> <ul><li>方法
+<ul><li>index 创建文档如果存在则覆盖</li> <li>update 更新一个文档</li> <li>delete 删除某个文档</li> <li>create 创建文档如果存在则报错</li></ul></li> <li>批量查询根据id GET /_mget<br>
+body里面{&quot;docs&quot;:[<br>
+{&quot;index&quot;:&quot;test_index&quot;，<br>
+&quot;_type&quot;:&quot;doc&quot;，<br>
+&quot;id&quot;:&quot;1&quot;<br>
+}，<br>
+{&quot;index&quot;:&quot;test_index&quot;，<br>
+&quot;type&quot;:&quot;doc&quot;，<br>
+&quot;id&quot;:&quot;2&quot;<br>
+}]<br>
+}<br></li></ul> <h2 id="索引"><a href="#索引" aria-hidden="true" class="header-anchor">#</a> 索引</h2> <h3 id="正排索引"><a href="#正排索引" aria-hidden="true" class="header-anchor">#</a> 正排索引</h3> <ul><li>文档Id到文档内容、单词的关联关系id为x的文档中出现了什么词</li></ul> <h3 id="倒排索引"><a href="#倒排索引" aria-hidden="true" class="header-anchor">#</a> 倒排索引</h3> <ul><li>单词到文档Id的关联关系对句子进行分词之后每个词在哪个文档id出现过</li></ul> <p>一般是通过倒排索引查找到哪些文档，然后通过正排索引取出文档的完整内容倒排索引是搜索引擎的核心，主要包含两部分</p> <ul><li>单词词典（Term Dictionary）
+<ul><li>记录所有文档的单词，一般都比较大</li> <li>记录单词到倒排列表的关联信息</li></ul></li> <li>倒排列表（Posting List）记录了单词对应的文档集合，由倒排索引项（Posting）组成<br>
+倒排索引项（Posting）主要包含如下信息：</li> <li>文档Id，用于获取原始信息</li> <li>单词频率（TF，Term Frequency），记录该单词在该文档中的出现次数，用于后续相关性算分</li> <li>位置（Position），记录单词在文档中的分词位置（多个），用于做词语搜索（Phrase Query）</li> <li>偏移（Offset），记录单词在文档的开始和结束位置，用于做高亮显示
+<br></li></ul> <h2 id="分词"><a href="#分词" aria-hidden="true" class="header-anchor">#</a> 分词</h2> <h3 id="分词器和它的构成"><a href="#分词器和它的构成" aria-hidden="true" class="header-anchor">#</a> 分词器和它的构成</h3> <p>分词把一系列句子分成一系列的词语，例如word to Vec.分词器是es中专门处理分词的组件，Analyzer，它的组成如下：</p> <ol><li><p>Character Filters针对原始文本进行处理，比如去除html特殊标记符</p></li> <li><p>Tokenizer将原始文本按照一定规则切分为单词</p></li> <li><p>Token Filters针对tokenizer处理的单词就行再加工，比如转小写、删除或新增等处理
+使用_analyze接口可以指定字段，指定analyzer，自定义分词器进行测试</p></li> <li><p>POST /_analyze {&quot;analyzer&quot;:&quot;standard&quot;，&quot;text&quot;:&quot;hello samasiis&quot;}指定分词器和想要分词的文本，
+&quot;filter&quot;:[&quot;lowercase&quot;]自己可以指定比如指定filter就可以返回全小写的结果</p></li></ol> <blockquote><p>response<br>
+{&quot;tokens&quot;:
+[{&quot;token&quot;:&quot;analyzer&quot;，<br>&quot;start_offset&quot;:1，<br>&quot;end_offset&quot;:9，<br>&quot;type&quot;:&quot;&lt; ALPHANUM &gt;&quot;，<br>&quot;position&quot;:0}<br>]}</p></blockquote> <ol start="2"><li>自带的分词器有:<code>[Standard，Simple，Whitespace，Stop，Keyword，Pattern，Language]</code><br> <code>[1]Standard</code> 默认分词，按词切分，全员小写支持多语言<br> <code>[2]Simple</code> 简单分词多，非字符(下划线，数字，单引号等等都切分并且去掉)小写处理<br> <code>[3]Whitespace</code> 空格切分，保留大写<br> <code>[4]Stop</code> the，an，的等停止词进行分词<br> <code>[5]Keyword</code>不分词直接返回<br> <code>[6]Pattern</code> 通过<em>正则表达式</em>自定义分割符默认是\W+，即非字词的符号作为分隔符，小写<br> <code>[7]Language</code>提供多语言分词器(用到就百度)<br></li></ol> <h3 id="中文分词"><a href="#中文分词" aria-hidden="true" class="header-anchor">#</a> 中文分词</h3> <p><a href="https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247486148&idx=1&sn=817027a204650763c1bea3e837d695ea&source=41#wechat_redirect">难点</a><br>常用IK，jieba，THULAC，hanlp</p> <h3 id="自定义分词"><a href="#自定义分词" aria-hidden="true" class="header-anchor">#</a> 自定义分词</h3> <p>通过自定义Character Filters、Tokenizer和Token Filter实现<br></p> <ul><li>Character Filters在Tokenizer之前对原始文本进行处理，比如增加、删除或替换字符等自带的有：
+<ul><li>HTML Strip去除html标签和转换html实体</li> <li>Mapping 进行字符替换操作</li> <li>Pattern Replace 进行正则匹配替换</li> <li>会影响后续tokenizer解析的postion和offset信息</li></ul></li></ul> <p>例子（其他的留坑以后试试）:</p> <blockquote><p>POST /_analyze<br>
+{&quot;tokenizer&quot;:&quot;keyword&quot;, <br>
+A&quot;char_filter&quot;:[&quot;html_strip&quot;],<br>
+&quot;text&quot;:&quot;&lt;\p&gt;I&amp; apos;m so&lt;//b&gt;happy&lt;//b&gt;!&lt;//p&gt;&quot;}</p></blockquote> <ul><li>Tokenizer将原始文本按照一定规则切分为单词（term or token）自带：
+<ul><li>standard 按照单词进行分割-letter 按照非字符类进行分割</li> <li>whitespace 按照空格进行分割</li> <li>UAXURL Email 按照 standard分割，但不会分割邮箱和url</li> <li>NGram 和Edge NGram 连词分割</li> <li>Path Hierarchy 按照文件路径进行切割</li></ul></li></ul> <p>例子（其他的留坑以后试试）:</p> <blockquote><p>POST /_analyze<br>
+{&quot;tokenizer&quot;:&quot;path_hierarchy&quot;,<br>
+&quot;text&quot;:&quot;/one/two/three&quot;<br>}</p></blockquote> <ul><li><p>Token Filters对于tokenizer输出的单词（term）进行增加、删除、修改等操作自带的：</p> <ul><li>lowercase将所有term转换为小写</li> <li>stop 删除 stop words</li> <li>NGram和Edge NGram连词分割</li> <li>Synonym添加近义词的term</li></ul> <blockquote><p>POST _analyze<br>
+{<br>
+&quot;text&quot;:&quot;a Hello,world!&quot;,<br>
+&quot;tokenizer&quot;:&quot;standard&quot;,<br>
+&quot;filter&quot;:[<br>
+&quot;stop&quot;,<br>
+&quot;lowercase&quot;,<br>
+        {<br>
+        &quot;type&quot;:&quot;ngram&quot;,<br>
+        &quot;min_gram&quot;:4,<br>
+        &quot;max_gram&quot;:4<br>
+        }<br>
+      ]<br>
+}</p></blockquote></li></ul> <h3 id="自定义分词的api"><a href="#自定义分词的api" aria-hidden="true" class="header-anchor">#</a> 自定义分词的api</h3> <p>创建或更新文档时（Index Time），会对相应的文档进行分词处理查询时（Search Time），会对查询语句进行分词。
+索引时分词是通过配置Index Mapping中每个字段的analyzer属性实现。不指定分词时，使用默认standard。查询的时候通过 analyzer 指定分词器或者在通过index mapping 设置search_analyzer实现
+一般不需要特别指定查询时分词器，如果查询时制定分词器和文档默认分词器不一样可能无法匹配。明确字段是否需要分词，不需要分词的字段就将 type 设置为keyword，可以节省空间和提高写性能
+可以先用_anaylize检查然后再测试
+<br>
+api像这样<br></p> <blockquote><p>PUT test_index(自己指定索引)<br>
+{<br>
+&quot;settings&quot;:{<br>
+&quot;analysis&quot;:<br>
+     {<br>
+     &quot;char_filter&quot;:{},<br>
+     &quot;tokenizer&quot;:{},<br>
+     &quot;filter&quot;:{},<br>
+     &quot;analyzer&quot;:{}<br>
+     }<br>
+  }<br>
+}<br> <div id="vcomments"></div></p></blockquote></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>11/8/2019, 7:50:25 AM</span></div></div> <!----> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/71.577ad016.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

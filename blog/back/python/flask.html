@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Flask | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/17.a33727a2.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/back/python/flask.html#项目结构" class="sidebar-link">项目结构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#flask-script拆分" class="sidebar-link">Flask-script拆分</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#独立view和拓展sql" class="sidebar-link">独立view和拓展SQL</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#管理环境" class="sidebar-link">管理环境</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#migrate数据库表迁移" class="sidebar-link">Migrate数据库表迁移</a></li></ul></li><li><a href="/blog/back/python/flask.html#路由" class="sidebar-link">路由</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#获取参数" class="sidebar-link">获取参数</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#重定向和request" class="sidebar-link">重定向和request</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#响应response" class="sidebar-link">响应Response</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#会话" class="sidebar-link">会话</a></li></ul></li><li><a href="/blog/back/python/flask.html#jinja2模板" class="sidebar-link">jinja2模板</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/flask.html#flask-bootstrap" class="sidebar-link">flask-bootstrap</a></li></ul></li><li><a href="/blog/back/python/flask.html#model" class="sidebar-link">Model</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/python/flask.html#参考引用" class="sidebar-link">参考引用</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>Flask</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>3/10/2019</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      后端
+    </span><span class="tag-item" data-v-2c25cede>
+      web
+    </span><span class="tag-item" data-v-2c25cede>
+      Flask
+    </span><span class="tag-item" data-v-2c25cede>
+      python🐍
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><p><font color="#53abe2" size="5">前言:</font><br>
+学习flask用来开发一些小的快速的只有几个接口的东西，而且也可以扩充自己的技术栈，我不会深挖原理持续学flask，编程扳手能用就行，因此也不会记的很详细。jinja2除外，因为这个东西可以直接在Django里代替Django原先的模板，一次学习，到处使用。Django作为主力的单机框架，大的web还得用java，没啥要求就用Django，odoo看情况学不学。主要还是想学习大数据方向的东西，有机会搞搞知识图谱和软件工程理论，精力集中在数据层上。<br>
+我搜集的千峰笔记 <a href="https://flaskdoc.ooowl.fun">https://flaskdoc.ooowl.fun</a> 我直接挂这儿了v.1.0.2。有兴趣的可以直接<a href="https://pan.baidu.com/s/1tfOdUCxlDAleDtTlhpUsDw">拿去用</a>，密码<code>1xid</code></p> <h2 id="项目结构"><a href="#项目结构" aria-hidden="true" class="header-anchor">#</a> 项目结构</h2> <p>hello world 程序详解</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask <span class="token comment"># 引入主程序</span>
+
+app<span class="token operator">=</span>Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span> <span class="token comment"># 生成对象并以参数形式获得当前目录</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token comment"># 规定路由</span>
+<span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># 处理函数</span>
+    <span class="token keyword">return</span> <span class="token string">'hello world'</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    app<span class="token punctuation">.</span>debug <span class="token operator">=</span> <span class="token boolean">False</span> <span class="token comment"># 禁止debug模式 </span>
+    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> port<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> debug<span class="token operator">=</span>Boolean<span class="token punctuation">,</span>threaded<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>processes<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment"># 运行,多线程进程</span>
+</code></pre></div><p>返回值可以直接写html,不过不推荐你这样做因为很蠢.<br>
+Debug模式只有在develop环境才能使用,默认应该是develop,如果不是,在你的环境变量里面添加&quot;FLASK_ENV&quot;.<br>
+Debug可以<code>app.debug=Bool</code> or <code>app.run(debug=False/True)</code> or 环境变量&quot;FLASK_DEBUG&quot;.我的现在好像只有环境变量才管用,不知道为啥.</p> <div class="tip custom-block"><p class="custom-block-title">Linux环境变量</p> <ul><li>系统级
+<ul><li><code>/etc/envirtonment</code></li> <li><code>/etc/profile</code></li></ul></li> <li>用户级:<code>~/.bashrc</code></li> <li>临时级:<code>在窗口中直接export</code><br>
+依次生效顺序覆盖,windows可以直接在pycharm中设置</li></ul></div> <div class="language- extra-class"><pre class="language-text"><code> * Serving Flask app &quot;app.py&quot; (lazy loading)
+ * Environment: development #这里显示是不是生产环境
+ * Debug mode: on # 这里显示是否是调试模式
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 235-170-085 # 这是pin
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+</code></pre></div><p>flask可以直接在网页控制台控制调试,但是需要输入pin码<br> <br>
+到这里基本上很小的逻辑都能够解决了,但是如果拓展那就不好办,整个代码耦合在一个文件.</p> <h3 id="flask-script拆分"><a href="#flask-script拆分" aria-hidden="true" class="header-anchor">#</a> Flask-script拆分</h3> <p>用这个可以把app拆分,渐渐的从一个微型文件变成了django.<br>
+首先pip安装这个拓
+展,<a href="https://flask-script.readthedocs.io/en/latest/">官网</a></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask
+<span class="token keyword">from</span> flask_script <span class="token keyword">import</span> Manager
+
+app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+manager <span class="token operator">=</span> Manager<span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+@app<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token comment"># 规定路由</span>
+<span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># 处理函数</span>
+    <span class="token keyword">return</span> <span class="token string">'hello world'</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment">#app.run() # 运行</span>
+    manager<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>文件名改名为manage.py,使用cmd中python manage.py runserver 可django一样<br>
+参数如下</p> <blockquote><p>-?, --help  show this help message and exitM<br>
+-h HOST, --host HOST 指定主机M<br>
+--threaded 是否启用多线程M<br>
+--processes PROCESSES 是否启用多进程 M<br>
+--passthrough-errors 忽略错误不报告M<br>
+-d, --debug   调试模式  enable the Werkzeug debugger (DO NOT use in production code)M<br>
+-D, --no-debug  不调试模式  disable the Werkzeug debuggerM<br>
+-r, --reload 自动重新加载 monitor Python files for changes (not 100% safe for production use)M<br>
+-R, --no-reload       do not monitor Python files for changesM<br>
+--ssl-crt SSL_CRT     Path to ssl certificateM<br>
+--ssl-key SSL_KEY     Path to ssl keyM<br></p></blockquote> <h3 id="独立view和拓展sql"><a href="#独立view和拓展sql" aria-hidden="true" class="header-anchor">#</a> 独立view和拓展SQL</h3> <p>安装<code>flask-blueprint</code>,<code>flask_sqlalchemy</code>,把view和拓展都独立出去,方便管理
+拆分view的基本思路是
+每个文件是一组view，然后在每一个view.py文件里面初始化一个blueprint</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> flask <span class="token keyword">import</span> Blueprint
+
+first<span class="token operator">=</span> Blueprint<span class="token punctuation">(</span><span class="token string">&quot;first&quot;</span><span class="token punctuation">,</span>__name__<span class="token punctuation">)</span>
+@first<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">&quot;我是主页&quot;</span>
+</code></pre></div><p>在views的__init__里引入其他文件的blueprint，声明函数init_view，然后函数接收app，注册blueprint</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> <span class="token punctuation">.</span>first <span class="token keyword">import</span> first
+<span class="token keyword">from</span> <span class="token punctuation">.</span>second <span class="token keyword">import</span> second
+
+<span class="token keyword">def</span> <span class="token function">init_view</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    app<span class="token punctuation">.</span>register_blueprint<span class="token punctuation">(</span>first<span class="token punctuation">)</span>
+    app<span class="token punctuation">.</span>register_blueprint<span class="token punctuation">(</span>second<span class="token punctuation">)</span>
+</code></pre></div><p>App中包含views(文件夹)，models，先把这三个引入，ext。在App的__init__中主要任务是生成app，引入view的init_view，ext的init_ext。</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask
+<span class="token keyword">from</span> App<span class="token punctuation">.</span>views <span class="token keyword">import</span> init_view
+<span class="token keyword">from</span> App<span class="token punctuation">.</span>ext <span class="token keyword">import</span> init_ext
+<span class="token keyword">def</span> <span class="token function">create_app</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    app<span class="token operator">=</span>Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+    app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">&quot;SQLALCHEMY_DATABASE_URI&quot;</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;sqlite:///sqlite.db&quot;</span>
+    app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">&quot;SQLALCHEMY_TRACK_MODIFICATIONS&quot;</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token boolean">False</span>
+    init_view<span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+    init_ext<span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> app
+</code></pre></div><p>ext的思路也是一样的，用函数接收app初始化，因为整个app是以一个对象的形式传递的</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment">#import your model here</span>
+<span class="token keyword">from</span> flask_sqlalchemy <span class="token keyword">import</span> SQLAlchemy
+<span class="token comment">#your class&amp;function here</span>
+models<span class="token operator">=</span>SQLAlchemy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+migrate<span class="token operator">=</span>Migrate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment"># 安装migrate后使用</span>
+<span class="token keyword">def</span> <span class="token function">init_ext</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    models<span class="token punctuation">.</span>init_app<span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+    migrate<span class="token punctuation">.</span>init_app<span class="token punctuation">(</span>app<span class="token punctuation">,</span>models<span class="token punctuation">)</span><span class="token comment"># 安装migrate后使用</span>
+</code></pre></div><p>数据库url写法<code>数据库+驱动://用户名:密码@主机:端口/具体哪一个库</code><br>
+最后在<code>manage.py</code>里面引入这个app，然后运行就可以了</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> flask_script <span class="token keyword">import</span> Manager
+
+<span class="token keyword">from</span> App <span class="token keyword">import</span> create_app
+
+app <span class="token operator">=</span> create_app<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+manager <span class="token operator">=</span> Manager<span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment">#App.run() # 运行</span>
+    manager<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>组后工程结构图
+</p><div align="center"><img src="/assets/img/Snipaste_2019-11-20_16-50-47.cfe07a21.png" style="height: 350px"></div><p></p> <h3 id="管理环境"><a href="#管理环境" aria-hidden="true" class="header-anchor">#</a> 管理环境</h3> <p>建立<code>settings.py</code>,或者直接改ini为py
+测试，开发，演示，生产四个环境,传入对象的格式是固定的,记住以后就这么写,模仿django的配置.
+</p><details><summary><B><I style="cursor:pointer;color:#0e5870;">Click to See More Code</I></B></summary><p></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">def</span> <span class="token function">get_db_url</span><span class="token punctuation">(</span>dbinfo<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#将配置组合成url</span>
+    engine <span class="token operator">=</span> dbinfo<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;ENGINE&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">&quot;sqlite&quot;</span>
+    driver <span class="token operator">=</span> dbinfo<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;DRIVER&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">&quot;sqlite&quot;</span>
+    user <span class="token operator">=</span> dbinfo<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;USER&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">&quot;&quot;</span>
+    password <span class="token operator">=</span> dbinfo<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;PASSWORD&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">&quot;&quot;</span>
+    host <span class="token operator">=</span> dbinfo<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;HOST&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">&quot;&quot;</span>
+    port <span class="token operator">=</span> dbinfo<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;PORT&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">&quot;&quot;</span>
+    table <span class="token operator">=</span> dbinfo<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;TABLE&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">&quot;&quot;</span>
+
+    <span class="token keyword">return</span> <span class="token string">&quot;{}+{}://{}:{}@{}:{}/{}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>engine<span class="token punctuation">,</span> driver<span class="token punctuation">,</span> user<span class="token punctuation">,</span> password<span class="token punctuation">,</span>host<span class="token punctuation">,</span> port<span class="token punctuation">,</span> table<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Config</span><span class="token punctuation">:</span>
+    DEBUG <span class="token operator">=</span> <span class="token boolean">False</span>
+    TESTING <span class="token operator">=</span> <span class="token boolean">False</span>
+    SQLALCHEMY_TRACK_MODIFICATIONS<span class="token operator">=</span><span class="token boolean">False</span>
+
+<span class="token keyword">class</span> <span class="token class-name">DevConfig</span><span class="token punctuation">(</span>Config<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    DEBUG <span class="token operator">=</span> <span class="token boolean">True</span>
+    dbinfo<span class="token operator">=</span><span class="token punctuation">{</span>
+        <span class="token string">&quot;ENGINE&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;mysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;DRIVER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;pymysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;USER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PASSWORD&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;1118&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;HOST&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;mysql.ooowl.fun&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PORT&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;3306&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;TABLE&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;flaskStudy&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    SQLALCHEMY_DATABASE_URI<span class="token operator">=</span>get_db_url<span class="token punctuation">(</span>dbinfo<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TestConfig</span><span class="token punctuation">(</span>Config<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    DEBUG <span class="token operator">=</span> <span class="token boolean">True</span>
+    dbinfo<span class="token operator">=</span><span class="token punctuation">{</span>
+        <span class="token string">&quot;ENGINE&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;mysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;DRIVER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;pymysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;USER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PASSWORD&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;1118&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;HOST&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;mysql.ooowl.fun&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PORT&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;3306&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;TABLE&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;flaskStudy&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    SQLALCHEMY_DATABASE_URI<span class="token operator">=</span>get_db_url<span class="token punctuation">(</span>dbinfo<span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">StageConfig</span><span class="token punctuation">(</span>Config<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    DEBUG <span class="token operator">=</span> <span class="token boolean">True</span>
+    dbinfo <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;ENGINE&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;mysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;DRIVER&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;pymysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;USER&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;root&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PASSWORD&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;1118&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;HOST&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;mysql.ooowl.fun&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PORT&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;3306&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;TABLE&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;flaskStudy&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    SQLALCHEMY_DATABASE_URI <span class="token operator">=</span> get_db_url<span class="token punctuation">(</span>dbinfo<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ProductConfig</span><span class="token punctuation">(</span>Config<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    DEBUG <span class="token operator">=</span> <span class="token boolean">True</span>
+    dbinfo<span class="token operator">=</span><span class="token punctuation">{</span>
+        <span class="token string">&quot;ENGINE&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;mysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;DRIVER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;pymysql&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;USER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PASSWORD&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;1118&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;HOST&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;mysql.ooowl.fun&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PORT&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;3306&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;TABLE&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;flaskStudy&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    SQLALCHEMY_DATABASE_URI<span class="token operator">=</span>get_db_url<span class="token punctuation">(</span>dbinfo<span class="token punctuation">)</span>
+
+<span class="token comment">#包装成一个对象，便于manage引入</span>
+envs<span class="token operator">=</span><span class="token punctuation">{</span>
+<span class="token string">&quot;dev&quot;</span><span class="token punctuation">:</span>DevConfig<span class="token punctuation">,</span>
+<span class="token string">&quot;test&quot;</span><span class="token punctuation">:</span>TestConfig<span class="token punctuation">,</span>
+<span class="token string">&quot;stage&quot;</span><span class="token punctuation">:</span>StageConfig<span class="token punctuation">,</span>
+<span class="token string">&quot;prod&quot;</span><span class="token punctuation">:</span>ProductConfig<span class="token punctuation">,</span>
+<span class="token string">&quot;default&quot;</span><span class="token punctuation">:</span>DevConfig
+<span class="token punctuation">}</span>
+</code></pre></div></details> <p>在App的init中<code>app.config.from_object(envs.get(&quot;dev&quot;))#相当于字典，拿到里面的对象</code></p> <h3 id="migrate数据库表迁移"><a href="#migrate数据库表迁移" aria-hidden="true" class="header-anchor">#</a> Migrate数据库表迁移</h3> <p><code>pip install flask-Migrate</code><br>
+在ext中添加<code>migrate=Migrate()</code> <code>migrate.init_app(app,models)</code>上面有.<br>
+在manage.py中添加<code>manager.add_command(&quot;db&quot;,MigrateCommand)</code>少啥引入啥</p> <div class="language-py extra-class"><pre class="language-py"><code>这里是以后拿笔画结构图的地方
+</code></pre></div><p>flask可以通过各种插件拓展功能,你可以把她变得和django一样,也可以一个文件搭建很小的服务,真正大小可变轻量级,想拆成什么规模都行.
+通常是 init,生成python文件,upgrade生成sql的migrate表,migrate生成数据库</p> <h2 id="路由"><a href="#路由" aria-hidden="true" class="header-anchor">#</a> 路由</h2> <h3 id="获取参数"><a href="#获取参数" aria-hidden="true" class="header-anchor">#</a> 获取参数</h3> <p><strong>限定方法</strong><br> <code>@app.route('/demo2', methods=['GET','POST','DELETE','PUT','HEAD','Options'])</code> <strong>参数</strong>有
+</p><div align="center"><p></p> <table><thead><tr><th style="text-align:left">Type</th> <th style="text-align:center">example</th></tr></thead> <tbody><tr><td style="text-align:left">&lt;string:para&gt;</td> <td style="text-align:center">默认接收没有斜杠的,如果你的url有&quot;/&quot;,那你的访问地址也要带,否则会报错</td></tr> <tr><td style="text-align:left">&lt;int:para&gt;</td> <td style="text-align:center">整型</td></tr> <tr><td style="text-align:left">&lt;float:para&gt;</td> <td style="text-align:center">浮点型</td></tr> <tr><td style="text-align:left">&lt;path:para&gt;</td> <td style="text-align:center">接收路径,可接收斜线.如果你url带了斜线,那么访问地址最后的斜线就会被忽略</td></tr> <tr><td style="text-align:left">&lt;uuid:para&gt;</td> <td style="text-align:center">只接受uuid字符串</td></tr> <tr><td style="text-align:left">&lt;any(a,b):para&gt;</td> <td style="text-align:center">可以同时指定多路径,访问a,b都可以使用处理函数,默认string</td></tr></tbody></table></div> <p>自带converter,默认为string<br>
+可以叠加,一个函数使用多个装饰器</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token decorator annotation punctuation">@first<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">&quot;/number/&lt;string:xxx&gt;&quot;</span><span class="token punctuation">)</span>
+@first<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">&quot;/path/&lt;path:xxx&gt;&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">a</span><span class="token punctuation">(</span>xxx<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> xxx
+</code></pre></div><h3 id="重定向和request"><a href="#重定向和request" aria-hidden="true" class="header-anchor">#</a> 重定向和request</h3> <p>硬编码</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token decorator annotation punctuation">@first<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">&quot;/redirect/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">redirectx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span><span class="token string">&quot;/path/阿斯帝芬&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><p>函数带参数反向解析</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token decorator annotation punctuation">@first<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">&quot;/redirect/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">redirectx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span>url_for<span class="token punctuation">(</span><span class="token string">'first.a'</span><span class="token punctuation">,</span>xxx <span class="token operator">=</span> <span class="token string">&quot;事实上&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>request对象由flask自己生成(需要引入),携带了各种各样的信息,看不懂的去补HTTP的知识</p> <div align="center"><img src="/assets/img/Snipaste_2019-11-19_18-01-557.50dc2828.png" style="height: 450px"></div> <p>常用参数</p> <div align="center"><table><thead><tr><th style="text-align:center">属性</th> <th style="text-align:center">说明</th> <th style="text-align:center">类型</th></tr></thead> <tbody><tr><td style="text-align:center">data</td> <td style="text-align:center">记录请求的数据，并转换为字符串,比如json,xml</td> <td style="text-align:center">*</td></tr> <tr><td style="text-align:center">form</td> <td style="text-align:center">记录请求中的表单数据</td> <td style="text-align:center">MultiDict</td></tr> <tr><td style="text-align:center">args(request.args.get(&quot;city&quot;))</td> <td style="text-align:center">获取请求中的查询参数(?city=&quot;x&quot;)</td> <td style="text-align:center">MultiDict</td></tr> <tr><td style="text-align:center">cookies</td> <td style="text-align:center">记录请求中的cookie信息</td> <td style="text-align:center">Dict</td></tr> <tr><td style="text-align:center">headers</td> <td style="text-align:center">记录请求中的报文头</td> <td style="text-align:center">EnvironHeaders</td></tr> <tr><td style="text-align:center">method</td> <td style="text-align:center">记录请求使用的HTTP方法</td> <td style="text-align:center">GET/POST等</td></tr> <tr><td style="text-align:center">url</td> <td style="text-align:center">记录请求的URL地址</td> <td style="text-align:center">string</td></tr> <tr><td style="text-align:center">base_url</td> <td style="text-align:center">去掉GET参数的URL</td> <td style="text-align:center"></td></tr> <tr><td style="text-align:center">host_url</td> <td style="text-align:center">只有主机和端口号的URL</td> <td style="text-align:center"></td></tr> <tr><td style="text-align:center">remote_addr</td> <td style="text-align:center">请求的客户端地址</td> <td style="text-align:center"></td></tr> <tr><td style="text-align:center">files</td> <td style="text-align:center">记录请求上传的文件</td> <td style="text-align:center">*</td></tr></tbody></table></div> <h3 id="响应response"><a href="#响应response" aria-hidden="true" class="header-anchor">#</a> 响应Response</h3> <ul><li><code>return &quot;xxx&quot;,状态码</code>直接返回响应字符串</li> <li><code>return render_template(&quot;testfile.html&quot;)</code>直接渲染html</li> <li><code>return make_response(&quot; &lt;h1&gt;sdsadasd&lt;/h1&gt;&quot;)</code>调用函数构建</li> <li><code>return Response()</code>自己构建,debug去看具体参数</li> <li><code>abort(404)/abort(Response(&quot;xxx&quot;))</code>返回<strong>错误</strong> 响应码并终止响应</li> <li><code>return redirect(url_for('first.a',xxx = &quot;事实上&quot;))</code> 函数带参反向解析</li></ul> <p>可以使用装饰器直接拦截错误响应,最常用的是5xx和4xx的</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token decorator annotation punctuation">@first<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">&quot;/request/&lt;string:paramas&gt;&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">show_request</span><span class="token punctuation">(</span>paramas<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    a<span class="token operator">=</span>request
+    <span class="token keyword">print</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>host<span class="token punctuation">)</span>
+    abort<span class="token punctuation">(</span><span class="token number">401</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Response<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+@first<span class="token punctuation">.</span>errorhandler<span class="token punctuation">(</span><span class="token number">401</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">handle_401</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span><span class="token builtin">type</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string">&quot;what,you're wrong&quot;</span>
+</code></pre></div><p>blueprint的处理机制和原生的flask不大一样,原生也有要用原生地去查</p> <h3 id="会话"><a href="#会话" aria-hidden="true" class="header-anchor">#</a> 会话</h3> <p>session cookie 持久化<br>
+需要一个加密Key，在settings.py-&gt;Config类中添加<code>SECRET_KEY=&quot;mykey&quot;</code>用作混淆</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token decorator annotation punctuation">@second<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">&quot;/login/&quot;</span><span class="token punctuation">,</span>methods<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;POST&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">login_action</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method<span class="token operator">==</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">&quot;loginpage.html&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> request<span class="token punctuation">.</span>method<span class="token operator">==</span><span class="token string">&quot;POST&quot;</span><span class="token punctuation">:</span>
+        username<span class="token operator">=</span>request<span class="token punctuation">.</span>form<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">)</span>
+        response<span class="token operator">=</span>Response<span class="token punctuation">(</span><span class="token string">&quot;登陆成功%s&quot;</span> <span class="token operator">%</span>username<span class="token punctuation">)</span>
+        response<span class="token punctuation">.</span>set_cookie<span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">,</span>username<span class="token punctuation">)</span><span class="token comment">#使用cookie</span>
+        session<span class="token punctuation">[</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">]</span><span class="token operator">=</span>username<span class="token comment">#使用session</span>
+        <span class="token keyword">return</span> response
+
+@second<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">&quot;/my/&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token operator">=</span>request<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">)</span><span class="token comment">#获取cookie</span>
+    username<span class="token operator">=</span>session<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">)</span><span class="token comment">#获取session</span>
+    <span class="token keyword">return</span> <span class="token string">&quot;biss %s&quot;</span><span class="token operator">%</span>username
+</code></pre></div><p>对数据进行序列化，进行了base64，进行了zlib压缩，传递了hash</p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>需要注意的是flask存储session的做法不同于django，django是直接存储到服务器端，cookie存储一个sessionid，按照这个id获取session。flask直接把session存储在cookie放在了客户端</p></div> <h3>session持久化到数据库</h3> <p><code>pip install flask-session</code>,官网<a href="https://pythonhosted.org/Flask-Session/">链接</a><br> <code>SESSION_TYPE = 'redis'</code>加入到settings.py-&gt;Config类中,ext.py<code>from flask_session import Session</code>初始化<code>Session(app)</code><br>
+这个插件支持 redis memcached filesystem mongodb sqlalchmey。<br>
+在settings-&gt;Config类中配置
+公共前缀</p> <div class="language-py extra-class"><pre class="language-py"><code>SESSION_PERMANENT <span class="token operator">=</span> <span class="token boolean">True</span> <span class="token comment"># 如果设置为True，则关闭浏览器session就失效。</span>
+SESSION_USE_SIGNER <span class="token operator">=</span> <span class="token boolean">False</span> <span class="token comment"># 是否对发送到浏览器上session的cookie值进行加密</span>
+SESSION_KEY_PREFIX <span class="token operator">=</span> <span class="token string">'session:'</span> <span class="token comment"># 保存到session中的值的前缀</span>
+</code></pre></div><h3>redis </h3> <details><summary><B><I style="cursor:pointer;color:#0e5870;">Click to See More </I></B></summary> <div class="language-py extra-class"><pre class="language-py"><code>SESSION_TYPE <span class="token operator">=</span> <span class="token string">'redis'</span>  <span class="token comment"># session类型为redis</span>
+SESSION_REDIS <span class="token operator">=</span> redis<span class="token punctuation">.</span>Redis<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token string">'127.0.0.1'</span><span class="token punctuation">,</span> port<span class="token operator">=</span><span class="token string">'6379'</span><span class="token punctuation">,</span> password<span class="token operator">=</span><span class="token string">'123123'</span><span class="token punctuation">)</span>  
+<span class="token comment"># 用于连接redis的配置</span>
+</code></pre></div></details> <h3>memcached </h3> <details><summary><B><I style="cursor:pointer;color:#0e5870;">Click to See More </I></B></summary> <div class="language-py extra-class"><pre class="language-py"><code>SESSION_TYPE <span class="token operator">=</span> <span class="token string">'memcached'</span> <span class="token comment"># session类型为memcached</span>
+SESSION_MEMCACHED <span class="token operator">=</span> memcache<span class="token punctuation">.</span>Client<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'10.211.55.4:12000'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div></details> <h3>filesystem </h3> <details><summary><B><I style="cursor:pointer;color:#0e5870;">Click to See More </I></B></summary> <div class="language-py extra-class"><pre class="language-py"><code>SESSION_TYPE <span class="token operator">=</span> <span class="token string">'filesystem'</span>  <span class="token comment"># session类型为redis</span>
+SESSION_FILE_DIR <span class="token operator">=</span> <span class="token string">'/session/dir'</span>  <span class="token comment"># 存储session文件夹</span>
+SESSION_FILE_THRESHOLD <span class="token operator">=</span> <span class="token number">500</span>  <span class="token comment"># 存储session的个数如果大于这个值时，就要开始进行删除了</span>
+SESSION_FILE_MODE <span class="token operator">=</span> <span class="token number">384</span>  <span class="token comment"># 文件权限类型</span>
+</code></pre></div></details> <h3>mongodb </h3> <details><summary><B><I style="cursor:pointer;color:#0e5870;">Click to See More </I></B></summary> <div class="language-py extra-class"><pre class="language-py"><code>SESSION_TYPE <span class="token operator">=</span> <span class="token string">'mongodb'</span>  <span class="token comment"># session类型为redis</span>
+SESSION_MONGODB <span class="token operator">=</span> pymongo<span class="token punctuation">.</span>MongoClient<span class="token punctuation">(</span><span class="token punctuation">)</span>
+SESSION_MONGODB_DB <span class="token operator">=</span> <span class="token string">'mongo的db名称（数据库名称）'</span>
+SESSION_MONGODB_COLLECT <span class="token operator">=</span> <span class="token string">'mongo的collect名称（表名称）'</span>
+</code></pre></div></details> <h3>sqlalchmey</h3> <details><summary><B><I style="cursor:pointer;color:#0e5870;">Click to See More </I></B></summary> <div class="language-py extra-class"><pre class="language-py"><code>SESSION_TYPE <span class="token operator">=</span> <span class="token string">'sqlalchemy'</span>  <span class="token comment"># session类型为sqlalchemy</span>
+SESSION_SQLALCHEMY <span class="token operator">=</span> models <span class="token comment"># SQLAlchemy对象,记得前面要注册models=SQLAlchemy()</span>
+SESSION_SQLALCHEMY_TABLE <span class="token operator">=</span> <span class="token string">'session'</span> <span class="token comment"># session要保存的表名称</span>
+</code></pre></div></details> <h2 id="jinja2模板"><a href="#jinja2模板" aria-hidden="true" class="header-anchor">#</a> jinja2模板</h2> <p>官网<a href="http://docs.jinkan.org/docs/jinja2/">在这</a>,记不住了去瞅瞅<br>
+使用:render_template('template1.html',key=value)</p> <ul><li>获取变量值:</li></ul> <div class="language-py extra-class"><pre class="language-py"><code>    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>整数<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">{</span> number <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>元祖<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token builtin">tuple</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>列表<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>字典<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token builtin">dict</span><span class="token punctuation">[</span><span class="token string">'key'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+</code></pre></div><ul><li>分支语句if</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token punctuation">{</span> <span class="token operator">%</span> <span class="token keyword">if</span> a<span class="token operator">==</span>b <span class="token operator">%</span> <span class="token punctuation">}</span>
+    语句<span class="token number">1</span>
+ <span class="token punctuation">{</span> <span class="token operator">%</span> <span class="token keyword">else</span> <span class="token operator">%</span> <span class="token punctuation">}</span>    
+    语句<span class="token number">2</span>
+<span class="token punctuation">{</span> <span class="token operator">%</span> endif <span class="token operator">%</span> <span class="token punctuation">}</span>
+</code></pre></div><ul><li>for循环</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> i  <span class="token keyword">in</span> value <span class="token operator">%</span><span class="token punctuation">}</span>
+    语句
+<span class="token punctuation">{</span><span class="token operator">%</span> endfor<span class="token operator">%</span><span class="token punctuation">}</span>
+</code></pre></div><p>留坑loop的使用</p> <ul><li>注释</li></ul> <div class="language- extra-class"><pre class="language-text"><code>{# 注释内容 #}
+</code></pre></div><ul><li>block,extends<br>
+父模板挖坑子模板填.</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;/&gt;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>{{ tittle }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+{% block header %}
+{% endblock %}
+this is base content
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>继承之后</p> <div class="language-html extra-class"><pre class="language-html"><code>{% extends &quot;base.html&quot; %}
+{% block header %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span>5</span><span class="token punctuation">&gt;</span></span>
+{% endblock %}
+{% block content %}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    {% for i in students %}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>i am students {{ i }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    {% endfor %}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+{% endblock %}
+{% block footer %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span>5</span><span class="token punctuation">&gt;</span></span>
+{% endblock %}
+</code></pre></div><p>如果有又继承了子模板之后,重写的块内容会被覆盖,在块头加入 <code>{ { super() } }</code> 就可以,没重写的block会显示</p> <ul><li>include,marco</li></ul> <p>宏定义留坑</p> <h3 id="flask-bootstrap"><a href="#flask-bootstrap" aria-hidden="true" class="header-anchor">#</a> flask-bootstrap</h3> <p>注册拓展之后直接就可以用bootstrap了,无需引入css之类的,<a href="https://pythonhosted.org/Flask-Bootstrap/">官网</a>例子<br>
+结构留坑</p> <h2 id="model"><a href="#model" aria-hidden="true" class="header-anchor">#</a> Model</h2> <p>删除表
+添加表
+清除表
+字段类型
+Integer
+Smallinteger
+BigInteger
+Float
+Numeric
+String
+Text
+Unicode
+Unicode Text
+Boolean
+Date
+Time
+DateTime
+Interval
+LargeBinary
+引用方式在
+常用约束
+primary key
+autoincrement
+unique
+index
+oullable
+default
+Foreignkey()</p> <p>db.create.all（）
+db.drop all（）
+数据操作
+在事务中处理，数据插入
+db.session.add(object)
+db.session.add_all(list[object])
+d业.session.delete(object)
+db.session.commit()
+修改和删除基于查询
+User.query.all()拿到所有的对象
+User.query.get(id)只支持主键
+User.query.first()拿到第一条记录
+User.query.filter()查询条件</p> <p>blueprint(&quot;blue&quot;,<strong>name</strong>,template_folder=&quot;xxx&quot;,urlprefi=&quot;/db&quot;)url前缀</p> <p><code>pip install flask-debugtoolbar</code> 在ext中引入,DebugToolbarExtension(app)<br>
+config中的变量都可以在Config中配置,每一项具体作用自己百度</p> <p>静态资源也是有路由的
+endpoint是static
+参数有一个filename</p> <div class="language- extra-class"><pre class="language-text"><code>{{url_for('static,filename=xxx)}}
+</code></pre></div><h2 id="参考引用"><a href="#参考引用" aria-hidden="true" class="header-anchor">#</a> 参考引用</h2> <ul><li>https://www.cnblogs.com/52forjie/p/8282453.html</li> <li>千峰flask视频
+<div id="vcomments"></div></li></ul></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>12/29/2019, 3:00:55 PM</span></div></div> <div class="page-nav" data-v-cdcae5a4><p class="inner" data-v-cdcae5a4><!----> <span class="next" data-v-cdcae5a4><a href="/blog/back/python/Django.html" data-v-cdcae5a4>
+          Django的基础知识(Old)
+        </a>
+        →
+      </span></p></div> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/17.a33727a2.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

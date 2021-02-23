@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>windows子系统WSL | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/14.69f05fca.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/back/linux/windows%E5%AD%90%E7%B3%BB%E7%BB%9F.html#安装" class="sidebar-link">安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/linux/windows%E5%AD%90%E7%B3%BB%E7%BB%9F.html#配置ssh" class="sidebar-link">配置ssh</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/linux/windows%E5%AD%90%E7%B3%BB%E7%BB%9F.html#ohmyzsh" class="sidebar-link">OhMyZSH</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/linux/windows%E5%AD%90%E7%B3%BB%E7%BB%9F.html#安装zhs和oh-my-zsh" class="sidebar-link">安装ZHS和oh my zsh</a></li><li class="sidebar-sub-header"><a href="/blog/back/linux/windows%E5%AD%90%E7%B3%BB%E7%BB%9F.html#安装插件和主题" class="sidebar-link">安装插件和主题</a></li></ul></li><li><a href="/blog/back/linux/windows%E5%AD%90%E7%B3%BB%E7%BB%9F.html#注意事项" class="sidebar-link">注意事项</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/linux/windows%E5%AD%90%E7%B3%BB%E7%BB%9F.html#参考" class="sidebar-link">参考</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>windows子系统WSL</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>5/14/2019</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      代码之外
+    </span><span class="tag-item" data-v-2c25cede>
+      后端
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span><span class="tag-item" data-v-2c25cede>
+      linux🐧
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><div class="warning custom-block"><p class="custom-block-title">zsh真香</p> <p>linux 配置 oh my zsh和zsh<br>
+到处安利~</p></div> <h2 id="安装"><a href="#安装" aria-hidden="true" class="header-anchor">#</a> 安装</h2> <p>MS商店直接就能安装，简单无脑。<br>
+安装完之后第一次使用会等待一段时间，有长有短根据你机器配置来的。等待足够长时间之后就会让你设置用户名和密码，先填写一个，记住这个不要忘了。<br>
+在你没有动root用户名之前，这个最小子系统的root密码每次开机都会重置一个随机密码，直到你输入命令</p> <div class="language- extra-class"><pre class="language-text"><code>sudo passwd
+</code></pre></div><p>然后就会让你输入一次当前用户名密码，两次root(UNIX)密码,这样就成功的设置了root密码，别给忘了，很麻烦。</p> <h2 id="配置ssh"><a href="#配置ssh" aria-hidden="true" class="header-anchor">#</a> 配置ssh</h2> <p>设置完用户名和密码之后我们来设置ssh，windows的cmd很难用而且还有不停的提示音耳朵简直爆炸<br>
+设置ssh之后就可以使用外部的Termius，xshell，putty连接啦。</p> <ul><li><strong>顺手更新下阿里云软件源</strong><br>
+备份</li></ul> <div class="language- extra-class"><pre class="language-text"><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+</code></pre></div><p>编辑</p> <div class="language- extra-class"><pre class="language-text"><code>sudo vim /etc/apt/sources.list
+</code></pre></div><p>把所有内容注释掉，把下面这些地址粘贴进去
+</p><details><summary><B><I style="cursor:pointer;color:#0e5870;">Click to See More</I></B></summary><p></p> <div class="language- extra-class"><pre class="language-text"><code>deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+</code></pre></div></details> <p>保存退出，然后更新apt</p> <div class="language- extra-class"><pre class="language-text"><code>sudo apt-get update
+sudo apt-get upgrade
+</code></pre></div><ul><li><strong>重装自带的ssh</strong><br>
+自带的可能不稳定，重新装一下就好了</li></ul> <div class="language- extra-class"><pre class="language-text"><code>sudo apt-get remove openssh-server
+sudo apt-get install openssh-server
+</code></pre></div><ul><li><strong>编辑sshd_config文件,允许用户连接</strong></li></ul> <div class="language- extra-class"><pre class="language-text"><code>sudo vim /etc/ssh/sshd_config
+</code></pre></div><p><code>Port 23</code>端口最好不要用22，可能和windows冲突<br> <code>PasswordAuthentication yes</code>允许用户名密码登录<br> <code>PermitRootLogin yes</code>允许root登录<br> <code>PubkeyAuthentication no</code>不校验公钥</p> <ul><li><strong>重启ssh服务</strong>
+不能用systemctl,因为init进程pid并不是1</li></ul> <div class="language- extra-class"><pre class="language-text"><code>sudo service ssh restart
+</code></pre></div><ul><li><strong>测试一下</strong><br>
+cmd输入命令</li></ul> <div class="language- extra-class"><pre class="language-text"><code>ssh  -o StrictHostKeyChecking=no root@127.0.0.1
+</code></pre></div><p>然后会让你输入密码，能登陆进去就成功了。ssh配置就完了<br>
+在xshell中和termius中设置好就可以用了🎉</p> <ul><li><strong>开机启动</strong>
+每次开机都要先启动一下Ubuntu才能进行ssh，作为一个懒人，当然要用脚本了。<br>
+WSL貌似很早就支持后台驻留进程，非常方便，只有一个init和sshd进程占资源也很少<br>
+root编辑</li></ul> <div class="language- extra-class"><pre class="language-text"><code>sudo vim /etc/init.wsl
+</code></pre></div><p>写入并保存</p> <div class="language- extra-class"><pre class="language-text"><code>#! /bin/sh
+/etc/init.d/cron $1
+/etc/init.d/ssh $1
+/etc/init.d/supervisor $1
+</code></pre></div><p>安装supervisor赋予脚本执行权限</p> <div class="language- extra-class"><pre class="language-text"><code>sudo apt-get install supervisor
+sudo chmod +x /etc/init.wsl
+</code></pre></div><p>之后我们就可以通过<code>sudo /etc/init.wsl [start|stop|restart]</code>停止启动我们的服务，但是还需要root密码<br>
+编辑<code>sudo vim /etc/sudoers</code>添加</p> <div class="language- extra-class"><pre class="language-text"><code>%sudo ALL=NOPASSWD: /etc/init.wsl
+</code></pre></div><div class="danger custom-block"><p class="custom-block-title">WARNING</p> <p>一定要在所有东西做完之后在文本最后添加！！！<br>
+不然会失败</p></div> <p>linux部分大功告成！<br>
+在windows下新建一个文本文档，写入下面内容，保存为随便一个名字后缀 <strong>.vbs</strong>文件</p> <div class="language- extra-class"><pre class="language-text"><code>Set ws = CreateObject(&quot;Wscript.Shell&quot;)
+ws.run &quot;ubuntu1804 run sudo /etc/init.wsl start&quot;, vbhide
+</code></pre></div><p>扔到开机自启文件夹<br> <code>[C:\Users\你当前的用户\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup]</code><br>
+里就会开机自启，
+重启开机直接连接试试。</p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>可以在windows控制面板-&gt;程序-&gt;更改或关闭windows设置-&gt;适用于windows的最小linux子系统<br>
+控制是否启用系统中的该功能，如果不启用就不会开始init进程也不会耗电。</p></div> <h2 id="ohmyzsh"><a href="#ohmyzsh" aria-hidden="true" class="header-anchor">#</a> OhMyZSH</h2> <p>这是一个好用的shell命令行有很多插件。（确定不是因为好看才装的？</p> <h3 id="安装zhs和oh-my-zsh"><a href="#安装zhs和oh-my-zsh" aria-hidden="true" class="header-anchor">#</a> 安装ZHS和oh my zsh</h3> <p>ssh连接以后是这样的，但是很丑啊。。。自动补全跳转啥的都不好用。
+</p><div align="center"><img src="/assets/img/截图2019-05-15_18-24-39.5590e31e.png" style="height: 500px"></div><p></p> <p><strong>ubuntu使用</strong></p> <div class="language- extra-class"><pre class="language-text"><code>sudo apt update
+sudo apt install zsh
+chsh -s /bin/zsh
+</code></pre></div><p><strong>centos</strong>（也就是阿里云）</p> <div class="language- extra-class"><pre class="language-text"><code>yum install zsh -y
+chsh -s /bin/zsh
+</code></pre></div><p><strong>然后执行</strong></p> <div class="language- extra-class"><pre class="language-text"><code>sh -c &quot;$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;
+</code></pre></div><p>安完之后<code>ls ~/.oh-my-zsh/themes</code>可以查看主题，不过最好看的在下面。<br>
+现在新开一个tab，如果主题没更换，就重启一次，如果还没更换，就是安装失败了</p> <h3 id="安装插件和主题"><a href="#安装插件和主题" aria-hidden="true" class="header-anchor">#</a> 安装插件和主题</h3> <p>所有的设置都存放在<code>~/.zshrc</code>文件里<code>ZSH_THEME=&quot;&quot;</code>切换你的主题</p> <p><strong>ubuntu</strong></p> <div class="language- extra-class"><pre class="language-text"><code>sudo apt install zsh-theme-powerlevel9k
+</code></pre></div><p><strong>centos</strong></p> <div class="language- extra-class"><pre class="language-text"><code>git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+</code></pre></div><p>然后切换<code>ZSH_THEME=&quot;powerlevel9k/powerlevel9k&quot;</code></p> <p><strong>插件</strong></p> <div class="language- extra-class"><pre class="language-text"><code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+</code></pre></div><p><strong>ubuntu安装autojump</strong></p> <div class="language- extra-class"><pre class="language-text"><code>sudo apt-get install autojump
+</code></pre></div><p>需要把<code>. /usr/share/autojump/autojump.sh</code>添加到<code>~/.zshrc</code>文件尾。<br> <strong>centos安装autojump</strong></p> <div class="language- extra-class"><pre class="language-text"><code>git clone git://github.com/joelthelion/autojump.git
+cd autojump
+./install.py
+</code></pre></div><p>需要把<code>[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh</code>添加到<code>~/.zshrc</code>文件尾。<br>
+一定要添加到文件尾，不要在中间！之后就可以用 <em><strong>j</strong></em> 直接跳转了<br> <strong>编辑文件<code>~/.zshrc</code></strong></p> <ul><li>添加 export DEFAULT_USER=&quot;whoami&quot;</li> <li>添加 export TERM=&quot;xterm-256color&quot;</li> <li>修改插件(放心修改不会变卡😂</li></ul> <div class="language- extra-class"><pre class="language-text"><code>plugins=(git extract ruby gem rails rvm python pip django npm node scala docker ant gradle golang redis-cli colored-man-pages zsh-syntax-highlighting zsh-autosuggestions)
+</code></pre></div><ul><li>修改 ZSH_THEME=&quot;powerlevel9k/powerlevel9k&quot;</li> <li>最后一行添加 POWERLEVEL9K_CONTEXT_TEMPLATE=&quot;%n&quot;
+<ul><li>这个是用来去掉阿里云前面又臭又长的主机名的，留下了用户名。其他的不用动就很帅</li></ul></li></ul> <br> <p>重启或者新开选项卡或<code>source ~/.zshrc</code>就有作用了。<br>
+安完之后敲shell就舒服多了
+</p><div align="center"><img src="/assets/img/截图2019-05-15_19-07-42.0c38c6f6.png" style="height: 500px"></div><p></p> <h2 id="注意事项"><a href="#注意事项" aria-hidden="true" class="header-anchor">#</a> 注意事项</h2> <p><strong>文件读写</strong><br> <br>
+windows下的磁盘文件都挂载到了/mnt，盘符对应win的盘符，不过外置驱动器是不会自动挂载的</p> <p><strong>Docker</strong><br> <br>
+docker本身是深入系统服务的软件，开启docker必须要访问windows上面的docker进程。<br>
+但是既然这样为什么不直接使用windows上的docker呢？还不会有性能损耗。<br>
+Docker无法在win10家庭版运行，使用toolbox可以试试.不过对于surface的性能来说，可以，但没必要。<br> <br> <strong>服务管理</strong><br> <br></p> <div class="danger custom-block"><p class="custom-block-title">WARNING</p> <p>不能使用systemctl,因为init进程pid并不是1。这个本质上是windows开起了一个进程通过MINGW64运行linux命令，所以系统的最高进程和普通的linux不一样，无法调用systemctl。<br>
+建议使用service</p></div> <p><strong>密钥</strong><br> <br>
+密钥和Windows中的密钥匙不互通的，ssh-keygen会生成一个新的存储在WSL的~/.ssh里面。<br>
+软件使用密钥的时候(git)要注意。
+<br></p> <div align="center"><img src="/assets/img/截图2019-05-14_15-51-38.b7ed5192.png" style="height: 550px"><br>完成之后</div> <h2 id="参考"><a href="#参考" aria-hidden="true" class="header-anchor">#</a> 参考</h2> <p><a href="https://unix.stackexchange.com/questions/229124/how-do-i-run-the-ssh-command-to-set-stricthostkeychecking-no">ssh登录免验证</a><br> <a href="https://zhuanlan.zhihu.com/p/47733615">WSL开机启动ssh</a><br> <a href="https://blog.csdn.net/zhangjiahao14/article/details/80554616">Ubuntu修改阿里源</a><br> <a href="https://blog.csdn.net/raoweijian/article/details/65661302 ">WSL配置ssh</a></p> <div id="vcomments"></div></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>12/29/2019, 3:00:55 PM</span></div></div> <!----> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/14.69f05fca.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

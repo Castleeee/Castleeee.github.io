@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>C++数据结构(一) | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/42.b0388f8b.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/38.34e99c36.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#时间复杂度" class="sidebar-link">时间复杂度</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#空间复杂度" class="sidebar-link">空间复杂度</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#线性表-linertable" class="sidebar-link">线性表(LinerTable)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#链表" class="sidebar-link">链表</a></li><li class="sidebar-sub-header"><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#链表插入，遍历，删除相同元素" class="sidebar-link">链表插入，遍历，删除相同元素</a></li><li class="sidebar-sub-header"><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#链表有序合并" class="sidebar-link">链表有序合并</a></li><li class="sidebar-sub-header"><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#双向链表-循环链表" class="sidebar-link">双向链表&amp;循环链表</a></li><li class="sidebar-sub-header"><a href="/blog/back/C%E5%92%8CCpp/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841.html#一些应用" class="sidebar-link">一些应用</a></li></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>C++数据结构(一)</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>3/17/2019</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      后端
+    </span><span class="tag-item" data-v-2c25cede>
+      C/C++
+    </span><span class="tag-item" data-v-2c25cede>
+      数据结构和算法
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><h2>前置的一些东西</h2> <p>书上都有的我就不写了比如什么数据元素数据项等等，只及以下经常提到的或者自己对概念的理解。想看概念去 <em>[1]数据结构严蔚敏C语言版p4序章1.2</em>，我也是看着这个书写的<br>
+算法的特性：</p> <ul><li>有穷(能执行完)，</li> <li>确定(每条指令有明确含义无二义性，相同输入会有相同输出)，</li> <li>可行性(可以由有限个指令实现)，</li> <li>有一个或多个输入/输出<br>
+良好算法要求：</li> <li>正确(边缘的数据也能得到预期输出)</li> <li>可读性，</li> <li>健壮性(鲁棒性鲁大营老师很棒(。・∀・)ノ对于莫名其妙的输入也能处理不会崩)</li> <li>时间空间复杂度良好。</li></ul> <h2 id="时间复杂度"><a href="#时间复杂度" aria-hidden="true" class="header-anchor">#</a> 时间复杂度</h2> <h2 id="空间复杂度"><a href="#空间复杂度" aria-hidden="true" class="header-anchor">#</a> 空间复杂度</h2> <h2 id="线性表-linertable"><a href="#线性表-linertable" aria-hidden="true" class="header-anchor">#</a> 线性表(LinerTable)</h2> <p>一般的线性表系统已经实现好了，自己再实现一次差不多就是对系统的list进行封装而已，注意内存地址连续。<br>
+性质:</p> <ul><li>有穷性有限个元素，元素长度就是表长</li> <li>有前驱和后继节点，只有一个直接前驱和直接后继，头无前驱尾无后继</li> <li>同一性，数据元素类型必需相同</li> <li>有序性，存在序偶关系</li></ul> <p>顺序表也就是数组，直接存放在连续的内存中，物理内存对应和顺序是一致的。从0开始数不能切片<br>
+基本操作：初始化插入查找删除修改求长度<br>
+线性表查找插入等的时间耗费主要在表中结点的移动操作上，设在线性表L中的第i元素之前插入结点的概率为Pi，设各个位置插入是等概率，则<code>Pi=1/(n+1)</code>？.而插入时移动结点的次数为<code>n-i+1</code>.
+总的平均移动次数：<code>Einsert=ΣPi*(n-i+1)</code>    (1&lt;i&lt;n) <code>Einsert=n/2</code> 即在顺序表上做插入运算，平均要移动表上一半结点。当表长n较大时，算法的效率相当低。因此算法的平均时间复杂度为 <code>O(n)</code>.</p> <div class="warning custom-block"><p class="custom-block-title">动态分配</p> <p>动态分配<code>p=(LNode*)malloc(sizeof(LNode));</code><br>
+函数<code>malloc</code>分配了一个类型为LNode的结点变量的空间，并其首地址放入指针变量p中。<br>
+动态释放<code>free(p);</code>系统回收由指针变量p所指向的内存区。p必须是最近一次调用malloc函数时的返回值。</p></div> <h3 id="链表"><a href="#链表" aria-hidden="true" class="header-anchor">#</a> 链表</h3> <p>一维，顺序存储的数据元素，可以直接用while进行遍历。只能从头开始，因为没有指向上一个的指针，而且有时候都没有变量名，就维护一个表。表头没有上一个结点，表尾没有下一个节点指向nullptr</p> <details><summary><B><I style="cursor:pointer;color:#0e5870;">点击查看线性表代码</I></B></summary> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/*include here*/</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&quot;iostream&quot;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&quot;string&quot;</span></span>
+<span class="token comment">/*define here*/</span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token comment">/*function&amp;class*/</span>
+
+<span class="token keyword">static</span> <span class="token keyword">int</span> num<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//表示这是创建的第几个node</span>
+<span class="token keyword">class</span> <span class="token class-name">Liner</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span> <span class="token operator">:</span>
+    string value<span class="token punctuation">;</span>
+    Liner <span class="token operator">*</span>next<span class="token punctuation">;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    string <span class="token function">GetValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//get 方法</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> <span class="token function">SetValue</span><span class="token punctuation">(</span>string <span class="token operator">&amp;</span>v<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//set方法</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>value<span class="token operator">=</span>v<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    Liner <span class="token function">GetNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>next<span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>next<span class="token punctuation">;</span><span class="token comment">//取值</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span><span class="token punctuation">{</span>
+            cout<span class="token operator">&lt;&lt;</span><span class="token string">&quot;no next node&quot;</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">Liner</span><span class="token punctuation">(</span>string value<span class="token operator">=</span><span class="token string">&quot;no first data set!&quot;</span><span class="token punctuation">,</span>Liner <span class="token operator">*</span>next<span class="token operator">=</span><span class="token keyword">nullptr</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>next <span class="token operator">=</span> next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//entry</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;hello world&quot;</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    Liner <span class="token function">B</span><span class="token punctuation">(</span><span class="token string">&quot;you succeed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Liner <span class="token function">A</span><span class="token punctuation">(</span><span class="token string">&quot;12345&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>B<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span>A<span class="token punctuation">.</span><span class="token function">GetNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">GetValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*
+created by a_little_rubbish
+have a nice day : )
+*/</span>
+
+</code></pre></div></details> <h3 id="链表插入，遍历，删除相同元素"><a href="#链表插入，遍历，删除相同元素" aria-hidden="true" class="header-anchor">#</a> 链表插入，遍历，删除相同元素</h3> <p>链表删除相同的值，单链表往后循环的比，挨个删除</p> <h3 id="链表有序合并"><a href="#链表有序合并" aria-hidden="true" class="header-anchor">#</a> 链表有序合并</h3> <h3 id="双向链表-循环链表"><a href="#双向链表-循环链表" aria-hidden="true" class="header-anchor">#</a> 双向链表&amp;循环链表</h3> <p>插入，删除+删除相同元素（注意顺序或者用暂时的指针存储两种断表方式），遍历</p> <h3 id="一些应用"><a href="#一些应用" aria-hidden="true" class="header-anchor">#</a> 一些应用</h3> <h3>一元多项式的相加</h3> <p>（浮点系数为0怎么办1.0e-6）
+</p><h3>头结点的范围值删除</h3><p></p> <h3>原空间就地逆序</h3>
+啊
+</div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>11/8/2019, 7:50:25 AM</span></div></div> <div class="page-nav" data-v-cdcae5a4><p class="inner" data-v-cdcae5a4><span class="prev" data-v-cdcae5a4>
+        ←
+        <a href="/blog/back/C和Cpp/Cpp.html" class="prev" data-v-cdcae5a4>
+          C++基础
+        </a></span> <span class="next" data-v-cdcae5a4><a href="/blog/back/C和Cpp/数据结构2.html" data-v-cdcae5a4>
+          C++数据结构（二）
+        </a>
+        →
+      </span></p></div> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/42.b0388f8b.js" defer></script>
+  </body>
+</html>

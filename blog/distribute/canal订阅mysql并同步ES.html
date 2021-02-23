@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>canal订阅mysql同步到ES | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/9.56b90d44.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#readme" class="sidebar-link">README</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#es搭建" class="sidebar-link">ES搭建</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#mysql配置" class="sidebar-link">mysql配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#修改源" class="sidebar-link">修改源</a></li><li class="sidebar-sub-header"><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#开启binlog" class="sidebar-link">开启binlog</a></li></ul></li><li><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#canal配置" class="sidebar-link">canal配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#启动server" class="sidebar-link">启动server</a></li><li class="sidebar-sub-header"><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#启动client" class="sidebar-link">启动client</a></li></ul></li><li><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#遇到的坑" class="sidebar-link">遇到的坑</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#用户名密码错误" class="sidebar-link">用户名密码错误</a></li><li class="sidebar-sub-header"><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#更新机制" class="sidebar-link">更新机制</a></li><li class="sidebar-sub-header"><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#选型" class="sidebar-link">选型</a></li></ul></li><li><a href="/blog/distribute/canal%E8%AE%A2%E9%98%85mysql%E5%B9%B6%E5%90%8C%E6%AD%A5ES.html#引用参考" class="sidebar-link">引用参考</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>canal订阅mysql同步到ES</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>2/13/2020</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span><span class="tag-item" data-v-2c25cede>
+      分布式
+    </span><span class="tag-item" data-v-2c25cede>
+      后端
+    </span><span class="tag-item" data-v-2c25cede>
+      进阶
+    </span><span class="tag-item" data-v-2c25cede>
+      数据层
+    </span><span class="tag-item" data-v-2c25cede>
+      大数据
+    </span><span class="tag-item" data-v-2c25cede>
+      ELK
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><div class="tip custom-block"><p class="custom-block-title">主要的方面</p> <p>canal的用法,将mysql增量同步到ES<br>
+mysql的binlog订阅机制,主从同步的原理</p></div> <h2 id="readme"><a href="#readme" aria-hidden="true" class="header-anchor">#</a> README</h2> <p>这篇文章是毕业设计改良搜索引擎的一部分，主要解决的问题是mysql和es的同步问题。我的数据库是直接用django item生成的，如果你自己搭建的话，需要先把表建好，字段和类型规定好。<br>
+我用的版本是canal:1.1.4,mysql:5.7,ELK:6.7截至目前。server端支持8+，但是client客户端支持到不知道多少，保险起见我用的mysql5.7(因为用8失败了,用户一直无法登陆上去)，我是用docker直接搭建的ELK，为了方便后期部署也把mysql也放进了这个网络里<br>
+canal需要jdk1.8,在docker里面安装</p> <h2 id="es搭建"><a href="#es搭建" aria-hidden="true" class="header-anchor">#</a> ES搭建</h2> <p>用的这个repo,docker-compose可以直接搭建<br> <code>https://github.com/deviantony/docker-elk.git</code><br>
+下载好之后有几个地方需要改</p> <ol><li><strong>所有的密码为changeme的地方改为你自己想要的密码</strong></li> <li>修改分配的内存大小,建议ES给2g,logstash给1G</li></ol> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">elasticsearch</span><span class="token punctuation">:</span>
+    <span class="token punctuation">...</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">ES_JAVA_OPTS</span><span class="token punctuation">:</span> <span class="token string">&quot;-Xmx2g -Xms2g&quot;</span>
+      <span class="token punctuation">...</span>
+<span class="token key atrule">logstash</span><span class="token punctuation">:</span>
+    <span class="token punctuation">...</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">LS_JAVA_OPTS</span><span class="token punctuation">:</span> <span class="token string">&quot;-Xmx1g -Xms1g&quot;</span>
+
+</code></pre></div><div class="warning custom-block"><p class="custom-block-title">注意</p> <p>因为es容器内部是以elasticsearch用户启动进程的，所以在做持久化数据目录挂载的时候，需要将目录权限进行设置，否则会因为没有访问权限而启动失败。elasticsearch的uid是1000，可以建一个uid为1000的用户，然后将目录所有者赋予该用户。<br>
+你要是懒就直接755</p></div> <ol start="3"><li>禁用付费功能</li></ol> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token comment">#　elasticsearch/config/elasticsearch.yml</span>
+  <span class="token key atrule">xpack.license.self_generated.type</span><span class="token punctuation">:</span> basic
+</code></pre></div><ol start="4"><li>第一层目录下的<code>.env</code>中决定版本</li> <li>修改network分配固定ip</li></ol> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token punctuation">...</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span> <span class="token comment">#容器网络上这样配置就可以固定内网ip了</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.70
+<span class="token punctuation">...</span>
+<span class="token punctuation">...</span>
+<span class="token key atrule">networks</span><span class="token punctuation">:</span>
+  <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+    <span class="token key atrule">driver</span><span class="token punctuation">:</span> bridge
+    <span class="token key atrule">ipam</span><span class="token punctuation">:</span> <span class="token comment"># 这一行往下是新加的 </span>
+      <span class="token key atrule">config</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">subnet</span><span class="token punctuation">:</span> 192.168.1.0/24
+</code></pre></div><ol start="6"><li>删掉无用的文件 <code>.github</code> <code>.travis</code> <code>.gitattributes</code> <code>.travis.yml</code> <code>LICENSE</code> <code>README.md</code> <code>docker-stack.yml</code></li></ol> <details><summary><B><I style="cursor:pointer;color:#0e5870;">这里贴出我的 docker-compose.yml</I></B></summary> <div class="language-yml extra-class"><pre class="language-yml"><code>
+<span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.2'</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">elasticsearch</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> elasticsearch/
+      <span class="token key atrule">args</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ELK_VERSION</span><span class="token punctuation">:</span> $ELK_VERSION
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> KGelasticsearch
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> bind
+        <span class="token key atrule">source</span><span class="token punctuation">:</span> ./elasticsearch/config/elasticsearch.yml
+        <span class="token key atrule">target</span><span class="token punctuation">:</span> /usr/share/elasticsearch/config/elasticsearch.yml
+        <span class="token key atrule">read_only</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> volume
+        <span class="token key atrule">source</span><span class="token punctuation">:</span> elasticsearch
+        <span class="token key atrule">target</span><span class="token punctuation">:</span> /usr/share/elasticsearch/data
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;9200:9200&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;9300:9300&quot;</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">ES_JAVA_OPTS</span><span class="token punctuation">:</span> <span class="token string">&quot;-Xmx2g -Xms2g&quot;</span> <span class="token comment"># 分配内存</span>
+      <span class="token key atrule">ELASTIC_PASSWORD</span><span class="token punctuation">:</span> <span class="token string">&quot;chamgeme&quot;</span> <span class="token comment"># 改下ES密码</span>
+      <span class="token comment"># Use single node discovery in order to disable production mode and avoid bootstrap checks</span>
+      <span class="token comment"># see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html</span>
+      <span class="token key atrule">discovery.type</span><span class="token punctuation">:</span> single<span class="token punctuation">-</span>node
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.10 <span class="token comment"># 分配ip</span>
+
+  <span class="token key atrule">logstash</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> logstash/
+      <span class="token key atrule">args</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ELK_VERSION</span><span class="token punctuation">:</span> $ELK_VERSION
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> KGlogstash
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> bind
+        <span class="token key atrule">source</span><span class="token punctuation">:</span> ./logstash/config/logstash.yml
+        <span class="token key atrule">target</span><span class="token punctuation">:</span> /usr/share/logstash/config/logstash.yml
+        <span class="token key atrule">read_only</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> bind
+        <span class="token key atrule">source</span><span class="token punctuation">:</span> ./logstash/pipeline
+        <span class="token key atrule">target</span><span class="token punctuation">:</span> /usr/share/logstash/pipeline
+        <span class="token key atrule">read_only</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;5000:5000/tcp&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;5000:5000/udp&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;9600:9600&quot;</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">LS_JAVA_OPTS</span><span class="token punctuation">:</span> <span class="token string">&quot;-Xmx1g -Xms1g&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.20 <span class="token comment"># 分配ip</span>
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> elasticsearch
+
+  <span class="token key atrule">kibana</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> kibana/
+      <span class="token key atrule">args</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ELK_VERSION</span><span class="token punctuation">:</span> $ELK_VERSION
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> KGkibana
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> bind
+        <span class="token key atrule">source</span><span class="token punctuation">:</span> ./kibana/config/kibana.yml
+        <span class="token key atrule">target</span><span class="token punctuation">:</span> /usr/share/kibana/config/kibana.yml
+        <span class="token key atrule">read_only</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;5601:5601&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.30 <span class="token comment"># 分配ip</span>
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> elasticsearch
+
+  <span class="token key atrule">mysql</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql<span class="token punctuation">:</span><span class="token number">5.7</span>
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> KGsql
+    <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/mysql57/my.cnf<span class="token punctuation">:</span>/etc/mysql/my.cnf 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/mysql57/conf.d<span class="token punctuation">:</span>/etc/mysql/conf.d 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/mysql57/data<span class="token punctuation">:</span>/var/lib/mysql 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/mysql57/logs<span class="token punctuation">:</span>/var/log/mysql 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/docker<span class="token punctuation">-</span>elk/canal<span class="token punctuation">:</span>/canal <span class="token comment"># 重要:这个目录用来放canal</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;3306:3306&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;11112:11112&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.40 <span class="token comment"># 分配ip</span>
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">MYSQL_ROOT_PASSWORD</span><span class="token punctuation">:</span> <span class="token string">'changeme'</span>
+      <span class="token key atrule">MYSQL_USER</span><span class="token punctuation">:</span> <span class="token string">'canal'</span> <span class="token comment"># 这个参数可以提前创建一个除root外的用户</span>
+      <span class="token key atrule">MYSQL_PASSWORD</span><span class="token punctuation">:</span> <span class="token string">'canal'</span> <span class="token comment"># 这个额外用户的密码,一会连接要用到</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span><span class="token punctuation">-</span>character<span class="token punctuation">-</span>set<span class="token punctuation">-</span>server=utf8mb4
+      <span class="token punctuation">-</span><span class="token punctuation">-</span>collation<span class="token punctuation">-</span>server=utf8mb4_general_ci
+      <span class="token punctuation">-</span><span class="token punctuation">-</span>explicit_defaults_for_timestamp=true
+      <span class="token punctuation">-</span><span class="token punctuation">-</span>lower_case_table_names=1
+      <span class="token punctuation">-</span><span class="token punctuation">-</span>max_allowed_packet=128M
+
+
+  <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> KGredis
+    <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>server /etc/redis/redis.conf
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/redisdata/redis.conf<span class="token punctuation">:</span>/etc/redis/redis.conf 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/redisdata/data<span class="token punctuation">:</span>/data
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/redisdata/logs<span class="token punctuation">:</span>/var/log/redis 
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;6379:6379&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.50 <span class="token comment"># 分配ip</span>
+
+  <span class="token key atrule">nginx</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> nginx
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> KGnginx
+    <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/nginx/conf<span class="token punctuation">:</span>/etc/nginx/conf.d 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/nginx/nginx.conf<span class="token punctuation">:</span>/etc/nginx/nginx.conf 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/nginx/html<span class="token punctuation">:</span>/usr/share/nginx/html 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/nginx/logs<span class="token punctuation">:</span>/var/log/nginx 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/docker<span class="token punctuation">-</span>elk/proj<span class="token punctuation">:</span>/proj <span class="token comment"># 以后放项目用</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;80:80&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;443:443&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;81:81&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.60 <span class="token comment"># 分配ip</span>
+
+  <span class="token key atrule">neo4j</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> neo4j
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> KGneo4j
+    <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/neo4j/data<span class="token punctuation">:</span>/data 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/neo4j/import<span class="token punctuation">:</span>/import 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/neo4j/logs<span class="token punctuation">:</span>/logs 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/neo4j/conf<span class="token punctuation">:</span>/conf 
+      <span class="token punctuation">-</span> /home/ooowl/Documents/DBdata/neo4j/plugins<span class="token punctuation">:</span>/plugins 
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;7474:7474&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;7687:7687&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+        <span class="token key atrule">ipv4_address</span><span class="token punctuation">:</span> 192.168.1.70 <span class="token comment"># 分配ip</span>
+
+
+<span class="token key atrule">networks</span><span class="token punctuation">:</span>
+  <span class="token key atrule">elk</span><span class="token punctuation">:</span>
+    <span class="token key atrule">driver</span><span class="token punctuation">:</span> bridge
+    <span class="token key atrule">ipam</span><span class="token punctuation">:</span> <span class="token comment"># 分配网络</span>
+      <span class="token key atrule">config</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">subnet</span><span class="token punctuation">:</span> 192.168.1.0/24 
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span> <span class="token comment"># 默认的数据卷,存放es的数据</span>
+  <span class="token key atrule">elasticsearch</span><span class="token punctuation">:</span>
+
+</code></pre></div></details> <p>最后在docker-compose.yml的目录运行<code>docker-compose up -d</code><br>
+强烈建议安装portainer,好操作一些,如果出错了查看日志<code>docker logs container_id</code>
+访问各个端口9200,5601,3306,80之类的看看正常吗</p> <h2 id="mysql配置"><a href="#mysql配置" aria-hidden="true" class="header-anchor">#</a> mysql配置</h2> <p>先进入mysql
+<code>docker exec -it 容器name或id /bin/bash</code><br>
+进去之后先ping一下看看网络通不通(ping命令需要安装)</p> <h3 id="修改源"><a href="#修改源" aria-hidden="true" class="header-anchor">#</a> 修改源</h3> <p>你可以在里面直接vim编辑但是需要先下载vim,我用canal那个文件夹,直接在外面写好源放进去,复制过去就可以了<br>
+不细说了,linux基础网上一搜一大把<br>
+更新源的时候会报错因为缺少公钥,先运行两个命令</p> <div class="language-shell extra-class"><pre class="language-text"><code>apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32 &amp;&amp; apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+cp /etc/apt/sources.list /etc/apt/sources.list.backup &amp;&amp; rm /etc/apt/sources.list &amp;&amp; cp /canal/sources.list /etc/apt/
+apt-get -y update &amp;&amp; apt-get -y upgrade
+</code></pre></div><p>直接安装jdk会报错,因为默认少个文件夹手动建立一个</p> <div class="language-shell extra-class"><pre class="language-text"><code>mkdir -p /usr/share/man/man1
+apt-get -y install vim net-tools inetutils-ping openjdk-8-jdk procps 
+</code></pre></div><p>输入java和javac试试行不行</p> <h3 id="开启binlog"><a href="#开启binlog" aria-hidden="true" class="header-anchor">#</a> 开启binlog</h3> <p>修改mysql的配置文件,在docker里面<code>/etc/mysql/conf.d/docker.cnf</code>,也可以直接在外面更新</p> <div class="language- extra-class"><pre class="language-text"><code># 在[mysqld]下面加入
+log-bin=mysql-bin
+binlog-format=ROW
+server-id=1
+</code></pre></div><p>我先前在创建docker的时候创建过了,就不在创建了.<br>
+授予用户权限和并允许远程登录,因为canal的原理是假装自己是个slave,然后从master那里拿数据再去干别的,所以要给这个用户slave的权限</p> <div class="language- extra-class"><pre class="language-text"><code>GRANT SELECT,REPLICATION SLAVE,REPLICATION CLIENT ON *.* TO 'canal'@'%';
+FLUSH PRIVILEGES;
+</code></pre></div><p>重启mysql后检查binlog是否正常启动</p> <div class="language- extra-class"><pre class="language-text"><code>show variables like '%log_bin%';
+</code></pre></div><p>查看用户是否可以远程登录</p> <div class="language- extra-class"><pre class="language-text"><code>use mysql;
+select host, user from user;
+</code></pre></div><div align="center"><img src="/assets/img/sadsdsa.2fe36ae9.png" style="height: 350px"></div> <p>mysql就配置完毕了</p> <h2 id="canal配置"><a href="#canal配置" aria-hidden="true" class="header-anchor">#</a> canal配置</h2> <p>我是直接把外面一个目录映射到里面去，然后在外面改的配置里面重启软件就可以生效，然后把server,client都放到里面，调试好就可以运行了,你只要保证这玩意能访问ES和mysql就可以<br>
+这里<a href="https://github.com/alibaba/canal/releases" target="_blank" rel="noopener noreferrer">下载<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>,adapter和deployer</p> <div align="center"><table border="0"><tr><th><img src="/assets/img/20200309155155.73e3b7ac.png" style="height: 350px;"></th> <th><img src="/assets/img/20200309154827.6421745f.png" style="height: 350px;"></th></tr></table></div> <h3 id="启动server"><a href="#启动server" aria-hidden="true" class="header-anchor">#</a> 启动server</h3> <p>进入server的文件夹,bin是执行的目录,conf是配置,我们主要改conf</p> <ol><li>主程序的配置不要动,修改实例的配置<code>instance.properties</code></li></ol> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token punctuation">...</span>
+canal.instance.master.address=127.0.0.1<span class="token punctuation">:</span><span class="token number">3306 </span><span class="token comment">#保证能从这个访问到mysql就可以</span>
+<span class="token punctuation">...</span>
+<span class="token comment"># canal.instance.tsdb.enable=true #注释掉这个测试数据库</span>
+<span class="token punctuation">...</span>
+canal.instance.dbUsername=canal <span class="token comment"># 那个用户名</span>
+canal.instance.dbPassword=canal <span class="token comment">#那个密码</span>
+<span class="token punctuation">...</span>
+canal.instance.filter.regex=kg.save_app_saveddata 
+<span class="token comment"># 用正则匹配的库和表,.*//..*意思时是有库所有表,我这里的配置意思的kg库下的save_app_saveddata表,多表同步没搞</span>
+<span class="token punctuation">...</span>
+</code></pre></div><p>查看那俩日志,出现这样的就对了,不对就照着日志改</p> <p><strong>example.log</strong></p> <div class="language-log extra-class"><pre class="language-text"><code>2020-03-09 05:06:15.075 [main] WARN  c.a.o.canal.parse.inbound.mysql.dbsync.LogEventConvert - --&gt; init table black filter : 
+2020-03-09 05:06:15.206 [destination = example , address = /127.0.0.1:3306 , EventParser] WARN  c.a.o.c.p.inbound.mysql.rds.RdsBinlogEventParserProxy - ---&gt; begin to find start position, it will be long time for reset or first position
+2020-03-09 05:06:15.223 [main] INFO  c.a.otter.canal.instance.core.AbstractCanalInstance - start successful....
+2020-03-09 05:06:15.235 [destination = example , address = /127.0.0.1:3306 , EventParser] WARN  c.a.o.c.p.inbound.mysql.rds.RdsBinlogEventParserProxy - prepare to find start position just last position
+ {&quot;identity&quot;:{&quot;slaveId&quot;:-1,&quot;sourceAddress&quot;:{&quot;address&quot;:&quot;localhost&quot;,&quot;port&quot;:3306}},&quot;postion&quot;:{&quot;gtid&quot;:&quot;&quot;,&quot;included&quot;:false,&quot;journalName&quot;:&quot;mysql-bin.000001&quot;,&quot;position&quot;:1184440,&quot;serverId&quot;:1,&quot;timestamp&quot;:1583729914000}}
+2020-03-09 05:06:15.572 [destination = example , address = /127.0.0.1:3306 , EventParser] WARN  c.a.o.c.p.inbound.mysql.rds.RdsBinlogEventParserProxy - ---&gt; find start position successfully, EntryPosition[included=false,journalName=mysql-bin.000001,position=1184440,serverId=1,gtid=,timestamp=1583729914000] cost : 359ms , the next step is binlog dump
+</code></pre></div><p><strong>canal.log</strong></p> <div align="center"><img src="/assets/img/c.21d01173.png" style="height: 100px"></div> <h3 id="启动client"><a href="#启动client" aria-hidden="true" class="header-anchor">#</a> 启动client</h3> <p>进入client的文件夹,bin是执行的目录,conf是配置,我们主要改conf</p> <ol><li>修改<code>application.yml</code></li></ol> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span>
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">jackson</span><span class="token punctuation">:</span>
+    <span class="token key atrule">date-format</span><span class="token punctuation">:</span> yyyy<span class="token punctuation">-</span>MM<span class="token punctuation">-</span>dd HH<span class="token punctuation">:</span>mm<span class="token punctuation">:</span>ss
+    <span class="token key atrule">time-zone</span><span class="token punctuation">:</span> GMT+8
+    <span class="token key atrule">default-property-inclusion</span><span class="token punctuation">:</span> non_null
+
+<span class="token key atrule">canal.conf</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mode</span><span class="token punctuation">:</span> tcp <span class="token comment"># kafka rocketMQ</span>
+  <span class="token key atrule">canalServerHost</span><span class="token punctuation">:</span> 192.168.1.40<span class="token punctuation">:</span><span class="token number">11111 </span><span class="token comment"># 数据库ip,如果你没改过那就是11111端口</span>
+<span class="token comment">#  zookeeperHosts: slave1:2181</span>
+<span class="token comment">#  mqServers: 127.0.0.1:9092 #or rocketmq</span>
+<span class="token comment">#  flatMessage: true</span>
+  <span class="token key atrule">batchSize</span><span class="token punctuation">:</span> <span class="token number">500</span>
+  <span class="token key atrule">syncBatchSize</span><span class="token punctuation">:</span> <span class="token number">1000</span>
+  <span class="token key atrule">retries</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">timeout</span><span class="token punctuation">:</span>
+  <span class="token key atrule">accessKey</span><span class="token punctuation">:</span>
+  <span class="token key atrule">secretKey</span><span class="token punctuation">:</span>
+  <span class="token key atrule">srcDataSources</span><span class="token punctuation">:</span>
+    <span class="token key atrule">defaultDS</span><span class="token punctuation">:</span>
+      <span class="token key atrule">url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//192.168.1.40<span class="token punctuation">:</span>3306/kg<span class="token punctuation">?</span>useUnicode=true <span class="token comment">#数据库uel</span>
+      <span class="token key atrule">username</span><span class="token punctuation">:</span> canal <span class="token comment"># 那个新的用户名</span>
+      <span class="token key atrule">password</span><span class="token punctuation">:</span> canal <span class="token comment"># 那个新的密码</span>
+  <span class="token key atrule">canalAdapters</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">instance</span><span class="token punctuation">:</span> example <span class="token comment"># 就是你server的地址</span>
+    <span class="token key atrule">groups</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">groupId</span><span class="token punctuation">:</span> g1
+        <span class="token key atrule">outerAdapters</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> es
+            <span class="token key atrule">hosts</span><span class="token punctuation">:</span> 192.168.1.10<span class="token punctuation">:</span><span class="token number">9300 </span><span class="token comment"># 你的es地址</span>
+            <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+              <span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> docker<span class="token punctuation">-</span>cluster <span class="token comment"># 你的es名称,访问9200会有,如果不对会报错</span>
+ 
+</code></pre></div><ol start="2"><li>修改<code>example.yml</code><br>
+实例文件会自动读取,改名也不要紧,他会自动读取所有的yml</li></ol> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">dataSourceKey</span><span class="token punctuation">:</span> defaultDS <span class="token comment">#从 主文件那个数据源读取</span>
+<span class="token key atrule">destination</span><span class="token punctuation">:</span> example <span class="token comment"># 对应server的实例的名字</span>
+<span class="token key atrule">groupId</span><span class="token punctuation">:</span> g1 <span class="token comment"># 默认就行</span>
+<span class="token key atrule">esMapping</span><span class="token punctuation">:</span>
+  <span class="token key atrule">_index</span><span class="token punctuation">:</span> sifoudata <span class="token comment"># 要插入的索引名称</span>
+  <span class="token key atrule">_type</span><span class="token punctuation">:</span> _doc
+  <span class="token key atrule">_id</span><span class="token punctuation">:</span> _id <span class="token comment"># 这个id就是es的唯一id,如果你想要主键充当id,应该在sql下写明,比如我</span>
+  <span class="token key atrule">upsert</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">sql</span><span class="token punctuation">:</span> <span class="token string">&quot;select a.id as _id, a.types, a.author_name, a.author_id, a.author_link, a.tags, a.likes, a.favorite, a.release_time, a.article_link, a.title, a.content from save_app_saveddata a&quot;</span>
+  <span class="token key atrule">commitBatch</span><span class="token punctuation">:</span> <span class="token number">30 </span>
+
+<span class="token comment"># 对应创建索引的json</span>
+<span class="token comment"># {</span>
+<span class="token comment">#   &quot;mappings&quot;: {</span>
+<span class="token comment">#     &quot;_doc&quot;: {</span>
+<span class="token comment">#         &quot;properties&quot;: {</span>
+<span class="token comment">#           &quot;types&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;keyword&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;author_name&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;keyword&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;author_id&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;keyword&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;author_link&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;keyword&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;tags&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;keyword&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;likes&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;integer&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;favorite&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;integer&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;release_time&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;keyword&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;article_link&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;keyword&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;title&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;text&quot;</span>
+<span class="token comment">#           },</span>
+<span class="token comment">#           &quot;content&quot;: {</span>
+<span class="token comment">#             &quot;type&quot;: &quot;text&quot;</span>
+<span class="token comment">#           }</span>
+<span class="token comment">#         }</span>
+<span class="token comment">#     }</span>
+<span class="token comment">#   }</span>
+<span class="token comment"># }</span>
+</code></pre></div><div class="danger custom-block"><p class="custom-block-title">WARNING</p> <p>先在ES中创建索引,sql表清空</p></div> <ol start="3"><li>输出日志表示你成功了
+<strong>adapter.log</strong></li></ol> <div align="center"><img src="/assets/img/b.e02864ed.png" style="height: 420px"></div> <h2 id="遇到的坑"><a href="#遇到的坑" aria-hidden="true" class="header-anchor">#</a> 遇到的坑</h2> <p>版本不用我多说,错了不兼容的直接连不上</p> <h3 id="用户名密码错误"><a href="#用户名密码错误" aria-hidden="true" class="header-anchor">#</a> 用户名密码错误</h3> <div class="language- extra-class"><pre class="language-text"><code>org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-196]
+</code></pre></div><p>解决办法:删除<code>canal.deployer-1.1.4/conf/example/h2.mv.db</code>重新运行</p> <h3 id="更新机制"><a href="#更新机制" aria-hidden="true" class="header-anchor">#</a> 更新机制</h3> <p>基于 row 模式的 binlog 会不会记录变更前、变更后的值呢？</p> <ul><li>INSERT:只有变更后的值。</li> <li>UPDATE:包含了变更前、变更后的值。</li> <li>DELETE:变更前的值</li></ul> <h3 id="选型"><a href="#选型" aria-hidden="true" class="header-anchor">#</a> 选型</h3> <div align="center"><img src="/assets/img/d.ec47dcf0.png" style="height: 620px"></div> <h2 id="引用参考"><a href="#引用参考" aria-hidden="true" class="header-anchor">#</a> 引用参考</h2> <ul><li><a href="https://www.bilibili.com/video/av82844749" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/av82844749<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://segmentfault.com/a/1190000019066098" target="_blank" rel="noopener noreferrer">https://segmentfault.com/a/1190000019066098<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/alibaba/canal/wiki/Sync-ES" target="_blank" rel="noopener noreferrer">https://github.com/alibaba/canal/wiki/Sync-ES<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://juejin.im/post/5d0dfec56fb9a07ed064bb6f#heading-3" target="_blank" rel="noopener noreferrer">https://juejin.im/post/5d0dfec56fb9a07ed064bb6f#heading-3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://blog.csdn.net/laoyang360/article/details/88600799#commentBox" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/laoyang360/article/details/88600799#commentBox<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <div id="vcomments"></div></li></ul></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>4/4/2020, 8:11:56 AM</span></div></div> <!----> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/9.56b90d44.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

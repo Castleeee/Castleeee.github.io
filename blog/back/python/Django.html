@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Django的基础知识(Old) | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/57.fbeec51d.js" as="script"><link rel="preload" href="/assets/js/38.34e99c36.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/6.9305fa77.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/back/python/Django.html#配置环境和ide" class="sidebar-link">配置环境和IDE</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#创建env" class="sidebar-link">创建env</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#环境搭建-创建工程" class="sidebar-link">环境搭建&amp;创建工程</a></li></ul></li><li><a href="/blog/back/python/Django.html#django基本结构介绍" class="sidebar-link">Django基本结构介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#特性" class="sidebar-link">特性</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#常用的命令" class="sidebar-link">常用的命令</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#新建一个工程" class="sidebar-link">新建一个工程</a></li></ul></li><li><a href="/blog/back/python/Django.html#django的m-v-c！" class="sidebar-link">Django的M V C！</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#模型-m" class="sidebar-link">模型-M</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#视图-url-v" class="sidebar-link">视图&amp;url-V</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#路由-中间件-c" class="sidebar-link">路由&amp;中间件-C</a></li></ul></li><li><a href="/blog/back/python/Django.html#admin转xadmin" class="sidebar-link">admin转Xadmin</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#admin" class="sidebar-link">admin</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#xadmin" class="sidebar-link">Xadmin</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#嵌套管理" class="sidebar-link">嵌套管理</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#字段分组管理" class="sidebar-link">字段分组管理</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/Django.html#其他几个小功能" class="sidebar-link">其他几个小功能</a></li></ul></li><li><a href="/blog/back/python/Django.html#安装djangoueditor使用富文本" class="sidebar-link">安装DjangoUeditor使用富文本</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>Django的基础知识(Old)</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>1/1/2019</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      后端
+    </span><span class="tag-item" data-v-2c25cede>
+      web
+    </span><span class="tag-item" data-v-2c25cede>
+      Django
+    </span><span class="tag-item" data-v-2c25cede>
+      python🐍
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><div class="danger custom-block"><p class="custom-block-title">写的太乱已废弃<br></p> <p>移步大型电视连续剧Django[0]-环境配置</p></div> <h1 id="django的基本用法"><a href="#django的基本用法" aria-hidden="true" class="header-anchor">#</a> Django的基本用法</h1> <h2 id="配置环境和ide"><a href="#配置环境和ide" aria-hidden="true" class="header-anchor">#</a> 配置环境和IDE</h2> <h3 id="创建env"><a href="#创建env" aria-hidden="true" class="header-anchor">#</a> 创建env</h3> <p><em>我喜欢用Anaconda</em><br>
+conda create -n xxxx python=3.6+/2.7<br>
+创建了一个conda的自带环境 <br>
+可以在Anconda中查看里面有啥<br>
+conda list查看所有的包<br>
+conda install xx 安装一个包<br>
+conda uninstall xx 卸载一个包<br>
+conda 存放在Anaconda/envs下<br>
+Linux:  source (de)activate name(虚拟环境名称)<br>
+Windows: (de)activate name(虚拟环境名称)<br>
+Anaconda真的很良心不用自己解决包冲突该有的都有还能兼容pip一块用【爽到<br></p> <h3 id="环境搭建-创建工程"><a href="#环境搭建-创建工程" aria-hidden="true" class="header-anchor">#</a> 环境搭建&amp;创建工程</h3> <p><em>这里默认你已经配置好python环境了</em><br></p> <ul><li>把django/bin/加入环境变量<br></li> <li>cmd 中输入进入到想要工程文件夹(最好是空的),<em>django-admin startproject name</em><br></li> <li>该目录下会多一个文件夹即是我们的工程.此时可以用pycharm打开配置一下django的configuration<br>(最好单独创建一个conda env)<br> <img src="https://upload-images.jianshu.io/upload_images/12620393-c7c9a11932192b4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选择配置好的conda环境"> <img src="https://upload-images.jianshu.io/upload_images/12620393-f71e96ee5210278b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置configuration"></li> <li>接下来就可以愉快的撸代码啦<br></li></ul> <h2 id="django基本结构介绍"><a href="#django基本结构介绍" aria-hidden="true" class="header-anchor">#</a> Django基本结构介绍</h2> <h3 id="特性"><a href="#特性" aria-hidden="true" class="header-anchor">#</a> 特性</h3> <p>django灵活性比pyrimid稍微差一点,但是确实十分快速的一个框架,编写十分的快,虽然不如Flask小巧但是能承担很大的负载<img src="https://upload-images.jianshu.io/upload_images/12620393-383636fee043c224.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="django的基本过程">
+也是一个MVC但是简化了model的操作,直接用django的engine代替了sql语句,更好写,自带了admin以及升级之后炫酷的的xadmin。<br> <img src="https://upload-images.jianshu.io/upload_images/12620393-5c4ab58f87086c11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="在这里可以直接打开manage.py控制台"></p> <h3 id="常用的命令"><a href="#常用的命令" aria-hidden="true" class="header-anchor">#</a> 常用的命令</h3> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment">#记不住也先看一遍,会一直用</span>
+django<span class="token operator">-</span>admin startproject xxx<span class="token comment">#前面提到的开始一个django的项目cmd进入目录之后</span>
+python manage<span class="token punctuation">.</span>py startapp xxx<span class="token comment">#创建一个xxx的app</span>
+python manage<span class="token punctuation">.</span>py makemigrations<span class="token comment">#创建更改的makemigrations文件</span>
+python manage<span class="token punctuation">.</span>py migrate<span class="token comment">#应用你的更改到数据库</span>
+python manage<span class="token punctuation">.</span>py runserver <span class="token number">0.0</span><span class="token number">.0</span><span class="token number">.0</span><span class="token punctuation">:</span><span class="token number">8000</span><span class="token comment">#在8000端口运行你的程序</span>
+python manage<span class="token punctuation">.</span>py shell<span class="token comment">#django命令行</span>
+python manage<span class="token punctuation">.</span>py flush<span class="token comment">#清空表</span>
+python manage<span class="token punctuation">.</span>py createsuperuser<span class="token comment">#创建管理员账户可以直接登陆后台，填入用户名密码邮箱可以空</span>
+python manage<span class="token punctuation">.</span>py dbshell<span class="token comment">#数据库命令行</span>
+python manage<span class="token punctuation">.</span>py changepassword username<span class="token comment">#换密码</span>
+</code></pre></div><div class="tip custom-block"><p class="custom-block-title">注意</p> <p>在manage.py Tools下前面的python manage.py 不用加</p></div> <h3 id="新建一个工程"><a href="#新建一个工程" aria-hidden="true" class="header-anchor">#</a> 新建一个工程</h3> <ol><li>安装拓展包：<br>
+DjangoUeditor(源码安装)<br>
+xdamin(git源码安装)<br>
+django-cors-headers(解决跨域)<br>
+djangorestframework(RESTful框架)<br>
+mysql-client(windows 拓展站下载轮子)<br>
+django-filter
+markdown</li> <li>建立目录<br> <img src="https://upload-images.jianshu.io/upload_images/12620393-390886d8368630df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="目录"></li> <li>修改setting文件</li></ol> <div class="language-python extra-class"><pre class="language-python"><code>sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>BASE_DIR<span class="token punctuation">)</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>inster<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span><span class="token string">&quot;apps&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>inster<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span><span class="token string">&quot;extra_apps&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">#BASE_DIR下面增加这三条将BASE_DIR apps extra_apps添加进搜索路径去</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code>INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">&quot;crispy_forms&quot;</span>
+    <span class="token string">&quot;xadmin&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;corsheaders&quot;</span>
+<span class="token punctuation">]</span>
+<span class="token comment">#注册插件</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code>MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">'corsheaders.middleware.CorsMiddleware'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">]</span>
+<span class="token comment">#要放在django.middleware.common.CommonMiddleware之前,</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code>DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">&quot;blog&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;USER&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PASSWORD&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;1118&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;HOST&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;127.0.0.1&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;PORT&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;3306&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">#修改默认数据库为Mysql</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code>LANGUAGE_CODE <span class="token operator">=</span> <span class="token string">'zh-hans'</span>
+
+TIME_ZONE <span class="token operator">=</span> <span class="token string">'Asia/Shanghai'</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+USE_TZ <span class="token operator">=</span> <span class="token boolean">False</span>
+<span class="token comment">#修改时区</span>
+
+<span class="token comment">#下面是cors跨域配置</span>
+CORS_ALLOW_CREDENTIALS <span class="token operator">=</span> <span class="token boolean">True</span>
+CORS_ORIGIN_ALLOW_ALL <span class="token operator">=</span> <span class="token boolean">True</span>
+CORS_ORIGIN_WHITELIST <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token string">'*'</span>
+<span class="token punctuation">)</span>
+
+CORS_ALLOW_METHODS <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token string">'DELETE'</span><span class="token punctuation">,</span>
+    <span class="token string">'GET'</span><span class="token punctuation">,</span>
+    <span class="token string">'OPTIONS'</span><span class="token punctuation">,</span>
+    <span class="token string">'PATCH'</span><span class="token punctuation">,</span>
+    <span class="token string">'POST'</span><span class="token punctuation">,</span>
+    <span class="token string">'PUT'</span><span class="token punctuation">,</span>
+    <span class="token string">'VIEW'</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+CORS_ALLOW_HEADERS <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token string">'XMLHttpRequest'</span><span class="token punctuation">,</span>
+    <span class="token string">'X_FILENAME'</span><span class="token punctuation">,</span>
+    <span class="token string">'accept-encoding'</span><span class="token punctuation">,</span>
+    <span class="token string">'authorization'</span><span class="token punctuation">,</span>
+    <span class="token string">'content-type'</span><span class="token punctuation">,</span>
+    <span class="token string">'dnt'</span><span class="token punctuation">,</span>
+    <span class="token string">'origin'</span><span class="token punctuation">,</span>
+    <span class="token string">'user-agent'</span><span class="token punctuation">,</span>
+    <span class="token string">'x-csrftoken'</span><span class="token punctuation">,</span>
+    <span class="token string">'x-requested-with'</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><div class="warning custom-block"><p class="custom-block-title">这里有坑</p> <p><em>！数据库使用utf8_unicode 排序集使用utf8_general_ci<br>
+django也是默认unicode,content_type='application/json[json类型才加,必需加]charset=utf-8'才可以返回中文</em><br> <em>！AUTH_USER_MODEL = &quot;app(AbstractUser使用者).UserProfile&quot;继承AbstractUser时重复名字错误需要在setting中设置</em><br> <em>！出现migrateerror把数据库全删除，重新migrate一遍</em><br> <em>!开头标明#-</em>-coding:utf-8-*-,所有中文字符串前要有u<br></p></div> <h2 id="django的m-v-c！"><a href="#django的m-v-c！" aria-hidden="true" class="header-anchor">#</a> Django的M V C！</h2> <h3 id="模型-m"><a href="#模型-m" aria-hidden="true" class="header-anchor">#</a> 模型-M</h3> <div class="tip custom-block"><p class="custom-block-title">字段类型</p> <p>CharField<br>
+(max_length=n,default=&quot;默认值&quot;,primary_key=True/False,blank=True/False,<br>
+null=True/False,verbosename=u&quot;管理界面中显示&quot;,unique=True/False)<br> <br>
+EmailField(verbose_name=u&quot;管理界面显示&quot;)<br> <br>
+ImageField(upload_to=&quot;一个媒体文件夹&quot;,default=&quot;默认头像&quot;,max_length=100)<br>
+max_lengt=时路径最大长度)<br> <br></p></div> <div class="warning custom-block"><p class="custom-block-title">class Meta:<br></p> <p>   verbose_name=&quot;管理界面显示类的管理名称&quot;<br>
+   verbose_name_plural=verbose_name<br>
+   db_table=&quot;自定义表名&quot;<br>
+   ordering=&quot;选取一个字段用来排序可用+/-&quot;<br>
+   def__str__(self):<br>
+     return self.管理中显示的字段<br></p></div> <p><img src="https://upload-images.jianshu.io/upload_images/12620393-94b0591c3953054e.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/240" alt="图片.png"> <br></p> <div class="tip custom-block"><p class="custom-block-title">查询模型:</p> <p>查询方法
+model.objects.filter()#过滤器<br>
+model.object.all()[0:x]#从0-x的切片,不支持负索引<br>
+model.objects.all().exists() #判断tb中是否为空<br>
+model.objects.all().count() #查询tb中的对象数量<br>
+model.objects.all().order_by('-name') #对tb中的对象按照name倒序查询<br>
+model.objects.all().reverse() #倒序取值,但需要已经在model中进行了排序,否则无意义。<br></p></div> <div class="warning custom-block"><p class="custom-block-title">过滤条件</p> <p>条件选取querySet的时候，filter表示=，exclude表示!=。<br>
+querySet.distinct() 去重复<br>
+__exact 精确等于 like 'aaa'<br>
+__iexact 精确等于 忽略大小写 ilike 'aaa'<br>
+__contains 包含 like '%aaa%'<br>
+__icontains 包含 忽略大小写 ilike '%aaa%'，对sqlite,contains的效果等于icontains<br>
+__gt 大于<br>
+__gte 大于等于<br>
+__lt 小于<br>
+__lte 小于等于<br>
+__in 存在于一个list范围内<br>
+__startswith 以...开头<br>
+__istartswith 以...开头 忽略大小写<br>
+__endswith 以...结尾<br>
+__iendswith 以...结尾，忽略大小写<br>
+__range 在...范围内<br>
+__year 日期字段的年份<br>
+__month 日期字段的月份<br>
+__day 日期字段的日<br>
+__isnull=True/False<br>
+__regex=&quot;^ $&quot;正则<br></p></div> <div class="tip custom-block"><p class="custom-block-title">高级查询<br></p> <p>from django.db.models import Q可以进行多连接查询筛选查询子句等<br>
+Q(OS_mark='wd') | Q(OS_mark='wa')可以和关键字混用但<em>Q必须在前面</em><br></p></div> <div class="danger custom-block"><p class="custom-block-title">取回结果和操作<br></p> <p>model.values()#返回字典组成的列表<br>
+model.values_list()#元组组成的列表没有键<br>
+model.values_list('name','ip')#只返回想要字段组成的元组的列表<br>
+item=model.objects.get(name='name')#查询出为name的结果一般返回单个<br>
+item.key=value#变更<br>
+item.save()#保存到数据库<br>
+item.delete()#删除记录<br>
+vm.objects.create(name='name',key='value')#创建新对象，调用save直接保存到数据库<br>
+vm.get_or_create(k=&quot;v&quot;)#返回一个二元组，若查询到了返回(结果,True)or(None,False)<br></p></div> <h4 id="queryset"><a href="#queryset" aria-hidden="true" class="header-anchor">#</a> QuerySet<br></h4> <p>查询出来的结果是一个QuerySet,是一个结果元组组成的列表<br>
+order_by(&quot;key&quot;)按照key进行排序，再进行reverse<br>
+可以切片不支持负索引，可调用reverse()将顺序倒过来<br>
+同一model和不同model都可以取并集</p> <div class="danger custom-block"><p class="custom-block-title">小心</p> <p>记得做缓存查询，避免重复</p></div> <h3 id="视图-url-v"><a href="#视图-url-v" aria-hidden="true" class="header-anchor">#</a> 视图&amp;url-V</h3> <h4 id="url"><a href="#url" aria-hidden="true" class="header-anchor">#</a> URL:</h4> <div class="tip custom-block"><p class="custom-block-title">引入</p> <p>from django.urls import include,path</p></div> <p>include把app的urls包含进来<br>
+类视图在引入的时候，直接传入类的.as_view()方法<br></p> <h4 id="view"><a href="#view" aria-hidden="true" class="header-anchor">#</a> view:</h4> <p>view中处理Httprequest有函数视图和类视图<br> <em>函数视图</em><br></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">root_page</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><p>在url中引入</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> <span class="token punctuation">.</span>views <span class="token keyword">import</span> root_page
+<span class="token comment">#your class here</span>
+
+urlpatterns<span class="token operator">=</span><span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">r&quot;&quot;</span><span class="token punctuation">,</span>root_page<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p><em>类视图</em><br>
+类视图更加灵活,<br>可以继承复用</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> django<span class="token punctuation">.</span>views<span class="token punctuation">.</span>generic <span class="token keyword">import</span> View
+
+<span class="token keyword">class</span> <span class="token class-name">view_class</span><span class="token punctuation">(</span>Viwe<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#注意此处是个元组</span>
+        <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>request<span class="token punctuation">,</span>kw<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#注意关键词的传入</span>
+                <span class="token keyword">return</span> HttpResponse <span class="token punctuation">(</span><span class="token string">&quot;hello world&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">post</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#post一般不需要kw,要对表单进行验证,用model中的form</span>
+                <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+                <span class="token keyword">return</span>  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment">#首先要在urls中引入</span>
+urlpatterns<span class="token operator">=</span><span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">r&quot;/view_calss&quot;</span><span class="token punctuation">,</span>view_calss<span class="token punctuation">.</span>as_view<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>name<span class="token operator">=</span><span class="token string">&quot;名字,在Django的templates中使用&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre></div><h3 id="路由-中间件-c"><a href="#路由-中间件-c" aria-hidden="true" class="header-anchor">#</a> 路由&amp;中间件-C</h3> <p>配置自定义500 404
+关闭DEBUG模式无法访问static文件需要自己配置STATIC_ROOT
+在全局url中handler404=&quot;users.&quot;</p> <div class="danger custom-block"><p class="custom-block-title">留坑</p> <p>留坑，modelfrom验证器，跟着DRF过一遍
+Template</p></div> <h2 id="admin转xadmin"><a href="#admin转xadmin" aria-hidden="true" class="header-anchor">#</a> admin转Xadmin</h2> <h3 id="admin"><a href="#admin" aria-hidden="true" class="header-anchor">#</a> admin</h3> <p>在每个app下的admin中需要管理的类要引入并注册</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> UserProfile<span class="token punctuation">,</span>Banner<span class="token punctuation">,</span>EmailVerifyCode<span class="token comment">#引入类</span>
+<span class="token comment"># Register your models here.</span>
+
+<span class="token keyword">class</span> <span class="token class-name">UserProfileAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#定义管理类</span>
+    <span class="token keyword">pass</span>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>UserProfile<span class="token punctuation">,</span>UserProfileAdmin<span class="token punctuation">)</span><span class="token comment">#注册管理类</span>
+</code></pre></div><h3 id="xadmin"><a href="#xadmin" aria-hidden="true" class="header-anchor">#</a> Xadmin</h3> <p>把git xadmin下的包xadmin放到extra_apps下<br></p> <p><img src="https://upload-images.jianshu.io/upload_images/12620393-722177e46ddaaba9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="xadmin"><br>xadmin需要&quot;crispy_forms&quot;注册进app中<br>
+使用xadmin的时候把原先的admin的操作注释，不再需要<br></p> <blockquote><p>url中引入xadmin<br></p></blockquote> <p><img src="https://upload-images.jianshu.io/upload_images/12620393-f95dca91cbda0bec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置url"><br>
+接下来访问admin就可以了<br> <img src="https://upload-images.jianshu.io/upload_images/12620393-a0b771270230b85b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/640" alt="注册完毕的"><br></p> <div class="warning custom-block"><p class="custom-block-title">注意</p> <p>外键字段要写成&quot;foreign__keyword&quot;会对外键的字段进行搜索<br></p></div> <h4 id="自定义界面和显示"><a href="#自定义界面和显示" aria-hidden="true" class="header-anchor">#</a> 自定义界面和显示</h4> <p>修改adminx文件</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> xadmin <span class="token keyword">import</span> views
+
+<span class="token comment">#global seeting class</span>
+<span class="token keyword">class</span> <span class="token class-name">BaseSetting</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    enable_themes<span class="token operator">=</span><span class="token boolean">True</span>
+    <span class="token comment">#启用主题</span>
+    use_bootswatch<span class="token operator">=</span><span class="token boolean">True</span>
+    <span class="token comment">#boots主题视图</span>
+<span class="token comment">#注册管理视图</span>
+xadmin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>views<span class="token punctuation">.</span>BaseAdminView<span class="token punctuation">,</span>BaseSetting<span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">GlobalSettings</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    site_title<span class="token operator">=</span><span class="token string">&quot;年轻人的管理系统&quot;</span>
+    <span class="token comment">#左上角的标志</span>
+    site_footer<span class="token operator">=</span><span class="token string">&quot;我的论坛&quot;</span>
+    <span class="token comment">#页脚显示</span>
+    menu_style<span class="token operator">=</span><span class="token string">&quot;accordion&quot;</span>
+    <span class="token comment">#折叠apps类</span>
+    model_icon <span class="token operator">=</span> <span class="token string">&quot;fa fa-clone&quot;</span>
+    <span class="token comment">#显示什么图标</span>
+    ordering<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;index&quot;</span><span class="token punctuation">]</span>
+    <span class="token comment">#按照index从小到大排序</span>
+    readonly_fields<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;add_time&quot;</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+    <span class="token comment">#设置只读不可修改字段</span>
+    exclude<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;add_time&quot;</span><span class="token punctuation">]</span>
+    <span class="token comment">#不显示某些字段</span>
+<span class="token comment">#注册管理视图</span>
+xadmin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>views<span class="token punctuation">.</span>CommAdminView<span class="token punctuation">,</span>GlobalSettings<span class="token punctuation">)</span>
+</code></pre></div><p>在app下的apps里添加命名verbose_name=u&quot;自己定义的名称&quot;<br>
+在__init__.py里添加 default_app_config=&quot;users.apps.UserConfig&quot;#app名称.apps.名称的Config<br>
+图标<a href="https://fontawesome.com/">下载4.7版本</a>（xadmin暂时不支持5以上），解压css和font覆盖文件<br>
+目录在'.\extra_apps\xadmin\static\xadmin\vendor\font-awesome'下<br>
+去这个网站找到对应版本的icon，想要哪个直接复制css给model_icon<br> <img src="https://upload-images.jianshu.io/upload_images/12620393-19db3a524cf6bdd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/640" alt="图片.png"><br>
+这个类在做外键的时候设置relfield_style=&quot;fk-ajax&quot;即可在其它表中作为ajax和联想查询不再使用默认下拉式<br></p> <h3 id="嵌套管理"><a href="#嵌套管理" aria-hidden="true" class="header-anchor">#</a> 嵌套管理</h3> <p>定义类</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">class</span> <span class="token class-name">BannerInline</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+model<span class="token operator">=</span>Banner<span class="token comment">#想要被嵌套的model</span>
+extra<span class="token operator">=</span><span class="token number">0</span>
+<span class="token comment">#在管理class中注册</span>
+inlines<span class="token operator">=</span><span class="token punctuation">[</span>BannerInline<span class="token punctuation">]</span><span class="token comment">#列表式的，可以有多个inline</span>
+</code></pre></div><h3 id="字段分组管理"><a href="#字段分组管理" aria-hidden="true" class="header-anchor">#</a> 字段分组管理</h3> <p>在model中创建新的类继承想要被管理的类
+<img src="https://upload-images.jianshu.io/upload_images/12620393-75b7d5c4eb9e949e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/840" alt="model"><br>
+在xadmin中引入创建admin类重载queryset方法,绑定新的管理类
+<img src="https://upload-images.jianshu.io/upload_images/12620393-c04de43dac670615.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="adminx"><br>
+再重载queryset方法，会使符合条件的留下</p> <h3 id="其他几个小功能"><a href="#其他几个小功能" aria-hidden="true" class="header-anchor">#</a> 其他几个小功能</h3> <ul><li><p>列表页直接编辑
+list_editable=[&quot;字段名&quot;]</p></li> <li><p>将函数直接作为字段，句柄传入字段列表将函数的返回值显示
+可以直接在adminx中定义
+定义描述和排序 function(函数句柄).short_description=&quot;xxx&quot;后台显示名称就是自己定义的</p></li> <li><p>定时刷新
+refresh_times=[3,2]
+在配置了的Admin类中才会显示
+会多出一个选项选择两秒或者三秒刷新一次</p></li> <li><p>外链接作为字段
+在model中定义(不知道为什么不能跳转不过链接倒是个真链接  ：\</p></li></ul> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">outer_connect</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">from</span> django<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>safestring <span class="token keyword">import</span> mark_safe
+    <span class="token keyword">return</span> mark_safe<span class="token punctuation">(</span><span class="token string">&quot;&lt;a href='http://www.baidu.com'&gt;跳转&lt;/a&gt;&quot;</span><span class="token punctuation">)</span>
+outer_connect<span class="token punctuation">.</span>short_description<span class="token operator">=</span><span class="token string">&quot;后台字段名称&quot;</span>
+</code></pre></div><h2 id="安装djangoueditor使用富文本"><a href="#安装djangoueditor使用富文本" aria-hidden="true" class="header-anchor">#</a> 安装DjangoUeditor使用富文本</h2> <p>python3不能直接pip版本不兼容，去git把<a href="https://github.com/twz915/DjangoUeditor3/">源码包</a>下载回家<br>
+解压之后命令行cd进目录激活虚拟环境，python setup.py install秒安完。<br>
+配置url：'ueditor/',include(&quot;DjangoUeditor.urls&quot;)'<br>
+使用from DjangoUeditor.models import UEditorField在model中引入<br>
+可以代替TextField不过需要额外配置参数我只列出常用的，它是继承自TextField的<br></p> <div class="tip custom-block"><p class="custom-block-title">UEditorField的属性</p> <p>Content=UEditorField(verbose_name='内容',#别名<br>
+width=600, height=300,#编辑器宽高<br>
+imagePath=&quot;图片/ueditor/&quot;, <br>
+filePath=&quot;文件路径/ueditor/&quot;, #路径如果不加前面的' / '默认media_root为相对路径<br>
+defalut=&quot;&quot;,#默认为空migrate才不会出错)<br></p></div> <div class="danger custom-block"><p class="custom-block-title">留坑</p> <p>导入xlsx json csv 插件的开发+外键自增似懂非懂留坑先填其他的 404 500 页面</p></div> <div id="vcomments"></div></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>3/9/2020, 8:33:00 AM</span></div></div> <div class="page-nav" data-v-cdcae5a4><p class="inner" data-v-cdcae5a4><span class="prev" data-v-cdcae5a4>
+        ←
+        <a href="/blog/back/python/flask.html" class="prev" data-v-cdcae5a4>
+          Flask
+        </a></span> <!----></p></div> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/57.fbeec51d.js" defer></script><script src="/assets/js/38.34e99c36.js" defer></script>
+  </body>
+</html>

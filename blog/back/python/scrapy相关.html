@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Scrapy(old) | 会走路的三百块</title>
+    <meta name="description" content="年轻人的博客">
+    <link rel="icon" href="/logo1.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.d22626bb.css" as="style"><link rel="preload" href="/assets/js/app.64171550.js" as="script"><link rel="preload" href="/assets/js/6.9305fa77.js" as="script"><link rel="prefetch" href="/assets/js/10.f30e4bf5.js"><link rel="prefetch" href="/assets/js/100.14a8b555.js"><link rel="prefetch" href="/assets/js/101.9e257240.js"><link rel="prefetch" href="/assets/js/11.c050169c.js"><link rel="prefetch" href="/assets/js/12.9abd0678.js"><link rel="prefetch" href="/assets/js/13.ca763ee5.js"><link rel="prefetch" href="/assets/js/14.69f05fca.js"><link rel="prefetch" href="/assets/js/15.db5225be.js"><link rel="prefetch" href="/assets/js/16.c6de58f6.js"><link rel="prefetch" href="/assets/js/17.a33727a2.js"><link rel="prefetch" href="/assets/js/18.78f0824a.js"><link rel="prefetch" href="/assets/js/19.20a4f3cf.js"><link rel="prefetch" href="/assets/js/20.15fb9aec.js"><link rel="prefetch" href="/assets/js/21.c2410e24.js"><link rel="prefetch" href="/assets/js/22.6423d49a.js"><link rel="prefetch" href="/assets/js/23.1b0b2120.js"><link rel="prefetch" href="/assets/js/24.93132bac.js"><link rel="prefetch" href="/assets/js/25.a334198a.js"><link rel="prefetch" href="/assets/js/26.c1c7aaa3.js"><link rel="prefetch" href="/assets/js/27.2c86a0cd.js"><link rel="prefetch" href="/assets/js/28.a9d5d0ae.js"><link rel="prefetch" href="/assets/js/29.82f2e489.js"><link rel="prefetch" href="/assets/js/3.465cd447.js"><link rel="prefetch" href="/assets/js/30.d0c8250c.js"><link rel="prefetch" href="/assets/js/31.e6286844.js"><link rel="prefetch" href="/assets/js/32.116769da.js"><link rel="prefetch" href="/assets/js/33.38e22b91.js"><link rel="prefetch" href="/assets/js/34.21d15ece.js"><link rel="prefetch" href="/assets/js/35.53517849.js"><link rel="prefetch" href="/assets/js/36.9b848dcf.js"><link rel="prefetch" href="/assets/js/37.bf3574bb.js"><link rel="prefetch" href="/assets/js/38.34e99c36.js"><link rel="prefetch" href="/assets/js/39.10a54121.js"><link rel="prefetch" href="/assets/js/4.9d750d27.js"><link rel="prefetch" href="/assets/js/40.0ead9dc2.js"><link rel="prefetch" href="/assets/js/41.16bfab2f.js"><link rel="prefetch" href="/assets/js/42.b0388f8b.js"><link rel="prefetch" href="/assets/js/43.1d51bbcb.js"><link rel="prefetch" href="/assets/js/44.9e15a8ac.js"><link rel="prefetch" href="/assets/js/45.c9a7ee30.js"><link rel="prefetch" href="/assets/js/46.0821d6b3.js"><link rel="prefetch" href="/assets/js/47.fdd4b2c4.js"><link rel="prefetch" href="/assets/js/48.c86a3241.js"><link rel="prefetch" href="/assets/js/49.29d7cdaf.js"><link rel="prefetch" href="/assets/js/5.b5540d72.js"><link rel="prefetch" href="/assets/js/50.88cae993.js"><link rel="prefetch" href="/assets/js/51.39b0672d.js"><link rel="prefetch" href="/assets/js/52.47b9c89c.js"><link rel="prefetch" href="/assets/js/53.561866dc.js"><link rel="prefetch" href="/assets/js/54.44ad8aef.js"><link rel="prefetch" href="/assets/js/55.999cd3f5.js"><link rel="prefetch" href="/assets/js/56.0fc25a14.js"><link rel="prefetch" href="/assets/js/57.fbeec51d.js"><link rel="prefetch" href="/assets/js/58.c2c3e960.js"><link rel="prefetch" href="/assets/js/59.388b8a2f.js"><link rel="prefetch" href="/assets/js/60.3bab7106.js"><link rel="prefetch" href="/assets/js/61.fab74e1f.js"><link rel="prefetch" href="/assets/js/62.b8451d9d.js"><link rel="prefetch" href="/assets/js/63.1ea19cc7.js"><link rel="prefetch" href="/assets/js/64.21f37b67.js"><link rel="prefetch" href="/assets/js/65.79da4678.js"><link rel="prefetch" href="/assets/js/66.2276f1ea.js"><link rel="prefetch" href="/assets/js/67.cf3e97e4.js"><link rel="prefetch" href="/assets/js/68.3b9433a6.js"><link rel="prefetch" href="/assets/js/69.a6723b19.js"><link rel="prefetch" href="/assets/js/7.8235c05c.js"><link rel="prefetch" href="/assets/js/70.eff0cc02.js"><link rel="prefetch" href="/assets/js/71.577ad016.js"><link rel="prefetch" href="/assets/js/72.ee1b8084.js"><link rel="prefetch" href="/assets/js/73.ce23853b.js"><link rel="prefetch" href="/assets/js/74.e51d0dc7.js"><link rel="prefetch" href="/assets/js/75.3fbf6e41.js"><link rel="prefetch" href="/assets/js/76.1ad79723.js"><link rel="prefetch" href="/assets/js/77.05aaa2f4.js"><link rel="prefetch" href="/assets/js/78.9e4bf317.js"><link rel="prefetch" href="/assets/js/79.028f9c41.js"><link rel="prefetch" href="/assets/js/8.a4265244.js"><link rel="prefetch" href="/assets/js/80.a83e9fee.js"><link rel="prefetch" href="/assets/js/81.e20ef630.js"><link rel="prefetch" href="/assets/js/82.0a2c28d1.js"><link rel="prefetch" href="/assets/js/83.84f22d3a.js"><link rel="prefetch" href="/assets/js/84.8c0c443d.js"><link rel="prefetch" href="/assets/js/85.1473a2e2.js"><link rel="prefetch" href="/assets/js/86.4683653f.js"><link rel="prefetch" href="/assets/js/87.9507aa61.js"><link rel="prefetch" href="/assets/js/88.77ce595e.js"><link rel="prefetch" href="/assets/js/89.d25806a8.js"><link rel="prefetch" href="/assets/js/9.56b90d44.js"><link rel="prefetch" href="/assets/js/90.231b245f.js"><link rel="prefetch" href="/assets/js/91.cb1ec410.js"><link rel="prefetch" href="/assets/js/92.10cedbd9.js"><link rel="prefetch" href="/assets/js/93.575cc043.js"><link rel="prefetch" href="/assets/js/94.9233e13a.js"><link rel="prefetch" href="/assets/js/95.fafa9bc4.js"><link rel="prefetch" href="/assets/js/96.8b941223.js"><link rel="prefetch" href="/assets/js/97.49080105.js"><link rel="prefetch" href="/assets/js/98.82d1cc72.js"><link rel="prefetch" href="/assets/js/99.d78b0b9a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0cd5f832.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d22626bb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div><header id="navbarWrapper" class="navbar"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <a href="/" class="home-link router-link-active"><img src="/head3.png" alt="会走路的三百块" class="logo"> <span class="site-name">会走路的三百块</span></a> <div class="links" style="max-width:nullpx;"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><div class="side-search-wrapper"><div class="search-box" data-v-1b2e3b29><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-1b2e3b29> <i class="iconfont reco-search" data-v-1b2e3b29></i> <!----></div></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/bigData.html" class="nav-link"><i class="iconfont undefined"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Distributed.html" class="nav-link"><i class="iconfont undefined"></i>
+  分布式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  日记
+</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tags
+</a></div><div class="nav-item"><a href="/categories/article.html" class="nav-link"><i class="iconfont reco-up"></i>
+  Library
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont reco-account"></i>
+  about me
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/04777e91e2ef" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  </a></div><div class="nav-item"><a href="https://github.com/Castleeee" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  </a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><!----></p> <ul class="sidebar-group-items"><li><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#setting-命令" class="sidebar-link">Setting&amp;命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#spider" class="sidebar-link">Spider</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#普通spider" class="sidebar-link">普通spider</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#crawlspider" class="sidebar-link">CrawlSpider</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#xpath和css选择器" class="sidebar-link">Xpath和Css选择器</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#使用itemloader" class="sidebar-link">使用Itemloader</a></li></ul></li><li><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#item" class="sidebar-link">Item</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#定义item的filed" class="sidebar-link">定义item的Filed</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#输入输出处理器" class="sidebar-link">输入输出处理器</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#django-scrapy-item" class="sidebar-link">django scrapy item</a></li></ul></li><li><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#pipline" class="sidebar-link">Pipline</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#图片pipeline" class="sidebar-link">图片Pipeline</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#插入sql数据库" class="sidebar-link">插入sql数据库</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#异步插入sql" class="sidebar-link">异步插入sql</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#插入mongo" class="sidebar-link">插入mongo</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#保存为json" class="sidebar-link">保存为json</a></li></ul></li><li><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#middleware" class="sidebar-link">Middleware</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#随机user-agent" class="sidebar-link">随机User-Agent</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#ip代理" class="sidebar-link">IP代理</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#使用cookie" class="sidebar-link">使用cookie</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#自动重试中间件" class="sidebar-link">自动重试中间件</a></li><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#集成selenium" class="sidebar-link">集成selenium</a></li></ul></li><li><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#schduler-other" class="sidebar-link">Schduler&amp;Other</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/back/python/scrapy%E7%9B%B8%E5%85%B3.html#schduler去重机制" class="sidebar-link">Schduler去重机制</a></li></ul></li></ul></div></li></ul> </div> <div class="page" data-v-cdcae5a4> <div class="page-title" data-v-cdcae5a4><h1 data-v-cdcae5a4>Scrapy(old)</h1> <hr data-v-cdcae5a4> <div data-v-2c25cede data-v-cdcae5a4><i class="iconfont reco-account" data-v-2c25cede><span data-v-2c25cede>会走路的三百块</span></i> <i class="iconfont reco-date" data-v-2c25cede><span data-v-2c25cede>7/13/2018</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c25cede><span class="tag-item" data-v-2c25cede>
+      python🐍
+    </span><span class="tag-item" data-v-2c25cede>
+      scrapy
+    </span><span class="tag-item" data-v-2c25cede>
+      后端
+    </span><span class="tag-item" data-v-2c25cede>
+      异步
+    </span><span class="tag-item" data-v-2c25cede>
+      所有文章
+    </span><span class="tag-item" data-v-2c25cede>
+      爬虫🕷
+    </span><span class="tag-item" data-v-2c25cede>
+      进阶
+    </span></i></div></div> <div class="content" data-v-cdcae5a4><div align="center"><h1>Scrapy介绍</h1></div> <div align="center"><h3>异步</h3>
+engine异步调用缩短事件
+<h3>事件循环</h3>
+对象传递+事件循环<br>
+spider—&gt;item—&gt;pipline
+<h3>定制化</h3>
+定制的pipline集中存储<br>
+selector+xpath定位爬取
+<img src="/assets/img/scrapy_architecture.e2954a38.png"></div> <h2 id="setting-命令"><a href="#setting-命令" aria-hidden="true" class="header-anchor">#</a> Setting&amp;命令</h2> <h3>环境</h3> <p>设置好环境python路径等等<br>
+从wheel找</p> <ul><li>pywin32</li> <li>pillow</li> <li>tiwsted</li></ul> <div class="danger custom-block"><p class="custom-block-title">WARNING</p> <p>不能只装pymysql需要MYSQLdb<br>
+安装MYSQLdb也就是mydqlclient和pymysql<br>
+如果失败apt-get install python-devel mysql-devel</p></div> <h3>http状态码</h3> <pre><code>      code说明
+      200请求被成功处理
+      301/302永久性重定向/临时性重定向
+      403没有权限访问
+      404表示没有对应的资源
+      500服务器错误
+      503服务器停机或正在维护
+</code></pre> <h3>命令行</h3> <pre><code>      scrapy startproject name
+      #新建一个工程,并cd 进目录中去
+      scrapy genspider [-t crawl] name xxx.com
+      #生成一个xxx爬虫，注意域名只需要www.xxx.com就行二级域名直接填
+      不填写就是默认的 spider 填写最常用的就是crawl
+      scrapy crawl spidername
+      #命令行运行spidername爬虫
+</code></pre> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>你新建的爬虫名字不能与网站名字，项目名字相同，你的名字会在spider中有一个变量表示</p></div> <h3>pycharm启动</h3>
+新建一个py文件写入如下内容，在pycharm中作如下设置
+<div class="language-py extra-class"><pre class="language-py"><code><span class="token comment">#import your model here</span>
+<span class="token keyword">from</span> scrapy <span class="token keyword">import</span> cmdline
+<span class="token comment">#your class&amp;function here</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    cmdline<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;scrapy&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;crawl&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;爬虫名字&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+</code></pre></div><div align="center"><img src="/assets/img/starter.70a190c7.png"></div> <p>这样直接F5就可以运行整个程序了
+</p><h3>修改setting</h3><p></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> os<span class="token punctuation">,</span>sys
+project_dir<span class="token operator">=</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#获取了当前文件也就是setting的目录</span>
+IMAGES_STORE <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span><span class="token string">&quot;images&quot;</span><span class="token punctuation">)</span><span class="token comment">#设置image的存储文件夹为当前目录下的image</span>
+</code></pre></div><div class="tip custom-block"><p class="custom-block-title">(oﾟvﾟ)ノ</p> <p>把setting中的ROBOTSTXT_OBEY = True设置为False不然会很蠢</p></div> <p>更多设置的作用在<a href="#setting的一些常用">这里</a></p> <h2 id="spider"><a href="#spider" aria-hidden="true" class="header-anchor">#</a> Spider</h2> <h3 id="普通spider"><a href="#普通spider" aria-hidden="true" class="header-anchor">#</a> 普通spider</h3> <p>新建了一个spider是这样的<br></p><div align="center"><img src="/assets/img/basicspider.d326d81b.png" style="height:250px"></div><p></p> <p>这个类接继承了Spider</p> <ul><li>name就是爬虫名字</li> <li>allow_domins就是允许爬哪个域名的范围</li> <li>start_urls是一个开始爬取那些url的列表</li></ul> <p>parse1()-&gt;parse2()-&gt;...-&gt;trans()
+一开始会初始的url，然后把response传给parse1，parse1进行处理在传给parse2最后给一个函数(trans)形成item传给pipline
+</p><h4>parse函数</h4>
+定义parse函数，默认接受一个response对象<br>
+response对象:<br><p></p> <div align="center"><img src="/assets/img/resobject.3c792678.png"></div>
+这个对象的基本的url，text，status，encoding，headers是基本属性。重点说一下meta，selector和request
+<br>request是一个Request对象，是一个完整的请求信息，解析去重模块中将要使用的就是这个request中的信息。<br>
+在*异步代码*中不要使用同步代码，会导致阻塞性能下降严重。<br>
+自动往下爬取<br> <p>从这个response中提取出还有需要爬取的url我们需要继续访问，这时候我们要用Request函数<br></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> scrapy <span class="token keyword">import</span> Request
+<span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  response<span class="token punctuation">.</span>meta<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token comment">#这样就和字典一样取出了v</span>
+  process<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">yield</span> Request<span class="token punctuation">(</span>url<span class="token operator">=</span><span class="token string">'localhost'</span><span class="token punctuation">,</span>meta<span class="token operator">=</span><span class="token punctuation">{</span>k<span class="token punctuation">:</span>v<span class="token punctuation">}</span><span class="token punctuation">,</span>callback<span class="token operator">=</span>self<span class="token punctuation">.</span>func<span class="token punctuation">)</span>
+</code></pre></div><p>这时候会yield一个Request对象出去，请求一下传入的url，把本次process解析的东西作为一个<em>字典</em>传给meta,这样就实现了解析内容的传递</p> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>可以直接指向self,这样这个请求还会回来调用自身，形成一个隐式递归。<br>
+注意递归的边界条件即url爬取到什么时候要传入trans函数存入<br>
+否则就会一直执行下去直到所有的url都访问过了</p></div> <p>最常见的情况即解析一个页面，拿一些内容在meta中传递给trans函数或下一个parse，然后再这个页面里的某些url(比如下一页等)继续Request调用自身
+<br>Request的参数</p> <ul><li>url是请求的地址</li> <li>callback 请求完之后的回调，传入一个response</li> <li>method='GET' 请求方法Get/Post</li> <li>headers 请求头</li> <li>body 请求body</li> <li>cookies 使用哪个cookie</li> <li>meta meta用来传递值</li> <li>encoding='utf-8' 编码</li> <li>priority=0 在scheduler中的优先级</li> <li>dont_filter=False 要不要被scheduler去重</li></ul> <div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>header，cookie，UA可以在这里加也可以在middleware集中加在这里加只会对这个Request发起的请求有效其他Request使用middleware的</p></div> <h4>形成Item传递给pipline</h4> <p>trans()<br>
+定义一个解析函数,这个函数接受一个response,它会解析response中的内容，利用Xpath或者CssSelector选择自己想要的内容
+最后形成一些变量，将这些变量通过item['k']或Itemloader赋值给item最后yield出去
+</p><h3>使用item</h3><p></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment">#文件顶部引入</span>
+<span class="token keyword">from</span> engine<span class="token punctuation">.</span>items <span class="token keyword">import</span> MyItem
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+item<span class="token operator">=</span>MyItem<span class="token punctuation">(</span><span class="token punctuation">)</span>
+item<span class="token punctuation">[</span><span class="token string">'x'</span><span class="token punctuation">]</span><span class="token operator">=</span>变量a
+item<span class="token punctuation">[</span><span class="token string">'y'</span><span class="token punctuation">]</span><span class="token operator">=</span>变量b
+<span class="token keyword">yield</span> item
+
+</code></pre></div><p>这个item会传到pipline中去</p> <h3 id="crawlspider"><a href="#crawlspider" aria-hidden="true" class="header-anchor">#</a> CrawlSpider</h3> <p>全站爬虫需要注意的地方有去重，url处理，Request转发<br>
+不再需要自己寻找url，scrapy会自己处理通过<em>Rule</em>进行筛选，符合allow_domins和rule的就会自动抓取，然后解析该页面所有包含的url
+,符合条件的继续递归Rule使用正则进行定义
+新建一个之后是这样的(为了便于讲解我改过了)
+</p><div align="center"><img src="/assets/img/crawl.2189c92b.png"></div>
+这里rule是一个LinkExtractor定义的类<p></p> <ul><li>allow(正则匹配符合的就请求)</li> <li>callback(请求之后传入哪个函数,一般是传入要进行解析的函数)</li> <li>follow(符合本规则的页面是否继续往下爬)</li> <li>unique（boolean）是否去重</li> <li>attrs（list）在查找要提取的链接时应该考虑的属性或属性列表（仅适用于参数中指定的那些标签tags ）。默认为('href',)</li></ul> <h3 id="xpath和css选择器"><a href="#xpath和css选择器" aria-hidden="true" class="header-anchor">#</a> Xpath和Css选择器</h3> <h3>语法看<a href="/爬虫.html#xpath-cssselector">这里</a></h3> <BR></BR> <p>从网页源代码中提取自己想要的字段就要用scrapy中的提取器(scrapy的提取器速度快，异步操作友好)selector
+<br></p> <ul><li>selector=response.css('css selector')<br></li> <li>selector=response.xpath('xpath')<br></li></ul> <p>拿出来的是一selector对象或者是SelectorList(在由多个节点情况下),调用selector.extract[0],获取内容
+这个方法等价于selector.extract_first()
+这里是再爬简书的时候，拿到这个ul的列表之后xpath得到的是下面所有的元素节点的SelectorList对象，包含子节点的seector,可以先调用
+属性像这样<br></p> <div align="center"><img src="/assets/img/selectorpro.996d84f7.png" style="height:440px"></div>
+上面的下划线开头的是meta属性最好不要进行操作，selector的attr['pros']直接获取对象的属性
+<div align="center"><img src="/assets/img/selector.7e29119d.png" style="height:440px"></div>
+selector可以继续调用css和xpath如上图
+<div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>urllib.parse import urljoin<br>
+pageurl=urljoin(base=&quot;https://www.jianshu.com&quot;,url=i.attrib[&quot;href&quot;])<br>
+urljoin可以把url和域名连接起来，保证不会出错</p></div> <h3 id="使用itemloader"><a href="#使用itemloader" aria-hidden="true" class="header-anchor">#</a> 使用Itemloader</h3> <h4>使用itemloader便于维护</h4> <p>from scrapy.loader import ItemLoader<br>
+同样，你需要实例化一个Item
+item=ItemLoader(item=JianshuItem(),response=response)<br>
+把自己导入的item和函数接受得到的response传给它
+接下来你可以添加属性
+主要用</p> <ul><li>item.add_xpath('FieldName','一个xpath')</li> <li>item.add_css('FieldName','一个cssselector')</li> <li>item.add_value('FieldName',随便什么变量)
+最后记得return item.load_load()出去</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">def</span> <span class="token function">parse_item</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    item<span class="token operator">=</span>ItemLoader<span class="token punctuation">(</span>item<span class="token operator">=</span>JianshuItem<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>response<span class="token operator">=</span>response<span class="token punctuation">)</span>
+    item<span class="token punctuation">.</span>add_xpath<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">,</span><span class="token string">'/html/body/div[1]/div[2]/div[1]/h1/text()'</span><span class="token punctuation">)</span>
+    item<span class="token punctuation">.</span>add_value<span class="token punctuation">(</span><span class="token string">'likes'</span><span class="token punctuation">,</span>re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">'&lt;script type=&quot;application/json&quot; data-name=&quot;page-data&quot;&gt;(.*?)&lt;/script&gt;'</span><span class="token punctuation">,</span>response<span class="token punctuation">.</span>body<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    item<span class="token punctuation">.</span>add_css<span class="token punctuation">(</span><span class="token string">'author'</span><span class="token punctuation">,</span><span class="token string">'body &gt; div.note &gt; div.post &gt; div.article &gt; div.author &gt; div &gt; span &gt; a::text'</span><span class="token punctuation">)</span>
+    item<span class="token punctuation">.</span>add_value<span class="token punctuation">(</span><span class="token string">'noteid'</span><span class="token punctuation">,</span>response<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+    item<span class="token punctuation">.</span>add_value<span class="token punctuation">(</span><span class="token string">'imageurl'</span><span class="token punctuation">,</span>response<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'imageurl'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> item<span class="token punctuation">.</span>load_item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+</code></pre></div><div class="danger custom-block"><p class="custom-block-title">注意</p> <p>item_loader和extract默认吧item赋值都是以list的形式</p></div> <h3>简书分析</h3> <p>简书这样的网站文章是html里面直接存在的，而下面的作者，评论，喜欢打赏是js加载出来的
+直接获取xpath和cssselector是不行的
+</p><div align="center"><img src="/assets/img/delete.bfd37baa.png" style="height:340px"></div> <h4>去掉这几个js后会这样</h4><p></p> <div align="center"><img src="/assets/img/effect.1871cfca.png" style="height:340px"></div> <p>数据是随着html中的一个&lt;script type=&quot;application/json&quot; data-name=&quot;page-data&quot;&gt;来的</p> <div align="center"><img src="/assets/img/datasource.6688db05.png" style="height:340px"></div> <p>用正则匹配到这个字符串，在pipline中拿出我们想要的数据即可</p> <h2 id="item"><a href="#item" aria-hidden="true" class="header-anchor">#</a> Item</h2> <h3 id="定义item的filed"><a href="#定义item的filed" aria-hidden="true" class="header-anchor">#</a> 定义item的Filed</h3> <p>Item定义在items.py里面一般这个字段是你想对应到db里面的字段,用scrapy.Field()来定义,在spider中赋值的时候就可以像给字典赋值一样直接赋值
+只有被定义的字段才可以被赋值。
+可以做一些处理处理过后才放到piplines中去<br></p> <div align="center"><img src="/assets/img/items.83d443a9.png" style="height:340px"></div> <h3 id="输入输出处理器"><a href="#输入输出处理器" aria-hidden="true" class="header-anchor">#</a> 输入输出处理器</h3> <p>在Field中可以定义输入处理和输出处理器(就是生命周期钩子)，指定一个函数，
+当item被return的时候先调用输入再调用输出处理对字段加工然后给pipline
+是在return的时候才会进行<br>
+默认的有几种processor，可以定义一个函数用MapCompose自己添加<br>
+SelectJmes，Identity，TakeFirst，Compose，MapCompose
+<br></p> <p>input_processor=MapCompose(一个匿名函数),<br>
+output_processor=TakeFirst(),<br>
+这里的值没有变，用一个匿名函数初步处理一下想要直接处理清楚可以直接用pipline</p> <div class="language-py extra-class"><pre class="language-py"><code>
+<span class="token keyword">def</span> <span class="token function">callme</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;我被调用啦&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> value
+
+<span class="token keyword">class</span> <span class="token class-name">JianshuItem</span><span class="token punctuation">(</span>scrapy<span class="token punctuation">.</span>Item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    title<span class="token operator">=</span>scrapy<span class="token punctuation">.</span>Field<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    likes<span class="token operator">=</span>scrapy<span class="token punctuation">.</span>Field<span class="token punctuation">(</span>
+        output_processor<span class="token operator">=</span>MapCompose<span class="token punctuation">(</span>callme<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#把这个里面的东西出来</span>
+    author<span class="token operator">=</span>scrapy<span class="token punctuation">.</span>Field<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    imageurl<span class="token operator">=</span>scrapy<span class="token punctuation">.</span>Field<span class="token punctuation">(</span>
+        input_processor<span class="token operator">=</span>MapCompose<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token string">&quot;http:&quot;</span><span class="token operator">+</span>x<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">&quot;?&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+    noteid<span class="token operator">=</span>scrapy<span class="token punctuation">.</span>Field<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="django-scrapy-item"><a href="#django-scrapy-item" aria-hidden="true" class="header-anchor">#</a> django scrapy item</h3> <div class="danger custom-block"><p class="custom-block-title">留坑</p> <p>写简书的时候试试</p></div> <h2 id="pipline"><a href="#pipline" aria-hidden="true" class="header-anchor">#</a> Pipline</h2> <p>首先在setting中开启pipline取消ITEM_PIPELINES的注释
+这个字典一样的结构是流经顺序,数字越小这个pipline会先流经,item就像流经管道一样一个一个流过pipline会取下或者修改item的字段,存入sql或whatever然后return出去
+让他流经下一个pipline像这样</p> <div class="language-py extra-class"><pre class="language-py"><code>ITEM_PIPELINES <span class="token operator">=</span> <span class="token punctuation">{</span>
+   <span class="token string">'aa.pipelines.likesPipeline'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+   <span class="token string">'aa.pipelines.SqlPipeline'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3>定义process_item</h3> <p>默认接受一个item和一个spider，item就是你在item中定义的,像调用字典一样调用item
+按照上面说的顺序最后别忘了return出去给下一个pipeline用</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">MyPipline</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    process_item<span class="token punctuation">(</span>self<span class="token punctuation">,</span> item<span class="token punctuation">,</span> spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+      <span class="token keyword">return</span> item
+</code></pre></div><p>像取字典一样直接取然后赋值就可以了
+先经过了likespipeline，拿出这个字符串我们想要的部分(做处理)，然后流到了SqlPipeline被打印了出来
+</p><div align="center"><img src="/assets/img/pipeline.72f215ff.png" style="height:440px"></div><p></p> <h3 id="图片pipeline"><a href="#图片pipeline" aria-hidden="true" class="header-anchor">#</a> 图片Pipeline</h3> <p>很多情况下是三种最常用的media,file,image有对应写好的pipline内置引入</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment">#piplines文件中引入</span>
+<span class="token keyword">from</span> scrapy<span class="token punctuation">.</span>pipelines<span class="token punctuation">.</span>images <span class="token keyword">import</span> ImagesPipeline
+
+setting中指明两个变量
+IMAGES_URLS_FIELD <span class="token operator">=</span> <span class="token string">&quot;imageurl&quot;</span><span class="token comment">#哪个字段是image的url</span>
+IMAGES_STORE <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>project_dir<span class="token punctuation">,</span><span class="token string">&quot;image&quot;</span><span class="token punctuation">)</span><span class="token comment">#存在哪个路径下</span>
+添加进piplines中
+ITEM_PIPELINES <span class="token operator">=</span> <span class="token punctuation">{</span>
+<span class="token string">'scrapy.pipelines.images.ImagesPipeline'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">#普通的图片pipeline</span>
+                  <span class="token punctuation">}</span>
+</code></pre></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>这个imageurl应该是个列表形式,不要取出来会报错</p></div> <h4>自定义存放路径的imagepipline</h4> <br> <p>首先引入并继承ImagesPipeline
+重写def item_completed(self, results, item, info)
+<br>自己打断点看里面的变量,改变想要的变量即可</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">JobboleImagePipline</span><span class="token punctuation">(</span>ImagesPipeline<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#自定义的管道进行路径存放</span>
+    <span class="token keyword">def</span> <span class="token function">item_completed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> results<span class="token punctuation">,</span> item<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> status<span class="token punctuation">,</span>p <span class="token keyword">in</span> results<span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                item<span class="token punctuation">[</span><span class="token string">&quot;imagepath&quot;</span><span class="token punctuation">]</span><span class="token operator">=</span>p<span class="token punctuation">[</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">]</span>
+                item<span class="token punctuation">[</span><span class="token string">&quot;imageurl&quot;</span><span class="token punctuation">]</span><span class="token operator">=</span>item<span class="token punctuation">[</span><span class="token string">&quot;imageurl&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            <span class="token keyword">except</span> TypeError<span class="token punctuation">:</span>
+                item<span class="token punctuation">[</span><span class="token string">&quot;imageurl&quot;</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;None&quot;</span>
+                item<span class="token punctuation">[</span><span class="token string">&quot;imagepath&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;None&quot;</span>
+        <span class="token keyword">return</span> item
+</code></pre></div><h3 id="插入sql数据库"><a href="#插入sql数据库" aria-hidden="true" class="header-anchor">#</a> 插入sql数据库</h3> <p>在这个函数里取出值然后存进去例子</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">SqlPipeline</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#构造sql语句并执行即可</span>
+    <span class="token keyword">def</span> <span class="token function">process_item</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>item<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''item={'author': ['城北听雪'],
+        'imageurl': ['http://upload-images.jianshu.io/upload_images/14074951-f700da6a9b168924.jpg'],
+        'likes': ['33'],
+        'noteid': ['https://www.jianshu.com/p/3e652aafb69b'],
+        'title': ['5天流浪加德满都，给你看一个不一样的真实尼泊尔']}'''</span>
+        a<span class="token operator">=</span><span class="token punctuation">{</span> k<span class="token punctuation">:</span>v<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> item<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token comment">#构造字符串</span>
+        str1 <span class="token operator">=</span> <span class="token string">&quot;,&quot;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        str2 <span class="token operator">=</span> <span class="token string">&quot;','&quot;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        sql<span class="token operator">=</span><span class="token string">&quot;INSERT INTO jianshu ({0}) VALUES ('{1}')&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span>str2<span class="token punctuation">)</span><span class="token comment">#构造sql</span>
+        conn<span class="token operator">=</span>pymysql<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token string">'127.0.0.1'</span><span class="token punctuation">,</span>port<span class="token operator">=</span><span class="token number">3306</span><span class="token punctuation">,</span>user<span class="token operator">=</span><span class="token string">'root'</span><span class="token punctuation">,</span>db<span class="token operator">=</span><span class="token string">'jobol'</span><span class="token punctuation">,</span>password<span class="token operator">=</span><span class="token string">'不告诉你'</span><span class="token punctuation">,</span>charset<span class="token operator">=</span><span class="token string">'utf8mb4'</span><span class="token punctuation">)</span>
+        cur<span class="token operator">=</span>conn<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            cur<span class="token punctuation">.</span>execute<span class="token punctuation">(</span>sql<span class="token punctuation">)</span>
+            conn<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            conn<span class="token punctuation">.</span>rollback<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+        <span class="token keyword">finally</span><span class="token punctuation">:</span>
+            cur<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            conn<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> item
+
+</code></pre></div><p>打印出来的sql应该像这样</p> <pre><code>  INSERT INTO jianshu
+  (author,imageurl,likes,noteid,title)
+  VALUES
+  ('城北听雪','http://upload-images.jianshu.io/upload_images/14074951-f700da6a9b168924.jpg','33','https://www.jianshu.com/p/3e652aafb69b','5天流浪加德满都，给你看一个不一样的真实尼泊尔')
+</code></pre> <h3 id="异步插入sql"><a href="#异步插入sql" aria-hidden="true" class="header-anchor">#</a> 异步插入sql</h3> <p>首先定义新的pipline，然后开始编写异步插入的pipline
+需要pywin32,twisted<br></p><h4>写法很固定，记住怎么写理解这是做什么的</h4><p></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> pymysql
+<span class="token keyword">from</span> twisted<span class="token punctuation">.</span>enterprise <span class="token keyword">import</span> adbapi
+<span class="token keyword">import</span> pymysql<span class="token punctuation">.</span>cursors
+<span class="token comment">#先引入</span>
+
+<span class="token keyword">class</span> <span class="token class-name">asyPipeline</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>dbpool<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#默认传入一个连接池</span>
+        self<span class="token punctuation">.</span>dbpool<span class="token operator">=</span>dbpool
+
+    @<span class="token builtin">classmethod</span><span class="token comment">#声明一个类方法</span>
+    <span class="token keyword">def</span> <span class="token function">from_settings</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span>settings<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#注意是settings有S这个类方法和实例没有关系,接受一个setting也就是我们的配置文件</span>
+    <span class="token comment">#把变量拿过来，传入adbpool里面定义一个dbpool</span>
+        dbpool<span class="token operator">=</span>adbapi<span class="token punctuation">.</span>ConnectionPool<span class="token punctuation">(</span><span class="token string">'pymysql'</span><span class="token punctuation">,</span>
+                                     host<span class="token operator">=</span>settings<span class="token punctuation">[</span><span class="token string">'MYSQL_HOST'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                     db<span class="token operator">=</span>settings<span class="token punctuation">[</span><span class="token string">'DB_NAME'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                     user<span class="token operator">=</span>settings<span class="token punctuation">[</span><span class="token string">'MYSQL_USER'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                     password<span class="token operator">=</span>settings<span class="token punctuation">[</span><span class="token string">'MYSQL_PASSWOED'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                     charset<span class="token operator">=</span>settings<span class="token punctuation">[</span><span class="token string">'CHARSET'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                     cursorclass<span class="token operator">=</span>pymysql<span class="token punctuation">.</span>cursors<span class="token punctuation">.</span>DictCursor<span class="token punctuation">,</span>
+                                     use_unicode<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token comment">#这里可以写死也可以用这个方法读取setting里面的配置信息(建议)</span>
+        <span class="token keyword">return</span> cls<span class="token punctuation">(</span>dbpool<span class="token operator">=</span>dbpool<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">process_item</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>item<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        query<span class="token operator">=</span>self<span class="token punctuation">.</span>dbpool<span class="token punctuation">.</span>runInteraction<span class="token punctuation">(</span>self<span class="token punctuation">.</span>do_insert<span class="token punctuation">,</span> item<span class="token punctuation">)</span>
+        <span class="token comment">#执行，相当于loop启动，定义一个变量来代表</span>
+        query<span class="token punctuation">.</span>addErrback<span class="token punctuation">(</span>self<span class="token punctuation">.</span>handler<span class="token punctuation">)</span>
+        <span class="token comment">#制定错误处理函数</span>
+
+    <span class="token keyword">def</span> <span class="token function">do_insert</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>cursor<span class="token punctuation">,</span>item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''执行查询的函数'''</span>
+        a <span class="token operator">=</span> <span class="token punctuation">{</span>k<span class="token punctuation">:</span> v<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> item<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>  <span class="token comment"># 构造字符串</span>
+        str1 <span class="token operator">=</span> <span class="token string">&quot;,&quot;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        str2 <span class="token operator">=</span> <span class="token string">&quot;','&quot;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        sql <span class="token operator">=</span> <span class="token string">&quot;INSERT INTO jianshu ({0}) VALUES ('{1}')&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>str1<span class="token punctuation">,</span> str2<span class="token punctuation">)</span>  <span class="token comment"># 构造sql</span>
+        cursor<span class="token punctuation">.</span>execute<span class="token punctuation">(</span>sql<span class="token punctuation">)</span>
+
+        <span class="token comment">#不能用try异步没有try</span>
+    <span class="token keyword">def</span> <span class="token function">handler</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>failure<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#定义错误处理</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>failure<span class="token punctuation">)</span><span class="token comment">#打印错误</span>
+
+
+
+</code></pre></div><div class="danger custom-block"><p class="custom-block-title">注意</p> <p>不能用try，异步里面没有try</p></div> <h3 id="插入mongo"><a href="#插入mongo" aria-hidden="true" class="header-anchor">#</a> 插入mongo</h3> <h3 id="保存为json"><a href="#保存为json" aria-hidden="true" class="header-anchor">#</a> 保存为json</h3> <div class="language-py extra-class"><pre class="language-py"><code>
+<span class="token keyword">class</span> <span class="token class-name">JsonPipeline</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">process_item</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>item<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        a <span class="token operator">=</span> <span class="token punctuation">{</span>k<span class="token punctuation">:</span> v<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> item<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token comment">#格式化一下</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'jianshu.json'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+            json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>a<span class="token punctuation">,</span>f<span class="token punctuation">,</span>ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+</code></pre></div><div align="center"><img src="/assets/img/cunchu.88c7cd3e.png" style="height:440px"></div> <h2 id="middleware"><a href="#middleware" aria-hidden="true" class="header-anchor">#</a> Middleware</h2> <p>是一个钩子系统，注入到生命周期中可扩展性好
+donwloader middlewaer用得最多，
+spidermiddleware没怎么用
+每次爬的时候经过一次中间件,像pipline一样流过最后在进行请求<br>
+主要作用更换代理IP，更换Cookies，更换User-Agent，自动重试
+</p><h4>重写process_request</h4>(self,request,spider):<p></p> <h3 id="随机user-agent"><a href="#随机user-agent" aria-hidden="true" class="header-anchor">#</a> 随机User-Agent</h3> <p>可以在setting里面制定UA<br> <em>USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'</em>
+所有的都会用这个UA<br></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> fake_useragent
+<span class="token keyword">class</span> <span class="token class-name">RandomUAMiddleware</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">process_request</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>request<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ua<span class="token operator">=</span>fake_useragent<span class="token punctuation">.</span>UserAgent<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        request<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'User-Agent'</span><span class="token punctuation">,</span>ua<span class="token punctuation">.</span>random<span class="token punctuation">)</span>
+</code></pre></div><p>网上很多用UAlist的，基本就是import一下，然后random取一下<br></p> <h4>fake_ua了解一下？</h4>
+git搜所第一个就是，可以直接pip安装<br> <p>基本使用</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> fake_useragent <span class="token keyword">import</span> UserAgent
+ua <span class="token operator">=</span> UserAgent<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ua<span class="token punctuation">.</span>random<span class="token comment">#直接随机返回一个头</span>
+ua<span class="token punctuation">.</span>ie<span class="token comment">#返回ie的头</span>
+</code></pre></div><div class="tip custom-block"><p class="custom-block-title">可用的头</p> <p>ie,msie,opera,chrome,google,firefox,ff,safari</p></div> <h3 id="ip代理"><a href="#ip代理" aria-hidden="true" class="header-anchor">#</a> IP代理</h3> <p>同样是操作reuest的meta信息</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">import</span> random
+<span class="token comment">#from settings import IPpool</span>
+<span class="token keyword">class</span> <span class="token class-name">IPproxyMiddleware</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">process_request</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''引入一个ip池或请求一次(购买的)接口,随机选择一个ip就可以'''</span>
+        request<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">&quot;proxy&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;https://222.223.115.30:51618&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="使用cookie"><a href="#使用cookie" aria-hidden="true" class="header-anchor">#</a> 使用cookie</h3> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">cookieMiddleware</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">process_request</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>request<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        request<span class="token punctuation">.</span>cookies <span class="token operator">=</span><span class="token string">'通过接口或什么方式拿到你的cookie'</span>
+
+    <span class="token keyword">def</span> <span class="token function">process_response</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> response<span class="token punctuation">,</span> spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''
+        对此次响应进行处理
+        如果请求不成功怎么处理
+        如果cookie失效怎么办
+        '''</span>
+        <span class="token keyword">pass</span>
+</code></pre></div><div class="tip custom-block"><p class="custom-block-title">TIP</p> <p>最好自己搭建代理池和cookie池，用的时候直接调用接口
+<br>后续我在出这个</p></div> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>请求头携带的Cookie必须是一个字典，不能直接设置成字符串</p></div> <h3 id="自动重试中间件"><a href="#自动重试中间件" aria-hidden="true" class="header-anchor">#</a> 自动重试中间件</h3> <p>setting的dowloadermiddlware中<br> <em>scrapy.downloadermiddlewares.retry.RetryMiddleware:6</em></p><h4>相关设置</h4><br><p></p> <ul><li><p>RETRY_ENABLED: 是否开启retry(True)</p></li> <li><p>RETRY_TIMES: 重试次数(3)</p></li> <li><p>RETRY_HTTP_CODECS: 默认[500,502,503,504,408]</p></li></ul> <h3 id="集成selenium"><a href="#集成selenium" aria-hidden="true" class="header-anchor">#</a> 集成selenium</h3> <p>selenium可以直接在中间件直接写</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">seleniumMiddleware</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>broswer <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span><span class="token string">r'D:\57635\chromedriver.exe'</span><span class="token punctuation">)</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">process_request</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>request<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> spider<span class="token punctuation">.</span>name<span class="token operator">==</span><span class="token string">'jianshu'</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>broswer<span class="token punctuation">.</span>get<span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'selenium访问{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">return</span> HtmlResponse<span class="token punctuation">(</span>url<span class="token operator">=</span>self<span class="token punctuation">.</span>broswer<span class="token punctuation">.</span>current_url<span class="token punctuation">,</span>
+                                body<span class="token operator">=</span>self<span class="token punctuation">.</span>broswer<span class="token punctuation">.</span>page_source<span class="token punctuation">,</span>
+                                encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">,</span>
+                                request<span class="token operator">=</span>request<span class="token punctuation">)</span>
+
+</code></pre></div><p>但是当一个spider结束的时候浏览器也不会退出，这样导致消耗资源
+</p><h4>在spider中是直接写</h4>
+在spider中添加<p></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">from</span> scrapy<span class="token punctuation">.</span>xlib<span class="token punctuation">.</span>pydispatch <span class="token keyword">import</span> dispatcher
+<span class="token keyword">from</span> scrapy <span class="token keyword">import</span> signals
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>broswer <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span><span class="token string">r'D:\57635\chromedriver.exe'</span><span class="token punctuation">)</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        dispatcher<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>spider_closed<span class="token punctuation">,</span>signals<span class="token punctuation">.</span>spider_closed<span class="token punctuation">)</span><span class="token comment">#信号量</span>
+
+    <span class="token keyword">def</span> <span class="token function">spider_closed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;完成&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>broswer<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">#退出</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+middlware<span class="token punctuation">:</span>
+<span class="token keyword">import</span> time
+<span class="token keyword">from</span> scrapy<span class="token punctuation">.</span>http <span class="token keyword">import</span> HtmlResponse
+<span class="token keyword">class</span> <span class="token class-name">seleniumMiddleware</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">process_request</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>request<span class="token punctuation">,</span>spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> spider<span class="token punctuation">.</span>name<span class="token operator">==</span><span class="token string">'jianshu'</span><span class="token punctuation">:</span>
+            spider<span class="token punctuation">.</span>broswer<span class="token punctuation">.</span>get<span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'selenium访问{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">return</span> HtmlResponse<span class="token punctuation">(</span>url<span class="token operator">=</span>spider<span class="token punctuation">.</span>broswer<span class="token punctuation">.</span>current_url<span class="token punctuation">,</span>
+                                body<span class="token operator">=</span>spider<span class="token punctuation">.</span>broswer<span class="token punctuation">.</span>page_source<span class="token punctuation">,</span>
+                                encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">,</span>
+                                request<span class="token operator">=</span>request<span class="token punctuation">)</span>
+
+</code></pre></div><p>解释一下，这里引入的是dispatch和信号signal，signal是scrapy各种对象生命周期信号，我们在这里写的是当一个爬虫结束的时候执行self.spider_closed函数，和信号绑上，这里和django里面的信号很像
+后面再讲
+这样在一个spider结束的时候就会退出浏览器</p> <h2 id="schduler-other"><a href="#schduler-other" aria-hidden="true" class="header-anchor">#</a> Schduler&amp;Other</h2> <h3 id="schduler去重机制"><a href="#schduler去重机制" aria-hidden="true" class="header-anchor">#</a> Schduler去重机制</h3> <p>Schduler是一个调度器，这里面是一些队列存放了所有待爬的已经爬了的等等，整个框架的队列都在这里面,去重和分布式开发插件开发的时候会用到
+利用set去重</p> <div class="danger custom-block"><p class="custom-block-title">留坑</p> <p>看源码之后再写</p></div></div> <!----> <!----> <!----> <div class="page-edit" data-v-cdcae5a4><!----> <div class="last-updated" data-v-cdcae5a4><span class="prefix" data-v-cdcae5a4>Last Updated: </span> <span class="time" data-v-cdcae5a4>3/20/2020, 3:10:16 AM</span></div></div> <div class="page-nav" data-v-cdcae5a4><p class="inner" data-v-cdcae5a4><span class="prev" data-v-cdcae5a4>
+        ←
+        <a href="/blog/back/python/基础爬虫.html" class="prev" data-v-cdcae5a4>
+          基础爬虫
+        </a></span> <!----></p></div> </div> <div class="valine-wrapper" data-v-63f18ac0><div id="valine" style="display:;" data-v-63f18ac0></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-41016a8b data-v-41016a8b><i class="iconfont reco-up" data-v-41016a8b></i></div></div></div></div>
+    <script src="/assets/js/app.64171550.js" defer></script><script src="/assets/js/6.9305fa77.js" defer></script>
+  </body>
+</html>
